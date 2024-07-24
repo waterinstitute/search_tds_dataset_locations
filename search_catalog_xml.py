@@ -11,12 +11,29 @@ def getCatalogRefs(catalog_xml, catalog_ref, catalog_path):
         # if the catalog reference contains a directory of /../, remove the /../ and the previous directory from the path.
         catalog_refs = [Path(ref).resolve() for ref in catalog_refs]
     except:
-        print(f'Error: Could not find catalog references in {catalog_ref}')
+        # print(f'No catalog references in {catalog_ref}.')
         catalog_refs = []
     return catalog_refs
 
+# refactor the function getCatalogRefs to output a dictionary with the catalog reference and the catalog path.
+def getCatalogRefs(catalog_xml, catalog_ref, catalog_path):
+    try:
+        catalog_refs = [tag.get('{http://www.w3.org/1999/xlink}href') for tag in catalog_xml.iter() if tag.tag.endswith('catalogRef')]
+        # add the catalog path to the catalog references
+        catalog_refs = [catalog_path / ref for ref in catalog_refs]
+        # if the catalog reference contains a directory of /../, remove the /../ and the previous directory from the path.
+        catalog_refs = [Path(ref).resolve() for ref in catalog_refs]
+        # create a dictionary with the catalog reference and the catalog path.
+        catalog_refs_dict = [{"parent": catalog_ref, "catalog": ref} for ref in catalog_refs]
+    except:
+        # print(f'No catalog references in {catalog_ref}.')
+        catalog_refs = []
+        catalog_refs_dict = []
+    return catalog_refs, catalog_refs_dict
+
 def updateCatalogRefs(catalog_refs):
     catalog_refs_sublist = []
+    catalog_refs_sublist_dict = []
     for catalog_ref in catalog_refs:
         # remove the thredds_home_dir from the catalog_ref
         catalog_ref_rel_path = Path(catalog_ref).relative_to(thredds_home_dir)
@@ -25,9 +42,10 @@ def updateCatalogRefs(catalog_refs):
         # join the thredds_home_dir with the relative path
         catalog_path = thredds_home_dir / catalog_ref_rel_path
         catalog_ref_xml = ET.parse(catalog_ref)
-        catalog_refs_sublist += getCatalogRefs(catalog_ref_xml, catalog_ref, catalog_path)
-
-    return catalog_refs_sublist
+        sublist, sublist_dict = getCatalogRefs(catalog_ref_xml, catalog_ref, catalog_path)
+        catalog_refs_sublist += sublist
+        catalog_refs_sublist_dict += sublist_dict
+    return catalog_refs_sublist, catalog_refs_sublist_dict
 
 # read /var/lib/tomcat/content/thredds/catalog.xml and parse it for additional catalog references.
 # read the catalog.xml file
@@ -40,23 +58,69 @@ catalog_xml = ET.parse(str(catalog_ref))
 
 # additional catalog references are stored in the <catalogRef> tag and have a 'xlink:href' attribute for the location of the catalog.
 # find all <catalogRef> tags in the catalog.xml file
-catalog_refs = getCatalogRefs(catalog_xml, catalog_ref, thredds_home_dir)
+catalog_refs, catalog_refs_dict = getCatalogRefs(catalog_xml, catalog_ref, thredds_home_dir)
 
 # for each catalog reference, read the catalog file, and parse it for additional catalog references. add these to the list of catalog references.
 # run updateCatalogRefs until there are no additional sub catalog references.
 n = 0
-catalog_refs_sublist= updateCatalogRefs(catalog_refs)
+catalog_refs_sublist, catalog_refs_sublist_dict = updateCatalogRefs(catalog_refs)
 while len(catalog_refs_sublist) > 0:
     # Update catalog reference list with sublist n.
     catalog_refs += catalog_refs_sublist
     n+=1
     print(f'\nFound nested catalogs\n Parsing nested catalog {n}. \n')    
     # Get new sublist
-    catalog_refs_sublist = updateCatalogRefs(catalog_refs_sublist)
+    catalog_refs_sublist, sublist_dict = updateCatalogRefs(catalog_refs_sublist) 
 
 # Update the catalog references to remove the thredds_home_dir.
 catalog_refs = [str(Path(ref).relative_to(thredds_home_dir)) for ref in catalog_refs]
 catalog_refs.sort()
-print (catalog_refs)
+print (f'Catalogs: {catalog_refs}\n')
+# Update the catalog references to remove the thredds_home_dir from the dictionary.
+for ref in catalog_refs_dict:
+    ref['catalog'] = str(Path(ref['catalog']).relative_to(thredds_home_dir))
+    ref['parent'] = str(Path(ref['parent']).relative_to(thredds_home_dir))
+
+# create a dictionary to store the dataset locations for each catalog reference.
+catalog_datasets = {}
 
 # for each catalog reference, read the catalog file, and parse it to find the dataset locations.
+for catalog_ref in catalog_refs:
+    # create a string from catalog ref that is just the end name of the catalog reference and drop the extension
+    catalog_ref_key = Path(catalog_ref).stem
+    # add a key to the dictionary for the catalog reference add an empty list as the value to append each found dataset location.
+    catalog_datasets[catalog_ref_key] = []
+    catalog_ref = thredds_home_dir / catalog_ref
+    catalog_xml = ET.parse(str(catalog_ref))
+    
+    # dataset locations are stored in the <datasetScan> and <datasetRoot> tags and have a 'location' attribute for the location of the dataset.
+    for tag in catalog_xml.iter():
+        # print the tag
+        try:
+            # print(tag.tag.split('}')[-1])
+            if tag.tag.endswith('datasetScan') or tag.tag.endswith('datasetRoot'):
+                # print the location attribute
+                # print(tag.get('location'))
+                # append the location attribute to the list of dataset locations for the catalog reference.
+                catalog_datasets[catalog_ref_key].append(
+                    {
+                        "name": tag.get('name'),
+                        "catalog": str(catalog_ref),
+                        "type": tag.tag.split('}')[-1],
+                        "server_location": tag.get('location'),
+                        "tds_path": tag.get('path'),
+                        "tds_id": tag.get('ID'),
+                    }
+                )
+        except:
+            continue
+
+
+
+    # dataset locations are stored in the <datasetScan> and <datasetRoot> tags and have a 'location' attribute for the location of the dataset.
+    
+# print(catalog_datasets)
+
+# pretty print catalog_datasets
+import json
+print(json.dumps(catalog_datasets, indent=4))
