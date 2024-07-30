@@ -1,6 +1,8 @@
-
+import os
+import subprocess
 import lxml.etree as ET
 from pathlib import Path
+import json
 
 # function to get all catalogRefs in the catalog.xml file.
 def getCatalogRefs(catalog_xml, catalog_ref, catalog_path):
@@ -47,6 +49,15 @@ def updateCatalogRefs(catalog_refs):
         catalog_refs_sublist_dict += sublist_dict
     return catalog_refs_sublist, catalog_refs_sublist_dict
 
+def is_on_mount(path):
+  while True:
+    if path == os.path.dirname(path):
+      # we've hit the root dir
+      return False
+    elif os.path.ismount(path):
+      return True
+    path = os.path.dirname(path)
+
 # read /var/lib/tomcat/content/thredds/catalog.xml and parse it for additional catalog references.
 # read the catalog.xml file
 thredds_home_dir = Path('/var/lib/tomcat/content/thredds/')
@@ -83,7 +94,7 @@ for ref in catalog_refs_dict:
 
 # Sort the dictionary
 catalog_refs_dict.sort(key=lambda x: x['catalog'])
-print (f'Catalog dicts: {catalog_refs_dict}\n')
+# print (f'Catalog dicts: {catalog_refs_dict}\n')
 
 
 # create a dictionary to store the dataset locations for each catalog reference.
@@ -106,6 +117,18 @@ for catalog_ref in catalog_refs_dict:
     for tag in catalog_xml.iter():
         try:
             if tag.tag.endswith('datasetScan') or tag.tag.endswith('datasetRoot'):
+
+                # use the server location attribute to get the mount path.
+                is_mounted = is_on_mount(tag.get('location'))
+                writeable = os.access(tag.get('location'), os.W_OK)
+                if is_mounted:
+                    # run a subprocess to use findmnt -n 0o SOURCE --target path
+                    # to get the source of the mount.
+                    mnt_path = subprocess.check_output(['findmnt', '-n', '-o', 'SOURCE', '--target', tag.get('location')])
+                    mnt_path = mnt_path.decode('utf-8').strip()
+                else: 
+                    mnt_path = None
+
                 # append the location attribute to the list of dataset locations for the catalog reference.
                 catalog_datasets_dict[catalog_ref_str].append({
                     "name": tag.get('name'),
@@ -114,29 +137,19 @@ for catalog_ref in catalog_refs_dict:
                     "server_location": tag.get('location'),
                     "tds_path": tag.get('path'),
                     "tds_id": tag.get('ID'),
-                    "parent_catalog": catalog_ref_parent
+                    "parent_catalog": catalog_ref_parent,
+                    "mount_path": mnt_path,
+                    "writeable": writeable
                 })
         except:
             continue
 
-# print the key 'catalog' in the catalog_refs_dict
-# for key in catalog_refs_dict:
-    
-#     print(key['catalog'])
-
-# iterate the keys of a dictionary
-
 # if a key in the catalog_datasets_dict has no dataset locations, add a nested dictionary with the catalog, parent and the rest of the fields set to None.
 for key in catalog_datasets_dict:
-    # print (key)
-    # get index of the key in the catalog_refs_dict
-    # index = [i for i, d in enumerate(catalog_refs_dict) if d['catalog'] == key][0]
-    # print(index)
     if len(catalog_datasets_dict[key]) == 0:
         # find the parent catalog reference, the parent catalog reference is the catalog_ref_dict at an unknown index.
         # we need to find the index by matching the parent catalog reference to the catalog reference in the catalog_refs_dict.
         index = [i for i, d in enumerate(catalog_refs_dict) if d['catalog'] == key][0]
-
         catalog_datasets_dict[key].append({
             "name": None,
             "catalog": key,
@@ -144,13 +157,15 @@ for key in catalog_datasets_dict:
             "server_location": None,
             "tds_path": None,
             "tds_id": None,
-            "parent_catalog": catalog_refs_dict[index]['parent']
+            "parent_catalog": catalog_refs_dict[index]['parent'],
+            "mount_path": None,
+            "writeable": None
         })
 
 
 # pretty print catalog_datasets
-import json
-print(json.dumps(catalog_datasets_dict, indent=4))
+# print(json.dumps(catalog_datasets_dict, indent=4))
+
 # write json to file: tds_datasets.json
 with open('tds_datasets.json', 'w') as f:
     json.dump(catalog_datasets_dict, f, indent=4)

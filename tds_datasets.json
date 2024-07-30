@@ -7,7 +7,9 @@
             "server_location": null,
             "tds_path": null,
             "tds_id": null,
-            "parent_catalog": "catalog.xml"
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": null
         }
     ],
     "blended-global/gcag.xml": [
@@ -18,7 +20,9 @@
             "server_location": "/datasets/published/climate-at-a-glance/access",
             "tds_path": "gcag",
             "tds_id": "gcag",
-            "parent_catalog": "blended-global/blended-global.xml"
+            "parent_catalog": "blended-global/blended-global.xml",
+            "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
+            "writeable": false
         },
         {
             "name": "NOAA Global Surface Temperature V5: File Access",
@@ -27,7 +31,9 @@
             "server_location": "/datasets/published/noaa-global-surface-temperature/v5/access/gridded",
             "tds_path": "noaa-global-temp-v5",
             "tds_id": "noaa-global-temp-v5",
-            "parent_catalog": "blended-global/blended-global.xml"
+            "parent_catalog": "blended-global/blended-global.xml",
+            "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
+            "writeable": false
         },
         {
             "name": "NOAA Global Surface Temperature V5.1: File Access",
@@ -36,7 +42,9 @@
             "server_location": "/datasets/published/noaa-global-surface-temperature/v5.1/access/gridded",
             "tds_path": "noaa-global-temp-v5.1",
             "tds_id": "noaa-global-temp-v5",
-            "parent_catalog": "blended-global/blended-global.xml"
+            "parent_catalog": "blended-global/blended-global.xml",
+            "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
+            "writeable": false
         }
     ],
     "blended-global/oceanWinds.xml": [
@@ -47,7 +55,9 @@
             "server_location": "/datasets/published/blended-global-sea-surface-wind-products/access/nrt/stress",
             "tds_path": "uv/strs",
             "tds_id": "Blended Ocean Winds - Stress",
-            "parent_catalog": "blended-global/blended-global.xml"
+            "parent_catalog": "blended-global/blended-global.xml",
+            "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
+            "writeable": false
         },
         {
             "name": "Files",
@@ -56,7 +66,9 @@
             "server_location": "/datasets/published/blended-global-sea-surface-wind-products/access/nrt/wind",
             "tds_path": "uv/winds",
             "tds_id": "Blended Ocean Winds",
-            "parent_catalog": "blended-global/blended-global.xml"
+            "parent_catalog": "blended-global/blended-global.xml",
+            "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
+            "writeable": false
         },
         {
             "name": "Files",
@@ -65,7 +77,9 @@
             "server_location": "/datasets/published/blended-global-sea-surface-wind-products/access/reprocessed/stress",
             "tds_path": "uv/reprocessed_strs",
             "tds_id": "Reprocessed Blended Ocean Winds - Stress",
-            "parent_catalog": "blended-global/blended-global.xml"
+            "parent_catalog": "blended-global/blended-global.xml",
+            "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
+            "writeable": false
         },
         {
             "name": "Files",
@@ -74,7 +88,9 @@
             "server_location": "/datasets/published/blended-global-sea-surface-wind-products/access/reprocessed/wind",
             "tds_path": "uv/reprocessed_winds",
             "tds_id": "Blended Ocean Winds",
-            "parent_catalog": "blended-global/blended-global.xml"
+            "parent_catalog": "blended-global/blended-global.xml",
+            "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
+            "writeable": false
         },
         {
             "name": "Files",
@@ -83,7 +99,9 @@
             "server_location": "/datasets/published/blended-global-sea-surface-wind-products/access/climatology",
             "tds_path": "uv/clm",
             "tds_id": "Blended Ocean Winds - Climatology Files",
-            "parent_catalog": "blended-global/blended-global.xml"
+            "parent_catalog": "blended-global/blended-global.xml",
+            "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
+            "writeable": false
         }
     ],
     "blended-global/oisst-catalog.xml": [
@@ -94,7 +112,9 @@
             "server_location": "/datasets/published/",
             "tds_path": "OisstBase",
             "tds_id": null,
-            "parent_catalog": "marine-ocean/marine-ocean.xml"
+            "parent_catalog": "marine-ocean/marine-ocean.xml",
+            "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
+            "writeable": false
         },
         {
             "name": "OISST-V2-AVHRR-Daily Files",
@@ -103,7 +123,9 @@
             "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2/access/avhrr-only",
             "tds_path": "OisstBase/NetCDF/V2.0/AVHRR",
             "tds_id": "OISST-V2-AVHRR-Daily",
-            "parent_catalog": "marine-ocean/marine-ocean.xml"
+            "parent_catalog": "marine-ocean/marine-ocean.xml",
+            "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
+            "writeable": false
         },
         {
             "name": "OISST-V2-AVHRR-AMSR-Daily Files",
@@ -112,7 +134,9 @@
             "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2/access/amsr-avhrr",
             "tds_path": "OisstBase/NetCDF/V2.0/AVHRR-AMSR",
             "tds_id": "OISST-V2-AVHRR-AMSR-Daily",
-            "parent_catalog": "marine-ocean/marine-ocean.xml"
+            "parent_catalog": "marine-ocean/marine-ocean.xml",
+            "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
+            "writeable": false
         },
         {
             "name": "OISST-V2.1-AVHRR-Daily Files",
@@ -121,7 +145,9 @@
             "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr",
             "tds_path": "OisstBase/NetCDF/V2.1/AVHRR",
             "tds_id": "OISST-V2.1-AVHRR-Daily",
-            "parent_catalog": "marine-ocean/marine-ocean.xml"
+            "parent_catalog": "marine-ocean/marine-ocean.xml",
+            "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
+            "writeable": false
         }
     ],
     "data-in-development/data-in-development.xml": [
@@ -132,7 +158,9 @@
             "server_location": "/mnt/san2/nidis",
             "tds_path": "smc",
             "tds_id": "smc",
-            "parent_catalog": "catalog.xml"
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
         },
         {
             "name": "NClimGrid",
@@ -141,7 +169,9 @@
             "server_location": "/datasets/published/nclimgrid-monthly/access/",
             "tds_path": "data-in-development/nclimgrid",
             "tds_id": null,
-            "parent_catalog": "catalog.xml"
+            "parent_catalog": "catalog.xml",
+            "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
+            "writeable": false
         },
         {
             "name": "Climate area grid masks (nclimgrid)",
@@ -150,7 +180,9 @@
             "server_location": "/datasets/published/gridmasks",
             "tds_path": "did/nclimgrid",
             "tds_id": null,
-            "parent_catalog": "catalog.xml"
+            "parent_catalog": "catalog.xml",
+            "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
+            "writeable": false
         },
         {
             "name": "Files",
@@ -159,7 +191,9 @@
             "server_location": "/datasets/published/nws-quantitative-precipitation-estimates/access",
             "tds_path": "did/nws-qpe",
             "tds_id": null,
-            "parent_catalog": "catalog.xml"
+            "parent_catalog": "catalog.xml",
+            "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
+            "writeable": false
         }
     ],
     "in_situ/aerosols-esrl-gmd.xml": [
@@ -170,7 +204,9 @@
             "server_location": "/datasets/published/aerosols-esrl-gmd/access",
             "tds_path": "aerosols-esrl-gmd",
             "tds_id": "aerosols-esrl-gmd",
-            "parent_catalog": "in_situ/in_situ.xml"
+            "parent_catalog": "in_situ/in_situ.xml",
+            "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
+            "writeable": false
         }
     ],
     "in_situ/in_situ.xml": [
@@ -181,7 +217,9 @@
             "server_location": null,
             "tds_path": null,
             "tds_id": null,
-            "parent_catalog": "catalog.xml"
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": null
         }
     ],
     "in_situ/nclimgrid-daily-auxiliary.xml": [
@@ -192,7 +230,9 @@
             "server_location": "/datasets/published/nclimgrid-daily-auxiliary/access/",
             "tds_path": "nclimgrid-daily-auxiliary",
             "tds_id": "nclimgrid-daily-auxiliary",
-            "parent_catalog": "in_situ/in_situ.xml"
+            "parent_catalog": "in_situ/in_situ.xml",
+            "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
+            "writeable": false
         }
     ],
     "in_situ/nclimgrid-daily.xml": [
@@ -203,7 +243,9 @@
             "server_location": "/datasets/published/nclimgrid-daily/access/grids",
             "tds_path": "nclimgrid-daily",
             "tds_id": "nclimgrid-daily",
-            "parent_catalog": "in_situ/in_situ.xml"
+            "parent_catalog": "in_situ/in_situ.xml",
+            "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
+            "writeable": false
         }
     ],
     "marine-ocean/ersst.xml": [
@@ -214,7 +256,9 @@
             "server_location": "/datasets/published/sea-surface-temperature-extended-reconstructed/access",
             "tds_path": "ersst",
             "tds_id": "gov.noaa.ncdc:C00833_ersstv5",
-            "parent_catalog": "marine-ocean/marine-ocean.xml"
+            "parent_catalog": "marine-ocean/marine-ocean.xml",
+            "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
+            "writeable": false
         }
     ],
     "marine-ocean/icoads_v3.xml": [
@@ -225,7 +269,9 @@
             "server_location": "/datasets/published/international-comprehensive-ocean-atmosphere/v3/archive/nrt",
             "tds_path": "international-comprehensive-ocean-atmosphere-dataset-icoads",
             "tds_id": "icoads",
-            "parent_catalog": "marine-ocean/marine-ocean.xml"
+            "parent_catalog": "marine-ocean/marine-ocean.xml",
+            "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
+            "writeable": false
         }
     ],
     "marine-ocean/marine-ocean.xml": [
@@ -236,7 +282,9 @@
             "server_location": null,
             "tds_path": null,
             "tds_id": null,
-            "parent_catalog": "catalog.xml"
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": null
         }
     ],
     "model/model.xml": [
@@ -247,7 +295,9 @@
             "server_location": null,
             "tds_path": null,
             "tds_id": null,
-            "parent_catalog": "catalog.xml"
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": null
         }
     ],
     "satellite/satellite.xml": [
@@ -258,7 +308,9 @@
             "server_location": null,
             "tds_path": null,
             "tds_id": null,
-            "parent_catalog": "catalog.xml"
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": null
         }
     ]
 }
