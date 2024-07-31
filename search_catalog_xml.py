@@ -43,7 +43,9 @@ def updateCatalogRefs(catalog_refs):
         catalog_ref_rel_path = catalog_ref_rel_path.parent
         # join the thredds_home_dir with the relative path
         catalog_path = thredds_home_dir / catalog_ref_rel_path
-        catalog_ref_xml = ET.parse(catalog_ref)
+        # read the catalog file
+        catalog_ref_str = str(catalog_ref)
+        catalog_ref_xml = ET.parse(catalog_ref_str)
         sublist, sublist_dict = getCatalogRefs(catalog_ref_xml, catalog_ref, catalog_path)
         catalog_refs_sublist += sublist
         catalog_refs_sublist_dict += sublist_dict
@@ -166,6 +168,9 @@ for key in catalog_datasets_dict:
 # pretty print catalog_datasets
 # print(json.dumps(catalog_datasets_dict, indent=4))
 
+# get hostname
+hostname = subprocess.check_output(['hostname']).decode('utf-8').strip()
+
 # write json to file: tds_datasets.json
-with open('tds_datasets.json', 'w') as f:
+with open(f'output/{hostname}_tds_datasets.json', 'w') as f:
     json.dump(catalog_datasets_dict, f, indent=4)
