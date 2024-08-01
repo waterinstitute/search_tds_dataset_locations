@@ -6,21 +6,22 @@ import json
 
 # function to get all catalogRefs in the catalog.xml file.
 def getCatalogRefs(catalog_xml, catalog_ref, catalog_path):
-    try:
-        catalog_refs = [tag.get('{http://www.w3.org/1999/xlink}href') for tag in catalog_xml.iter() if tag.tag.endswith('catalogRef')]
-        # add the catalog path to the catalog references
-        catalog_refs = [catalog_path / ref for ref in catalog_refs]
-        # if the catalog reference contains a directory of /../, remove the /../ and the previous directory from the path.
-        catalog_refs = [Path(ref).resolve() for ref in catalog_refs]
-    except:
+    # try:
+    catalog_refs = [tag.get('{http://www.w3.org/1999/xlink}href') for tag in catalog_xml.iter() if tag.tag.endswith('catalogRef')]
+    # add the catalog path to the catalog references
+    catalog_refs = [catalog_path / ref for ref in catalog_refs]
+    # if the catalog reference contains a directory of /../, remove the /../ and the previous directory from the path.
+    catalog_refs = [Path(ref).resolve() for ref in catalog_refs]
+    # except:
         # print(f'No catalog references in {catalog_ref}.')
-        catalog_refs = []
+    catalog_refs = []
     return catalog_refs
 
 # refactor the function getCatalogRefs to output a dictionary with the catalog reference and the catalog path.
 def getCatalogRefs(catalog_xml, catalog_ref, catalog_path):
+    print (f'\nFinding catalog references in: {catalog_ref}')
     try:
-        catalog_refs = [tag.get('{http://www.w3.org/1999/xlink}href') for tag in catalog_xml.iter() if tag.tag.endswith('catalogRef')]
+        catalog_refs = [tag.get('{http://www.w3.org/1999/xlink}href') for tag in catalog_xml.iter() if str(tag.tag).endswith('catalogRef')]
         # add the catalog path to the catalog references
         catalog_refs = [catalog_path / ref for ref in catalog_refs]
         # if the catalog reference contains a directory of /../, remove the /../ and the previous directory from the path.
@@ -28,7 +29,7 @@ def getCatalogRefs(catalog_xml, catalog_ref, catalog_path):
         # create a dictionary with the catalog reference and the catalog path.
         catalog_refs_dict = [{"parent": catalog_ref, "catalog": ref} for ref in catalog_refs]
     except:
-        # print(f'No catalog references in {catalog_ref}.')
+        print(f'No catalog references in {catalog_ref}.')
         catalog_refs = []
         catalog_refs_dict = []
     return catalog_refs, catalog_refs_dict
@@ -72,6 +73,11 @@ catalog_xml = ET.parse(str(catalog_ref))
 # find all <catalogRef> tags in the catalog.xml file
 catalog_refs, catalog_refs_dict = getCatalogRefs(catalog_xml, catalog_ref, thredds_home_dir)
 
+
+# remove duplicates from the catalog_refs and catalog_refs_dict
+catalog_refs = list(set(catalog_refs))
+catalog_refs_dict = [i for n, i in enumerate(catalog_refs_dict) if i not in catalog_refs_dict[n + 1:]]
+
 # print (f'Catalogs before updating with sublists: {len(catalog_refs)}\n')
 # print (f'Catalog dicts before updating with sublists: {len(catalog_refs_dict)}\n')
 
@@ -86,7 +92,11 @@ while len(catalog_refs_sublist) > 0:
     n+=1
     print(f'\nFound nested catalogs\n Parsing nested catalog {n}. \n')    
     # Get new sublist
-    catalog_refs_sublist, sublist_dict = updateCatalogRefs(catalog_refs_sublist) 
+    catalog_refs_sublist, sublist_dict = updateCatalogRefs(catalog_refs_sublist)
+
+# remove duplicates from the catalog_refs and catalog_refs_dict
+catalog_refs = list(set(catalog_refs))
+catalog_refs_dict = [i for n, i in enumerate(catalog_refs_dict) if i not in catalog_refs_dict[n + 1:]]
 
 # Update the catalog references to remove the thredds_home_dir from the catalog dictionary.
 for ref in catalog_refs_dict:
@@ -97,12 +107,12 @@ for ref in catalog_refs_dict:
 catalog_refs_dict.sort(key=lambda x: x['catalog'])
 # print (f'Catalog dicts: {catalog_refs_dict}\n')
 
-
 # create a dictionary to store the dataset locations for each catalog reference.
 catalog_datasets_dict = {}
 # for each catalog key in each item in the catalog_refs_dict, read the catalog file, parse it to find the dataset locations, 
 # and finally add the dataset location and other attrs to the dictionary.
 for catalog_ref in catalog_refs_dict:
+    # print('\n', catalog_ref)
     # create a string from catalog ref that is just the end name of the catalog reference and drop the extension
     catalog_ref_key = Path(catalog_ref['catalog']).stem
     catalog_ref_str = catalog_ref['catalog']
@@ -116,9 +126,10 @@ for catalog_ref in catalog_refs_dict:
     catalog_xml = ET.parse(str(catalog_ref))
     # dataset locations are stored in the <datasetScan> and <datasetRoot> tags and have a 'location' attribute for the location of the dataset.
     for tag in catalog_xml.iter():
+        # print(tag)
         try:
             if tag.tag.endswith('datasetScan') or tag.tag.endswith('datasetRoot'):
-
+                # print ('\ndataset tag found\n')
                 # use the server location attribute to get the mount path.
                 is_mounted = is_on_mount(tag.get('location'))
                 writeable = os.access(tag.get('location'), os.W_OK)
