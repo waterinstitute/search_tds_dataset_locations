@@ -1,0 +1,28 @@
+{
+    "model/model.xml": [
+        {
+            "name": null,
+            "catalog": "model/model.xml",
+            "type": null,
+            "server_location": null,
+            "tds_path": null,
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": null
+        }
+    ],
+    "stub.xml": [
+        {
+            "name": null,
+            "catalog": "stub.xml",
+            "type": null,
+            "server_location": null,
+            "tds_path": null,
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": null
+        }
+    ]
+}
