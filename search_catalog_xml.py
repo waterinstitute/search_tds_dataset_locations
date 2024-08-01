@@ -6,32 +6,25 @@ import json
 
 # function to get all catalogRefs in the catalog.xml file.
 def getCatalogRefs(catalog_xml, catalog_ref, catalog_path):
-    # try:
     catalog_refs = [tag.get('{http://www.w3.org/1999/xlink}href') for tag in catalog_xml.iter() if tag.tag.endswith('catalogRef')]
     # add the catalog path to the catalog references
     catalog_refs = [catalog_path / ref for ref in catalog_refs]
     # if the catalog reference contains a directory of /../, remove the /../ and the previous directory from the path.
     catalog_refs = [Path(ref).resolve() for ref in catalog_refs]
-    # except:
-        # print(f'No catalog references in {catalog_ref}.')
-    catalog_refs = []
+    
     return catalog_refs
 
 # refactor the function getCatalogRefs to output a dictionary with the catalog reference and the catalog path.
 def getCatalogRefs(catalog_xml, catalog_ref, catalog_path):
-    print (f'\nFinding catalog references in: {catalog_ref}')
-    try:
-        catalog_refs = [tag.get('{http://www.w3.org/1999/xlink}href') for tag in catalog_xml.iter() if str(tag.tag).endswith('catalogRef')]
-        # add the catalog path to the catalog references
-        catalog_refs = [catalog_path / ref for ref in catalog_refs]
-        # if the catalog reference contains a directory of /../, remove the /../ and the previous directory from the path.
-        catalog_refs = [Path(ref).resolve() for ref in catalog_refs]
-        # create a dictionary with the catalog reference and the catalog path.
-        catalog_refs_dict = [{"parent": catalog_ref, "catalog": ref} for ref in catalog_refs]
-    except:
-        print(f'No catalog references in {catalog_ref}.')
-        catalog_refs = []
-        catalog_refs_dict = []
+    # print (f'\nFinding catalog references in: {catalog_ref}')
+    catalog_refs = [tag.get('{http://www.w3.org/1999/xlink}href') for tag in catalog_xml.iter() if str(tag.tag).endswith('catalogRef')]
+    # add the catalog path to the catalog references
+    catalog_refs = [catalog_path / ref for ref in catalog_refs]
+    # if the catalog reference contains a directory of /../, remove the /../ and the previous directory from the path.
+    catalog_refs = [Path(ref).resolve() for ref in catalog_refs]
+    # create a dictionary with the catalog reference and the catalog path.
+    catalog_refs_dict = [{"parent": catalog_ref, "catalog": ref} for ref in catalog_refs]
+
     return catalog_refs, catalog_refs_dict
 
 def updateCatalogRefs(catalog_refs):
@@ -126,35 +119,31 @@ for catalog_ref in catalog_refs_dict:
     catalog_xml = ET.parse(str(catalog_ref))
     # dataset locations are stored in the <datasetScan> and <datasetRoot> tags and have a 'location' attribute for the location of the dataset.
     for tag in catalog_xml.iter():
-        # print(tag)
-        try:
-            if tag.tag.endswith('datasetScan') or tag.tag.endswith('datasetRoot'):
-                # print ('\ndataset tag found\n')
-                # use the server location attribute to get the mount path.
-                is_mounted = is_on_mount(tag.get('location'))
-                writeable = os.access(tag.get('location'), os.W_OK)
-                if is_mounted:
-                    # run a subprocess to use findmnt -n 0o SOURCE --target path
-                    # to get the source of the mount.
-                    mnt_path = subprocess.check_output(['findmnt', '-n', '-o', 'SOURCE', '--target', tag.get('location')])
-                    mnt_path = mnt_path.decode('utf-8').strip()
-                else: 
-                    mnt_path = None
+        if str(tag.tag).endswith('datasetScan') or str(tag.tag).endswith('datasetRoot'):
+            # print ('\ndataset tag found\n')
+            # use the server location attribute to get the mount path.
+            is_mounted = is_on_mount(tag.get('location'))
+            writeable = os.access(tag.get('location'), os.W_OK)
+            if is_mounted:
+                # run a subprocess to use findmnt -n 0o SOURCE --target path
+                # to get the source of the mount.
+                mnt_path = subprocess.check_output(['findmnt', '-n', '-o', 'SOURCE', '--target', tag.get('location')])
+                mnt_path = mnt_path.decode('utf-8').strip()
+            else: 
+                mnt_path = None
 
-                # append the location attribute to the list of dataset locations for the catalog reference.
-                catalog_datasets_dict[catalog_ref_str].append({
-                    "name": tag.get('name'),
-                    "catalog": str(catalog_ref),
-                    "type": tag.tag.split('}')[-1],
-                    "server_location": tag.get('location'),
-                    "tds_path": tag.get('path'),
-                    "tds_id": tag.get('ID'),
-                    "parent_catalog": catalog_ref_parent,
-                    "mount_path": mnt_path,
-                    "writeable": writeable
-                })
-        except:
-            continue
+            # append the location attribute to the list of dataset locations for the catalog reference.
+            catalog_datasets_dict[catalog_ref_str].append({
+                "name": tag.get('name'),
+                "catalog": str(catalog_ref),
+                "type": tag.tag.split('}')[-1],
+                "server_location": tag.get('location'),
+                "tds_path": tag.get('path'),
+                "tds_id": tag.get('ID'),
+                "parent_catalog": catalog_ref_parent,
+                "mount_path": mnt_path,
+                "writeable": writeable
+            })
 
 # if a key in the catalog_datasets_dict has no dataset locations, add a nested dictionary with the catalog, parent and the rest of the fields set to None.
 for key in catalog_datasets_dict:
@@ -184,3 +173,4 @@ hostname = subprocess.check_output(['hostname']).decode('utf-8').strip()
 # write json to file: tds_datasets.json
 with open(f'output/{hostname}_tds_datasets.json', 'w') as f:
     json.dump(catalog_datasets_dict, f, indent=4)
+print(f'Json output to: output/{hostname}_tds_datasets.json')
