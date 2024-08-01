@@ -65,7 +65,6 @@ def is_on_mount(path):
 thredds_home_dir = Path('/var/lib/tomcat/content/thredds/')
 # join the thredds_home_dir with the catalog.xml file
 catalog_ref = thredds_home_dir / 'catalog.xml'
-print(catalog_ref)
 # catalog_ref = thredds_home_dir + 'catalog.xml'
 catalog_xml = ET.parse(str(catalog_ref))
 
