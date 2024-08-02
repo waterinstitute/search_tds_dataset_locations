@@ -4,5 +4,11 @@
             "parent": "/oceanNomads/data/",
             "catalog": "data.nodc.noaa.gov/thredds/catalog/ncep/rtofs/catalog.xml"
         }
+    ],
+    "tds-coastal01-test.ncei.noaa.gov": [
+        {
+            "parent": "/oceanNomads/data/",
+            "catalog": "data.nodc.noaa.gov/thredds/catalog/ncep/rtofs/catalog.xml"
+        }
     ]
 }

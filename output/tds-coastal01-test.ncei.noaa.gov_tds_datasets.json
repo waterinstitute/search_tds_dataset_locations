@@ -1,0 +1,158 @@
+{
+    "tds-coastal01-test.ncei.noaa.gov": {
+        "USM_DAP/catalog_aggs.xml": [
+            {
+                "name": null,
+                "catalog": "USM_DAP/catalog_aggs.xml",
+                "type": null,
+                "server_location": null,
+                "tds_path": null,
+                "tds_id": null,
+                "parent_catalog": "catalog_USM_DAP.xml",
+                "mount_path": null,
+                "writeable": null
+            }
+        ],
+        "USM_DAP/catalog_data.xml": [
+            {
+                "name": null,
+                "catalog": "USM_DAP/catalog_data.xml",
+                "type": null,
+                "server_location": null,
+                "tds_path": null,
+                "tds_id": null,
+                "parent_catalog": "catalog_USM_DAP.xml",
+                "mount_path": null,
+                "writeable": null
+            }
+        ],
+        "catalog_USM_DAP.xml": [
+            {
+                "name": null,
+                "catalog": "catalog_USM_DAP.xml",
+                "type": null,
+                "server_location": null,
+                "tds_path": null,
+                "tds_id": null,
+                "parent_catalog": "catalog.xml",
+                "mount_path": null,
+                "writeable": null
+            }
+        ],
+        "catalog_aec_climo.xml": [
+            {
+                "name": "AEC Model",
+                "catalog": "/var/lib/tomcat/content/thredds/catalog_aec_climo.xml",
+                "type": "datasetScan",
+                "server_location": "/mnt/thredds-data/aec/aec_model_climo/",
+                "tds_path": "aec_model",
+                "tds_id": "AEC_model",
+                "parent_catalog": "catalog.xml",
+                "mount_path": "10.254.102.74:/NFS04/msthredds/data",
+                "writeable": false
+            },
+            {
+                "name": "AEC Satellite",
+                "catalog": "/var/lib/tomcat/content/thredds/catalog_aec_climo.xml",
+                "type": "datasetScan",
+                "server_location": "/mnt/thredds-data/aec/aec_sat_climo/",
+                "tds_path": "aec_sat",
+                "tds_id": "AEC_sat",
+                "parent_catalog": "catalog.xml",
+                "mount_path": "10.254.102.74:/NFS04/msthredds/data",
+                "writeable": false
+            }
+        ],
+        "catalog_dwh.xml": [
+            {
+                "name": "DWH CTD",
+                "catalog": "/var/lib/tomcat/content/thredds/catalog_dwh.xml",
+                "type": "datasetScan",
+                "server_location": "/mnt/thredds-data/dwh/ctd",
+                "tds_path": "dwh/ctd",
+                "tds_id": "dwh_ctd",
+                "parent_catalog": "catalog.xml",
+                "mount_path": "10.254.102.74:/NFS04/msthredds/data",
+                "writeable": false
+            }
+        ],
+        "catalog_navo_glider.xml": [
+            {
+                "name": "NAVOCEANO_GLIDER",
+                "catalog": "/var/lib/tomcat/content/thredds/catalog_navo_glider.xml",
+                "type": "datasetScan",
+                "server_location": "/mnt/thredds-data/navoceano_glider/",
+                "tds_path": "navoceano_glider",
+                "tds_id": "navoceano_glider",
+                "parent_catalog": "catalog.xml",
+                "mount_path": "10.254.102.74:/NFS04/msthredds/data",
+                "writeable": false
+            }
+        ],
+        "catalog_northwest_fisheries.xml": [
+            {
+                "name": "Northwest Fisheries",
+                "catalog": "/var/lib/tomcat/content/thredds/catalog_northwest_fisheries.xml",
+                "type": "datasetScan",
+                "server_location": "/mnt/thredds-data/northwest_fisheries/",
+                "tds_path": "northwest_fisheries",
+                "tds_id": "NORTHWEST_FISHERIES",
+                "parent_catalog": "catalog.xml",
+                "mount_path": "10.254.102.74:/NFS04/msthredds/data",
+                "writeable": false
+            }
+        ],
+        "catalog_oceanNomads.xml": [
+            {
+                "name": null,
+                "catalog": "catalog_oceanNomads.xml",
+                "type": null,
+                "server_location": null,
+                "tds_path": null,
+                "tds_id": null,
+                "parent_catalog": "catalog.xml",
+                "mount_path": null,
+                "writeable": null
+            }
+        ],
+        "catalog_ocean_exploration_research.xml": [
+            {
+                "name": "Ocean Exploration Research",
+                "catalog": "/var/lib/tomcat/content/thredds/catalog_ocean_exploration_research.xml",
+                "type": "datasetScan",
+                "server_location": "/mnt/thredds-data/ocean_exploration_research/",
+                "tds_path": "ocean_exploration_research",
+                "tds_id": "ocean_exploration_research",
+                "parent_catalog": "catalog.xml",
+                "mount_path": "10.254.102.74:/NFS04/msthredds/data",
+                "writeable": false
+            }
+        ],
+        "oceanNomads/catalog_aggs.xml": [
+            {
+                "name": null,
+                "catalog": "oceanNomads/catalog_aggs.xml",
+                "type": null,
+                "server_location": null,
+                "tds_path": null,
+                "tds_id": null,
+                "parent_catalog": "catalog_oceanNomads.xml",
+                "mount_path": null,
+                "writeable": null
+            }
+        ],
+        "oceanNomads/catalog_data.xml": [
+            {
+                "name": null,
+                "catalog": "oceanNomads/catalog_data.xml",
+                "type": null,
+                "server_location": null,
+                "tds_path": null,
+                "tds_id": null,
+                "parent_catalog": "catalog_oceanNomads.xml",
+                "mount_path": null,
+                "writeable": null
+            }
+        ]
+    }
+}

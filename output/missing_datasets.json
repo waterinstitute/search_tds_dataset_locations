@@ -185,5 +185,6 @@
             "writeable": false
         }
     ],
-    "tds-coastal01-dev.ncei.noaa.gov": []
+    "tds-coastal01-dev.ncei.noaa.gov": [],
+    "tds-coastal01-test.ncei.noaa.gov": []
 }
