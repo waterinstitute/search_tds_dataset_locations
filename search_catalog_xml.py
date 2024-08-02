@@ -43,6 +43,7 @@ def updateCatalogRefs(catalog_refs):
         sublist, sublist_dict = getCatalogRefs(catalog_ref_xml, catalog_ref, catalog_path)
         catalog_refs_sublist += sublist
         catalog_refs_sublist_dict += sublist_dict
+
     return catalog_refs_sublist, catalog_refs_sublist_dict
 
 def is_on_mount(path):
@@ -102,7 +103,7 @@ while len(catalog_refs_sublist) > 0:
     catalog_refs += catalog_refs_sublist
     catalog_refs_dict += catalog_refs_sublist_dict
     n+=1
-    print(f'\nFound nested catalogs\n Parsing nested catalog {n}. \n')    
+    # print(f'\nFound nested catalogs \n Parsing nested catalog {n}. \n')    
     # Get new sublist
     catalog_refs_sublist, sublist_dict = updateCatalogRefs(catalog_refs_sublist)
 
