@@ -210,5 +210,106 @@
             "mount_path": null,
             "writeable": false
         }
+    ],
+    "tds-ams01-test.ncei.noaa.gov": [
+        {
+            "name": "Arctic Seas",
+            "catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0115771",
+            "tds_path": "regional-climatologies/arctic-seas",
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "East Asian Seas",
+            "catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0123300",
+            "tds_path": "regional-climatologies/east-asian-seas",
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Greenland/Iceland/Norwegian Seas",
+            "catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0170742",
+            "tds_path": "regional-climatologies/greenland-iceland-seas",
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Gulf of Mexico",
+            "catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/nodc/web/woa.data.nodc/REGCLIM/GULFv2",
+            "tds_path": "regional-climatologies/gulf-of-mexico",
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Nordic Seas and North North Atlantic",
+            "catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0118478",
+            "tds_path": "regional-climatologies/nordic-and-north-atlantic",
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Northwest Atlantic",
+            "catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0155889",
+            "tds_path": "regional-climatologies/northwest-atlantic",
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Southwest North Atlantic",
+            "catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0201696/",
+            "tds_path": "regional-climatologies/southwest-north-atlantic",
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Northern North Pacific",
+            "catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0156768",
+            "tds_path": "regional-climatologies/northern-north-pacific",
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Northeast Pacific",
+            "catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0163799",
+            "tds_path": "regional-climatologies/northeast-pacific",
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        }
     ]
 }

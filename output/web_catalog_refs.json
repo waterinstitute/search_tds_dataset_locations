@@ -11,5 +11,6 @@
             "catalog": "data.nodc.noaa.gov/thredds/catalog/ncep/rtofs/catalog.xml"
         }
     ],
-    "tds-ams01-dev.ncei.noaa.gov": []
+    "tds-ams01-dev.ncei.noaa.gov": [],
+    "tds-ams01-test.ncei.noaa.gov": []
 }
