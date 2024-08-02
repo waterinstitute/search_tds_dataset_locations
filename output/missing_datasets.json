@@ -138,5 +138,51 @@
             "mount_path": null,
             "writeable": false
         }
+    ],
+    "tds-model01-test.ncei.noaa.gov": [
+        {
+            "name": "Monthly Means",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/mnt/modeldata4/model/cfsrmon",
+            "tds_path": "model-cfs_reanl_mm",
+            "tds_id": "cfs_reanl_mm",
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Surface and Radiative Fluxes (FLX), 45 Day Run",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/modeldata/cfs_reforecast_6-hourly_45day_flxf",
+            "tds_path": "model-cfs_refor_6h_45d_flx",
+            "tds_id": "cfs_refor_6h_45d_flx",
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Pressure Level (PGB), 45 Day Run",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/modeldata/cfs_reforecast_6-hourly_45day_pgbf",
+            "tds_path": "model-cfs_refor_6h_45d_pgb",
+            "tds_id": "cfs_refor_6h_45d_pgb",
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Surface and Radiative Fluxes (FLX), 9 Month Run",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/modeldata/cfs_reforecast_6-hourly_9mon_flxf",
+            "tds_path": "model-cfs_refor_6h_9m_flx",
+            "tds_id": "cfs_refor_6h_9m_flx",
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false
+        }
     ]
 }

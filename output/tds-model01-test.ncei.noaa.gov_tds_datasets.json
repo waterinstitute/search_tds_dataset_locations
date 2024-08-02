@@ -1,1436 +1,1438 @@
 {
-    "model/cbofs_catalog.xml": [
-        {
-            "name": "CBOFS Models",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cbofs_catalog.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/chesapeake-bay-operational-forecast-system-cbofs",
-            "tds_path": "model-cbofs-files",
-            "tds_id": "CBOFS/MODELS",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        }
-    ],
-    "model/cfs.xml": [
-        {
-            "name": "CFS File Access in Raw Directory Structure",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata",
-            "tds_path": "model-cfs-allfiles",
-            "tds_id": "model-cfs-allfiles",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.32:/export/Data",
-            "writeable": false
-        },
-        {
-            "name": "Time Series",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/model/cfsr",
-            "tds_path": "model-cfs_reanl_ts",
-            "tds_id": "cfs_reanl_ts",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "Monthly Means",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/mnt/modeldata4/model/cfsrmon",
-            "tds_path": "model-cfs_reanl_mm",
-            "tds_id": "cfs_reanl_mm",
-            "parent_catalog": "model/model.xml",
-            "mount_path": null,
-            "writeable": false
-        },
-        {
-            "name": "3-D Diabatic Heating Data (DIAB), 6-hour",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata2/cmd_diabf",
-            "tds_path": "model-cfs_reanl_6h_diab",
-            "tds_id": "cfs_reanl_6h_diab",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data1",
-            "writeable": false
-        },
-        {
-            "name": "Surface and Radiative Fluxes (FLX), 6-hour",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata2/cmd_flxf",
-            "tds_path": "model-cfs_reanl_6h_flxf",
-            "tds_id": "cfs_reanl_6h_flxf",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data1",
-            "writeable": false
-        },
-        {
-            "name": "Low Resolution Data, 6-hour",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata2/cmd_grblow",
-            "tds_path": "model-cfs_reanl_6h_grblow",
-            "tds_id": "cfs_reanl_6h_grblow",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data1",
-            "writeable": false
-        },
-        {
-            "name": "3-D Isentropic Level (IPV), 6-hour",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata2/cmd_ipvh",
-            "tds_path": "model-cfs_reanl_6h_ipv",
-            "tds_id": "cfs_reanl_6h_ipv",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data1",
-            "writeable": false
-        },
-        {
-            "name": "3-D Ocean (OCN), 6-hour",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata2/cmd_ocnh",
-            "tds_path": "model-cfs_reanl_6h_ocnh",
-            "tds_id": "cfs_reanl_6h_ocnh",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data1",
-            "writeable": false
-        },
-        {
-            "name": "3-D Pressure Level (PGB), 6-hour",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata2/cmd_pgbh",
-            "tds_path": "model-cfs_reanl_6h_pgb",
-            "tds_id": "cfs_reanl_6h_pgb",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data1",
-            "writeable": false
-        },
-        {
-            "name": "Monthly Means of Daily Averages",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/model/cfsr-rfl-mmda",
-            "tds_path": "model-cfs_refor_fl_mm_da",
-            "tds_id": "cfs_refor_fl_mm_da",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "Monthly Mean Time Series of Selected Variables",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/model/cfsr-rfl-mmts",
-            "tds_path": "model-cfs_refor_fl_mm_ts",
-            "tds_id": "cfs_refor_fl_mm_ts",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "6-Hourly Time Series from 45-Day and Seasonal Runs",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/model/cfsr-rfl-ts45",
-            "tds_path": "model-cfs_refor_fl_6h_seasonal",
-            "tds_id": "cfs_refor_fl_6h_seasonal",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "6-Hourly Time Series from 9-Month Runs",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/model/cfsr-rfl-ts9",
-            "tds_path": "model-cfs_refor_fl_6h_9m",
-            "tds_id": "cfs_refor_fl_6h_9m",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "Monthly Means from 9-Month Runs",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata2/cmd_mm_9mon",
-            "tds_path": "model-cfs_refor_hp_mm_9m",
-            "tds_id": "cfs_refor_hp_mm_9m",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data1",
-            "writeable": false
-        },
-        {
-            "name": "Monthly Means from seasonal Runs",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/model/cfsr-hpr-mms",
-            "tds_path": "model-cfs_refor_hp_mm_se",
-            "tds_id": "cfs_refor_hp_mm_se",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "Time Series from 45-Day and Seasonal Runs",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/model/cfsr-hpr-ts45",
-            "tds_path": "model-cfs_refor_hp_ts_seasonal",
-            "tds_id": "cfs_refor_hp_ts_seasonal",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "Time Series from 9-Month Runs",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata2/cmd_ts_9mon",
-            "tds_path": "model-cfs_refor_hp_ts_9m",
-            "tds_id": "cfs_refor_hp_ts_9m",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data1",
-            "writeable": false
-        },
-        {
-            "name": "Surface and Radiative Fluxes (FLX), 45 Day Run",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata/cfs_reforecast_6-hourly_45day_flxf",
-            "tds_path": "model-cfs_refor_6h_45d_flx",
-            "tds_id": "cfs_refor_6h_45d_flx",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data1",
-            "writeable": false
-        },
-        {
-            "name": "Pressure Level (PGB), 45 Day Run",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata/cfs_reforecast_6-hourly_45day_pgbf",
-            "tds_path": "model-cfs_refor_6h_45d_pgb",
-            "tds_id": "cfs_refor_6h_45d_pgb",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data1",
-            "writeable": false
-        },
-        {
-            "name": "Surface and Radiative Fluxes (FLX), 90 Day Run",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata2/cfs_reforecast_6-hourly_90day_flxf",
-            "tds_path": "model-cfs_refor_6h_90d_flx",
-            "tds_id": "cfs_refor_6h_90d_flx",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data1",
-            "writeable": false
-        },
-        {
-            "name": "Pressure Level (PGB), 90 Day Run",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata2/cfs_reforecast_6-hourly_90day_pgbf",
-            "tds_path": "model-cfs_refor_6h_90d_pgb",
-            "tds_id": "cfs_refor_6h_90d_pgb",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data1",
-            "writeable": false
-        },
-        {
-            "name": "Surface and Radiative Fluxes (FLX), 9 Month Run",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata/cfs_reforecast_6-hourly_9mon_flxf",
-            "tds_path": "model-cfs_refor_6h_9m_flx",
-            "tds_id": "cfs_refor_6h_9m_flx",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data1",
-            "writeable": false
-        },
-        {
-            "name": "Pressure Level (PGB), 9 Month Run",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata/cfs_reforecast_6-hourly_9mon_pgbf",
-            "tds_path": "model-cfs_refor_6h_9m_pgb",
-            "tds_id": "cfs_refor_6h_9m_pgb",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.32:/export/Data",
-            "writeable": false
-        },
-        {
-            "name": "Ocean (OCNF) 1982-2010",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata2/cfs_reforecast_calclim_mm_9mon_ocnf_1982-2010",
-            "tds_path": "model-cfs_refor_calclim_mm_9m_ocnf",
-            "tds_id": "cfs_refor_calclim_mm_9m_ocnf",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data1",
-            "writeable": false
-        },
-        {
-            "name": "Data By Pressure Level (PGBF) 1982-2010",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata2/cfs_reforecast_calclim_mm_9mon_pgbf_1982-2010",
-            "tds_path": "model-cfs_refor_calclim_mm_9m_pgbf",
-            "tds_id": "cfs_refor_calclim_mm_9m_pgbf",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data1",
-            "writeable": false
-        },
-        {
-            "name": "Time Series",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata/cfsv2_analysis_timeseries",
-            "tds_path": "model-cfs_v2_anl_ts",
-            "tds_id": "cfs_v2_anl_ts",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.32:/export/Data",
-            "writeable": false
-        },
-        {
-            "name": "Energetics, Monthly",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata/cfsv2_analysis_monthlymeans_egy",
-            "tds_path": "model-cfs_v2_anl_mm_egy",
-            "tds_id": "cfs_v2_anl_mm_egy",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.32:/export/Data",
-            "writeable": false
-        },
-        {
-            "name": "Surface and Radiative Fluxes (FLX), Monthly",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata/cfsv2_analysis_monthlymeans_flx",
-            "tds_path": "model-cfs_v2_anl_mm_flxf",
-            "tds_id": "cfs_v2_anl_mm_flxf",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.32:/export/Data",
-            "writeable": false
-        },
-        {
-            "name": "Isentropic Level (IPV), Monthly",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata/cfsv2_analysis_monthlymeans_ipv",
-            "tds_path": "model-cfs_v2_anl_mm_ipv",
-            "tds_id": "cfs_v2_anl_mm_ipv",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.32:/export/Data",
-            "writeable": false
-        },
-        {
-            "name": "Ocean (OCN), Monthly",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata/cfsv2_analysis_monthlymeans_ocn",
-            "tds_path": "model-cfs_v2_anl_mm_ocn",
-            "tds_id": "cfs_v2_anl_mm_ocn",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.32:/export/Data",
-            "writeable": false
-        },
-        {
-            "name": "Pressure Level (PGB), Monthly",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata/cfsv2_analysis_monthlymeans_pgb",
-            "tds_path": "model-cfs_v2_anl_mm_pgb",
-            "tds_id": "cfs_v2_anl_mm_pgb",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.32:/export/Data",
-            "writeable": false
-        },
-        {
-            "name": "Surface and Radiative Fluxes (FLX), 6-hour",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata2/cfsv2_analysis_flxf",
-            "tds_path": "model-cfs_v2_anl_6h_flxf",
-            "tds_id": "cfs_v2_anl_6h_flxf",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data1",
-            "writeable": false
-        },
-        {
-            "name": "Low Resolution Data, 6-hour",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata2/cfsv2_analysis_grblow",
-            "tds_path": "model-cfs_v2_anl_6h_grblow",
-            "tds_id": "cfs_v2_anl_6h_grblow",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data1",
-            "writeable": false
-        },
-        {
-            "name": "3-D Isentropic Level (IPV), 6-hour",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata2/cfsv2_analysis_ipvh",
-            "tds_path": "model-cfs_v2_anl_6h_ipv",
-            "tds_id": "cfs_v2_anl_6h_ipv",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data1",
-            "writeable": false
-        },
-        {
-            "name": "3-D Ocean (OCN), 6-hour",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata2/cfsv2_analysis_ocnh",
-            "tds_path": "model-cfs_v2_anl_6h_ocnh",
-            "tds_id": "cfs_v2_anl_6h_ocnh",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data1",
-            "writeable": false
-        },
-        {
-            "name": "3-D Pressure Level (PGB), 6-hour",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata2/cfsv2_analysis_pgbh",
-            "tds_path": "model-cfs_v2_anl_6h_pgb",
-            "tds_id": "cfs_v2_anl_6h_pgb",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data1",
-            "writeable": false
-        },
-        {
-            "name": "Time Series",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata/cfsv2_forecast_ts_9mon",
-            "tds_path": "model-cfs_v2_for_ts",
-            "tds_id": "cfs_v2_for_ts",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.32:/export/Data",
-            "writeable": false
-        },
-        {
-            "name": "Monthly Means",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata/cfsv2_forecast_mm_9mon",
-            "tds_path": "model-cfs_v2_for_mm",
-            "tds_id": "cfs_v2_for_mm",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.32:/export/Data",
-            "writeable": false
-        },
-        {
-            "name": "Surface and Radiative Fluxes (FLX), 6-hour",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata/cfsv2_forecast_6-hourly_9mon_flxf",
-            "tds_path": "model-cfs_v2_for_6h_flxf",
-            "tds_id": "cfs_v2_for_6h_flxf",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.32:/export/Data",
-            "writeable": false
-        },
-        {
-            "name": "3-D Isentropic Level (IPV), 6-hour",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata/cfsv2_forecast_6-hourly_9mon_ipvf",
-            "tds_path": "model-cfs_v2_for_6h_ipv",
-            "tds_id": "cfs_v2_for_6h_ipv",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.32:/export/Data",
-            "writeable": false
-        },
-        {
-            "name": "3-D Ocean (OCN), 6-hour",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata/cfsv2_forecast_6-hourly_9mon_ocnf",
-            "tds_path": "model-cfs_v2_for_6h_ocnh",
-            "tds_id": "cfs_v2_for_6h_ocnh",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.32:/export/Data",
-            "writeable": false
-        },
-        {
-            "name": "3-D Pressure Level (PGB), 6-hour",
-            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata/cfsv2_forecast_6-hourly_9mon_pgbf",
-            "tds_path": "model-cfs_v2_for_6h_pgb",
-            "tds_id": "cfs_v2_for_6h_pgb",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.32:/export/Data",
-            "writeable": false
-        }
-    ],
-    "model/ciofs_catalog.xml": [
-        {
-            "name": "CIOFS Models",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ciofs_catalog.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/cook-inlet-operational-forecast-system-ciofs",
-            "tds_path": "model-ciofs-files",
-            "tds_id": "CIOFS/MODELS",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        }
-    ],
-    "model/creofs_catalog.xml": [
-        {
-            "name": "CREOFS Models",
-            "catalog": "/var/lib/tomcat/content/thredds/model/creofs_catalog.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/columbia-river-estuary-operational-forecast-system-creofs/",
-            "tds_path": "model-creofs-files",
-            "tds_id": "model-creofs-files",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        }
-    ],
-    "model/dbofs_catalog.xml": [
-        {
-            "name": "DBOFS Models",
-            "catalog": "/var/lib/tomcat/content/thredds/model/dbofs_catalog.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/delaware-bay-operational-forecast-system-dbofs/",
-            "tds_path": "model-dbofs-files",
-            "tds_id": "DBOFS/MODELS",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        }
-    ],
-    "model/gens.xml": [
-        {
-            "name": "GEFS3 - Global Ensemble Forecast System 003 (1 degree longitude-latitude grid, 21 members)",
-            "catalog": "/var/lib/tomcat/content/thredds/model/gens.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/global-ensemble-forecast-system/access/1.0-degree-grid/",
-            "tds_path": "model-gefs-003",
-            "tds_id": "gefs003",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "GEFS2 - Global Ensemble Forecast System 002 (2.5 degree longitude-latitude grid, 21 members)",
-            "catalog": "/var/lib/tomcat/content/thredds/model/gens.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/global-ensemble-forecast-system/access/2.5-degree-grid/",
-            "tds_path": "model-gefs-002",
-            "tds_id": "gefs002",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        }
-    ],
-    "model/gfs.xml": [
-        {
-            "name": "Global Forecast System - Grid 3 - file units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/gfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/global-forecast-system/access/grid-003-1.0-degree/forecast",
-            "tds_path": "model-gfs-003-files",
-            "tds_id": "gfs-g3-files",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "Global Forecast System - Grid 3 - historical file units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/gfs.xml",
-            "type": "datasetScan",
-            "server_location": "/san5102/nexus/gfs-avn",
-            "tds_path": "model-gfs-003-files-old",
-            "tds_id": "gfs-g3-files-old",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
-            "writeable": false
-        },
-        {
-            "name": "Global Forecast System - Grid 4 - file units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/gfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/global-forecast-system/access/grid-004-0.5-degree/analysis",
-            "tds_path": "model-gfs-004-files",
-            "tds_id": "gfs-g4-files",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "Global Forecast System - Grid 4 - historical file units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/gfs.xml",
-            "type": "datasetScan",
-            "server_location": "/san5303/nexus/gfs4",
-            "tds_path": "model-gfs-004-files-old",
-            "tds_id": "gfs-g4-files-old",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
-            "writeable": false
-        },
-        {
-            "name": "Global Forecast System Grid 3 Analysis Set - file units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/gfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/global-forecast-system/access/grid-003-1.0-degree/analysis",
-            "tds_path": "model-gfs-g3-anl-files",
-            "tds_id": "gfs-g3-anl-files",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "Global Forecast System Grid 3 Analysis Set - historical file units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/gfs.xml",
-            "type": "datasetScan",
-            "server_location": "/san5302/nexus/gfsanl",
-            "tds_path": "model-gfs-g3-anl-files-old",
-            "tds_id": "gfs-g3-anl-files-old",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P1/san5302",
-            "writeable": false
-        },
-        {
-            "name": "Global Forecast System Grid 4 Analysis Set - file units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/gfs.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/global-forecast-system/access/grid-004-0.5-degree/analysis",
-            "tds_path": "model-gfs-g4-anl-files",
-            "tds_id": "gfs-g4-anl-files",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "Global Forecast System Grid 4 Analysis Set - historical file units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/gfs.xml",
-            "type": "datasetScan",
-            "server_location": "/san5302/nexus/gfsanl",
-            "tds_path": "model-gfs-g4-anl-files-old",
-            "tds_id": "gfs-g4-anl-files-old",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P1/san5302",
-            "writeable": false
-        }
-    ],
-    "model/gomofs_catalog.xml": [
-        {
-            "name": "GOMOFS Models",
-            "catalog": "/var/lib/tomcat/content/thredds/model/gomofs_catalog.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/gulf-of-maine-operational-forecast-system-gomofs",
-            "tds_path": "model-gomofs-files",
-            "tds_id": "GOMOFS/MODELS",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        }
-    ],
-    "model/leofs_catalog.xml": [
-        {
-            "name": "LEOFS Models",
-            "catalog": "/var/lib/tomcat/content/thredds/model/leofs_catalog.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-erie-operational-forecast-system-leofs",
-            "tds_path": "model-leofs",
-            "tds_id": "NOAA/LEOFS/MODELS",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        }
-    ],
-    "model/lhofs_catalog.xml": [
-        {
-            "name": "LHOFS Models",
-            "catalog": "/var/lib/tomcat/content/thredds/model/lhofs_catalog.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-huron-operational-forecast-system-lhofs/",
-            "tds_path": "model-lhofs-files",
-            "tds_id": "LHOFS/MODELS",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        }
-    ],
-    "model/lmhofs_catalog.xml": [
-        {
-            "name": "LMHOFS Models",
-            "catalog": "/var/lib/tomcat/content/thredds/model/lmhofs_catalog.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-michigan-and-huron-operational-forecast-system-lmhofs",
-            "tds_path": "model-lmhofs-files",
-            "tds_id": "LMHOFS/MODELS",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        }
-    ],
-    "model/lmofs_catalog.xml": [
-        {
-            "name": "LMOFS Models",
-            "catalog": "/var/lib/tomcat/content/thredds/model/lmofs_catalog.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-michigan-operational-forecast-system-lmofs/",
-            "tds_path": "model-lmofs-files",
-            "tds_id": "LMOFS/MODELS",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        }
-    ],
-    "model/loofs_catalog.xml": [
-        {
-            "name": "LOOFS Models",
-            "catalog": "/var/lib/tomcat/content/thredds/model/loofs_catalog.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-ontario-operational-forecast-system-loofs",
-            "tds_path": "model-loofs-files",
-            "tds_id": "LOOFS/MODELS",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        }
-    ],
-    "model/lsofs_catalog.xml": [
-        {
-            "name": "LSOFS Models",
-            "catalog": "/var/lib/tomcat/content/thredds/model/lsofs_catalog.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-superior-operational-forecast-system-lsofs/",
-            "tds_path": "model-lsofs-files",
-            "tds_id": "LSOFS/MODELS",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        }
-    ],
-    "model/model.xml": [
-        {
-            "name": null,
-            "catalog": "model/model.xml",
-            "type": null,
-            "server_location": null,
-            "tds_path": null,
-            "tds_id": null,
-            "parent_catalog": "catalog.xml",
-            "mount_path": null,
-            "writeable": null
-        }
-    ],
-    "model/nam.xml": [
-        {
-            "name": "NAM218 - Near Real-Time",
-            "catalog": "/var/lib/tomcat/content/thredds/model/nam.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/north-american-mesoscale-model/access/forecast",
-            "tds_path": "model-nam218",
-            "tds_id": null,
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "NAM218 -  Historical",
-            "catalog": "/var/lib/tomcat/content/thredds/model/nam.xml",
-            "type": "datasetScan",
-            "server_location": "/san5303/nexus/nam",
-            "tds_path": "model-nam218-old",
-            "tds_id": null,
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
-            "writeable": false
-        },
-        {
-            "name": "NAM Grid 218 - Analysis Only File Units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/nam.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/north-american-mesoscale-model/access/analysis",
-            "tds_path": "model-namanl",
-            "tds_id": null,
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "NAM Grid 218 - Analysis Only File Units, Historical",
-            "catalog": "/var/lib/tomcat/content/thredds/model/nam.xml",
-            "type": "datasetScan",
-            "server_location": "/san5302/nexus/namanl",
-            "tds_path": "model-namanl-old",
-            "tds_id": null,
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P1/san5302",
-            "writeable": false
-        }
-    ],
-    "model/narr.xml": [
-        {
-            "name": "NARR-A - 3 Hour - File Units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/narr.xml",
-            "type": "datasetScan",
-            "server_location": "/san5102/nexus/narr",
-            "tds_path": "model-narr-a-files",
-            "tds_id": null,
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
-            "writeable": false
-        },
-        {
-            "name": "NARR-A Monthly Means from Climate Diagnostics Center - File Units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/narr.xml",
-            "type": "datasetScan",
-            "server_location": "/san5102/nexus/narrmon",
-            "tds_path": "model-narrmon-a-files",
-            "tds_id": null,
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
-            "writeable": false
-        },
-        {
-            "name": "NARR-A Monthly Means by 3h Period from Climate Diagnostics Center - File Units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/narr.xml",
-            "type": "datasetScan",
-            "server_location": "/san5102/nexus/narrmon",
-            "tds_path": "model-narrmonhr-a-files",
-            "tds_id": null,
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
-            "writeable": false
-        },
-        {
-            "name": "NARR-B - 3 Hour - File Units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/narr.xml",
-            "type": "datasetScan",
-            "server_location": "/san5102/nexus/narr",
-            "tds_path": "model-narr-b-files",
-            "tds_id": null,
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
-            "writeable": false
-        },
-        {
-            "name": "NARR-B Monthly Means from Climate Diagnostics Center - File Units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/narr.xml",
-            "type": "datasetScan",
-            "server_location": "/san5102/nexus/narrmon",
-            "tds_path": "model-narrmon-b-files",
-            "tds_id": null,
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
-            "writeable": false
-        },
-        {
-            "name": "NARR-B Monthly Means by 3h Period from Climate Diagnostics Center - File Units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/narr.xml",
-            "type": "datasetScan",
-            "server_location": "/san5102/nexus/narrmon",
-            "tds_path": "model-narrmonhr-b-files",
-            "tds_id": null,
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
-            "writeable": false
-        }
-    ],
-    "model/ndfd.xml": [
-        {
-            "name": "NDFD - National Digital Forecast Database - File Access",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ndfd.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/national-digital-forecast-database/access",
-            "tds_path": "model-ndfd-file",
-            "tds_id": "NDFD",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "NDFD - National Digital Forecast Database - Historical File Access",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ndfd.xml",
-            "type": "datasetScan",
-            "server_location": "/san5303/nexus/ndfd",
-            "tds_path": "model-ndfd-file-old",
-            "tds_id": "NDFD-OLD",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
-            "writeable": false
-        },
-        {
-            "name": "NDFD - File Access for Core NDFD (Center Code: KWBN) Data With Human-Readable Names",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ndfd.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/national-digital-forecast-database/access",
-            "tds_path": "model-ndfd-file_kwbn",
-            "tds_id": "NDFD_kwbn",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "NDFD - Historical File Access for Core NDFD (Center Code: KWBN) Data With Human-Readable Names",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ndfd.xml",
-            "type": "datasetScan",
-            "server_location": "/san5303/nexus/ndfd",
-            "tds_path": "model-ndfd-file_kwbn-old",
-            "tds_id": "NDFD_kwbn-old",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
-            "writeable": false
-        },
-        {
-            "name": "NDFD - File Access for National Hurricane Center (Center Code: KNHC) Data With Human-Readable Names",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ndfd.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/national-digital-forecast-database/access",
-            "tds_path": "model-ndfd-file_knhc",
-            "tds_id": "NDFD_knhc",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "NDFD - Historical File Access for National Hurricane Center (Center Code: KNHC) Data With Human-Readable Names",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ndfd.xml",
-            "type": "datasetScan",
-            "server_location": "/san5303/nexus/ndfd",
-            "tds_path": "model-ndfd-file_knhc-old",
-            "tds_id": "NDFD_knhc-old",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
-            "writeable": false
-        },
-        {
-            "name": "NDFD - File Access for Storm Prediction Center (Center Code: KWNS) Data With Human-Readable Names",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ndfd.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/national-digital-forecast-database/access",
-            "tds_path": "model-ndfd-file_kwns",
-            "tds_id": "NDFD_kwns",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "NDFD - Historical File Access for Storm Prediction Center (Center Code: KWNS) Data With Human-Readable Names",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ndfd.xml",
-            "type": "datasetScan",
-            "server_location": "/san5303/nexus/ndfd",
-            "tds_path": "model-ndfd-file_kwns-old",
-            "tds_id": "NDFD_kwns-old",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
-            "writeable": false
-        },
-        {
-            "name": "NDFD - File Access for Climate Prediction Center (Center Code: KWNC) Data With Human-Readable Names",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ndfd.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/national-digital-forecast-database/access",
-            "tds_path": "model-ndfd-file_kwnc",
-            "tds_id": "NDFD_kwnc",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "NDFD - Historical File Access for Climate Prediction Center (Center Code: KWNC) Data With Human-Readable Names",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ndfd.xml",
-            "type": "datasetScan",
-            "server_location": "/san5303/nexus/ndfd",
-            "tds_path": "model-ndfd-file_kwnc-old",
-            "tds_id": "NDFD_kwnc-old",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
-            "writeable": false
-        }
-    ],
-    "model/ndgd.xml": [
-        {
-            "name": "NDGD - National Digital Guidance Database (file listing)",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ndgd.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/national-digital-guidance-database/access",
-            "tds_path": "model-ndgd-file",
-            "tds_id": "NDGD",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "NDGD - National Digital Guidance Database (file listing, historical)",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ndgd.xml",
-            "type": "datasetScan",
-            "server_location": "/san5303/nexus/ndgd",
-            "tds_path": "model-ndgd-file-old",
-            "tds_id": "NDGD-OLD",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
-            "writeable": false
-        },
-        {
-            "name": "NDGD - National Digital Guidance Database Core Files (Center Code: KWBR)",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ndgd.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/national-digital-guidance-database/access",
-            "tds_path": "model-ndgd-file_kwbr",
-            "tds_id": "NDGD_KWBR",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "NDGD - National Digital Guidance Database Core Files, Historical (Center Code: KWBR)",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ndgd.xml",
-            "type": "datasetScan",
-            "server_location": "/san5303/nexus/ndgd",
-            "tds_path": "model-ndgd-file_kwbr-old",
-            "tds_id": "NDGD_KWBR-old",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
-            "writeable": false
-        },
-        {
-            "name": "NDGD - National Digital Guidance Database Air Quality (Center Code: KWBP)",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ndgd.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/national-digital-guidance-database/access",
-            "tds_path": "model-ndgd-file_kwbp",
-            "tds_id": "NDGD_KWBP",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "NDGD - National Digital Guidance Database Air Quality, Historical (Center Code: KWBP)",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ndgd.xml",
-            "type": "datasetScan",
-            "server_location": "/san5303/nexus/ndgd",
-            "tds_path": "model-ndgd-file_kwbp-old",
-            "tds_id": "NDGD_KWBP-old",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
-            "writeable": false
-        },
-        {
-            "name": "NDGD - National Digital Guidance Database National Hurricane Center (Center Code: KNHC)",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ndgd.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/national-digital-guidance-database/access",
-            "tds_path": "model-ndgd-file_knhc",
-            "tds_id": "NDGD_KNHC",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "NDGD - National Digital Guidance Database National Hurricane Center, Historical (Center Code: KNHC)",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ndgd.xml",
-            "type": "datasetScan",
-            "server_location": "/san5303/nexus/ndgd",
-            "tds_path": "model-ndgd-file_knhc-old",
-            "tds_id": "NDGD_KNHC-old",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
-            "writeable": false
-        },
-        {
-            "name": "NDGD - National Digital Guidance Database Climate Prediction Center (Center Code: KWNC)",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ndgd.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/national-digital-guidance-database/access",
-            "tds_path": "model-ndgd-file_kwnc",
-            "tds_id": "NDGD_KWNC",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "NDGD - National Digital Guidance Database Climate Prediction Center, Historical (Center Code: KWNC)",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ndgd.xml",
-            "type": "datasetScan",
-            "server_location": "/san5303/nexus/ndgd",
-            "tds_path": "model-ndgd-file_kwnc-old",
-            "tds_id": "NDGD_KWNC-old",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
-            "writeable": false
-        },
-        {
-            "name": "NDGD - National Digital Guidance (Center Code: KWBG)",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ndgd.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/national-digital-guidance-database/access",
-            "tds_path": "model-ndgd-file_kwbg",
-            "tds_id": "NDGD_KWBG",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        }
-    ],
-    "model/negofs_catalog.xml": [
-        {
-            "name": "NEGOFS Models",
-            "catalog": "/var/lib/tomcat/content/thredds/model/negofs_catalog.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/northeast-gulf-of-mexico-operational-forecast-system-negofs/",
-            "tds_path": "model-negofs-files",
-            "tds_id": "NOAA/NEGOFS/MODELS",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        }
-    ],
-    "model/ngofs2_catalog.xml": [
-        {
-            "name": "NGOFS2 Models",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ngofs2_catalog.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/northern-gulf-of-mexico-2-operational-forecast-system-ngofs2/",
-            "tds_path": "model-ngofs2-files",
-            "tds_id": "NOAA/NGOFS2/MODELS",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        }
-    ],
-    "model/ngofs_catalog.xml": [
-        {
-            "name": "NGOFS Models",
-            "catalog": "/var/lib/tomcat/content/thredds/model/ngofs_catalog.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/northern-gulf-of-mexico-operational-forecast-system-ngofs/",
-            "tds_path": "model-ngofs-files",
-            "tds_id": "NOAA/NGOFS/MODELS",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        }
-    ],
-    "model/nmme.xml": [
-        {
-            "name": null,
-            "catalog": "model/nmme.xml",
-            "type": null,
-            "server_location": null,
-            "tds_path": null,
-            "tds_id": null,
-            "parent_catalog": "model/model.xml",
-            "mount_path": null,
-            "writeable": null
-        }
-    ],
-    "model/nnr2.xml": [
-        {
-            "name": "NCEP/NCAR Reanalysis II (NNR2) 6-hour - File Units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/nnr2.xml",
-            "type": "datasetScan",
-            "server_location": "/san5102/nexus/reanalysis-2/6hr/",
-            "tds_path": "model-nnr2-6h-files",
-            "tds_id": null,
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
-            "writeable": false
-        },
-        {
-            "name": "NCEP/NCAR Reanalysis II (NNR2) montly - File Units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/nnr2.xml",
-            "type": "datasetScan",
-            "server_location": "/san5102/nexus/reanalysis-2/month/",
-            "tds_path": "model-nnr2-month-files",
-            "tds_id": null,
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
-            "writeable": false
-        }
-    ],
-    "model/nwgofs_catalog.xml": [
-        {
-            "name": "NWGOFS Models",
-            "catalog": "/var/lib/tomcat/content/thredds/model/nwgofs_catalog.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/northwest-gulf-of-mexico-operational-forecast-system-nwgofs/",
-            "tds_path": "model-nwgofs-files",
-            "tds_id": "NOAA/NWGOFS/MODELS",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        }
-    ],
-    "model/nyofs_catalog.xml": [
-        {
-            "name": "NYOFS Models",
-            "catalog": "/var/lib/tomcat/content/thredds/model/nyofs_catalog.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/port-of-new-york-and-new-jersey-operational-forecast-system-nyofs/",
-            "tds_path": "model-nyofs-files",
-            "tds_id": "NYOFS/MODELS",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        }
-    ],
-    "model/paleo.xml": [
-        {
-            "name": "Drought Reconstructions",
-            "catalog": "/var/lib/tomcat/content/thredds/model/paleo.xml",
-            "type": "datasetScan",
-            "server_location": "/san5102/nexus/paleo/ngdc",
-            "tds_path": "model-paleo-pdsi",
-            "tds_id": "paleo-pdsi",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
-            "writeable": false
-        },
-        {
-            "name": "Paleoclimate Model Intercomparision Project",
-            "catalog": "/var/lib/tomcat/content/thredds/model/paleo.xml",
-            "type": "datasetScan",
-            "server_location": "/san5102/nexus/paleo/PMIP",
-            "tds_path": "model-paleo-pmip",
-            "tds_id": "paleo-pmip",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
-            "writeable": false
-        },
-        {
-            "name": "Paleoclimate Reconstructions of Last 2 Millennia",
-            "catalog": "/var/lib/tomcat/content/thredds/model/paleo.xml",
-            "type": "datasetScan",
-            "server_location": "/san5102/nexus/paleo/Last2Millennia/Reconstructions",
-            "tds_path": "model-paleo-2m-recon",
-            "tds_id": "paleo-2m-recon",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
-            "writeable": false
-        },
-        {
-            "name": "Abrupt Climate Change",
-            "catalog": "/var/lib/tomcat/content/thredds/model/paleo.xml",
-            "type": "datasetScan",
-            "server_location": "/san5102/nexus/paleo/AbruptChange",
-            "tds_path": "model-paleo-abrupt-climate-change",
-            "tds_id": "paleo-abrupt-climate-change",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
-            "writeable": false
-        }
-    ],
-    "model/rucrap.xml": [
-        {
-            "name": "Rapid Refresh - 13km CONUS - file units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/rucrap.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/rapid-refresh/access/rap-130-13km/forecast/",
-            "tds_path": "model-rap130",
-            "tds_id": "rap130",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "Rapid Refresh - 13km CONUS - historical file units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/rucrap.xml",
-            "type": "datasetScan",
-            "server_location": "/san5303/nexus/ruc13",
-            "tds_path": "model-rap130-old",
-            "tds_id": "rap130-old",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
-            "writeable": false
-        },
-        {
-            "name": "Rapid Refresh - 20KM CONUS - file units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/rucrap.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/rapid-refresh/access/rap-252-20km/forecast/",
-            "tds_path": "model-rap252",
-            "tds_id": "rap252",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "Rapid Refresh - 20KM CONUS - historical file units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/rucrap.xml",
-            "type": "datasetScan",
-            "server_location": "/san5303/nexus/ruc",
-            "tds_path": "model-rap252-old",
-            "tds_id": "rap252-old",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
-            "writeable": false
-        },
-        {
-            "name": "Rapid Refresh Analysis Collection - 13km CONUS - file units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/rucrap.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/rapid-refresh/access/rap-130-13km/analysis/",
-            "tds_path": "model-rap130anl",
-            "tds_id": "rap130anl",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "Rapid Refresh Analysis Collection - 13km CONUS - historical file units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/rucrap.xml",
-            "type": "datasetScan",
-            "server_location": "/san5302/nexus/rucanl",
-            "tds_path": "model-rap130anl-old",
-            "tds_id": "rap130anl-old",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P1/san5302",
-            "writeable": false
-        },
-        {
-            "name": "Rapid Refresh Analysis Collection - 20km CONUS - file units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/rucrap.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/rapid-refresh/access/rap-252-20km/analysis/",
-            "tds_path": "model-rap252anl",
-            "tds_id": "rap252anl",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        },
-        {
-            "name": "Rapid Refresh Analysis Collection - 20km CONUS - historical file units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/rucrap.xml",
-            "type": "datasetScan",
-            "server_location": "/san5302/nexus/rucanl",
-            "tds_path": "model-rap252anl-old",
-            "tds_id": "rap252anl-old",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P1/san5302",
-            "writeable": false
-        },
-        {
-            "name": "Rapid Update Cycle Analysis Collection - 20km CONUS - file units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/rucrap.xml",
-            "type": "datasetScan",
-            "server_location": "/san5302/nexus/rucanl",
-            "tds_path": "model-ruc252anl",
-            "tds_id": "ruc252anl",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P1/san5302",
-            "writeable": false
-        },
-        {
-            "name": "Rapid Update Cycle Analysis Collection - 13km CONUS - file units",
-            "catalog": "/var/lib/tomcat/content/thredds/model/rucrap.xml",
-            "type": "datasetScan",
-            "server_location": "/san5302/nexus/rucanl",
-            "tds_path": "model-ruc130anl",
-            "tds_id": "ruc130anl",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P1/san5302",
-            "writeable": false
-        }
-    ],
-    "model/sfbofs_catalog.xml": [
-        {
-            "name": "SFBOFS Models",
-            "catalog": "/var/lib/tomcat/content/thredds/model/sfbofs_catalog.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/san-francisco-bay-operational-forecast-system-sfbofs/",
-            "tds_path": "model-sfbofs-files",
-            "tds_id": "NOAA/SFBOFS/MODELS",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        }
-    ],
-    "model/sjrofs_catalog.xml": [
-        {
-            "name": "SJROFS Models",
-            "catalog": "/var/lib/tomcat/content/thredds/model/sjrofs_catalog.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/st-johns-river-operational-forecast-system-sjrofs/",
-            "tds_path": "model-sjrofs-files",
-            "tds_id": "SJROFS/MODELS",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        }
-    ],
-    "model/srrs.xml": [
-        {
-            "name": "SRRS - NWS Service Records Retention System (GRIB Products)",
-            "catalog": "/var/lib/tomcat/content/thredds/model/srrs.xml",
-            "type": "datasetScan",
-            "server_location": "/san5303/nexus/srrs/data",
-            "tds_path": "model-srrs-grib",
-            "tds_id": "SRRS-GRIB",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
-            "writeable": false
-        }
-    ],
-    "model/tbofs_catalog.xml": [
-        {
-            "name": "TBOFS Models",
-            "catalog": "/var/lib/tomcat/content/thredds/model/tbofs_catalog.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/tampa-bay-operational-forecast-system-tbofs/",
-            "tds_path": "model-tbofs-files",
-            "tds_id": "TBOFS/MODELS",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        }
-    ],
-    "model/wcofs_catalog.xml": [
-        {
-            "name": "WCOFS Models",
-            "catalog": "/var/lib/tomcat/content/thredds/model/wcofs_catalog.xml",
-            "type": "datasetScan",
-            "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/west-coast-operational-forecast-system-wcofs/",
-            "tds_path": "model-wcofs-files",
-            "tds_id": "NOAA/WCOFS/MODELS",
-            "parent_catalog": "model/model.xml",
-            "mount_path": "10.254.11.33:/export/opsnas102-data2",
-            "writeable": false
-        }
-    ],
-    "model/wcrp-cmip3.xml": [
-        {
-            "name": null,
-            "catalog": "model/wcrp-cmip3.xml",
-            "type": null,
-            "server_location": null,
-            "tds_path": null,
-            "tds_id": null,
-            "parent_catalog": "model/model.xml",
-            "mount_path": null,
-            "writeable": null
-        }
-    ],
-    "stub.xml": [
-        {
-            "name": null,
-            "catalog": "stub.xml",
-            "type": null,
-            "server_location": null,
-            "tds_path": null,
-            "tds_id": null,
-            "parent_catalog": "catalog.xml",
-            "mount_path": null,
-            "writeable": null
-        }
-    ]
+    "tds-model01-test.ncei.noaa.gov": {
+        "model/cbofs_catalog.xml": [
+            {
+                "name": "CBOFS Models",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cbofs_catalog.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/chesapeake-bay-operational-forecast-system-cbofs",
+                "tds_path": "model-cbofs-files",
+                "tds_id": "CBOFS/MODELS",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            }
+        ],
+        "model/cfs.xml": [
+            {
+                "name": "CFS File Access in Raw Directory Structure",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata",
+                "tds_path": "model-cfs-allfiles",
+                "tds_id": "model-cfs-allfiles",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.32:/export/Data",
+                "writeable": false
+            },
+            {
+                "name": "Time Series",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/model/cfsr",
+                "tds_path": "model-cfs_reanl_ts",
+                "tds_id": "cfs_reanl_ts",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "Monthly Means",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
+                "tds_path": "model-cfs_reanl_mm",
+                "tds_id": "cfs_reanl_mm",
+                "parent_catalog": "model/model.xml",
+                "mount_path": null,
+                "writeable": false
+            },
+            {
+                "name": "3-D Diabatic Heating Data (DIAB), 6-hour",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata2/cmd_diabf",
+                "tds_path": "model-cfs_reanl_6h_diab",
+                "tds_id": "cfs_reanl_6h_diab",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data1",
+                "writeable": false
+            },
+            {
+                "name": "Surface and Radiative Fluxes (FLX), 6-hour",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata2/cmd_flxf",
+                "tds_path": "model-cfs_reanl_6h_flxf",
+                "tds_id": "cfs_reanl_6h_flxf",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data1",
+                "writeable": false
+            },
+            {
+                "name": "Low Resolution Data, 6-hour",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata2/cmd_grblow",
+                "tds_path": "model-cfs_reanl_6h_grblow",
+                "tds_id": "cfs_reanl_6h_grblow",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data1",
+                "writeable": false
+            },
+            {
+                "name": "3-D Isentropic Level (IPV), 6-hour",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata2/cmd_ipvh",
+                "tds_path": "model-cfs_reanl_6h_ipv",
+                "tds_id": "cfs_reanl_6h_ipv",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data1",
+                "writeable": false
+            },
+            {
+                "name": "3-D Ocean (OCN), 6-hour",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata2/cmd_ocnh",
+                "tds_path": "model-cfs_reanl_6h_ocnh",
+                "tds_id": "cfs_reanl_6h_ocnh",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data1",
+                "writeable": false
+            },
+            {
+                "name": "3-D Pressure Level (PGB), 6-hour",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata2/cmd_pgbh",
+                "tds_path": "model-cfs_reanl_6h_pgb",
+                "tds_id": "cfs_reanl_6h_pgb",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data1",
+                "writeable": false
+            },
+            {
+                "name": "Monthly Means of Daily Averages",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/model/cfsr-rfl-mmda",
+                "tds_path": "model-cfs_refor_fl_mm_da",
+                "tds_id": "cfs_refor_fl_mm_da",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "Monthly Mean Time Series of Selected Variables",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/model/cfsr-rfl-mmts",
+                "tds_path": "model-cfs_refor_fl_mm_ts",
+                "tds_id": "cfs_refor_fl_mm_ts",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "6-Hourly Time Series from 45-Day and Seasonal Runs",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/model/cfsr-rfl-ts45",
+                "tds_path": "model-cfs_refor_fl_6h_seasonal",
+                "tds_id": "cfs_refor_fl_6h_seasonal",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "6-Hourly Time Series from 9-Month Runs",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/model/cfsr-rfl-ts9",
+                "tds_path": "model-cfs_refor_fl_6h_9m",
+                "tds_id": "cfs_refor_fl_6h_9m",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "Monthly Means from 9-Month Runs",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata2/cmd_mm_9mon",
+                "tds_path": "model-cfs_refor_hp_mm_9m",
+                "tds_id": "cfs_refor_hp_mm_9m",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data1",
+                "writeable": false
+            },
+            {
+                "name": "Monthly Means from seasonal Runs",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/model/cfsr-hpr-mms",
+                "tds_path": "model-cfs_refor_hp_mm_se",
+                "tds_id": "cfs_refor_hp_mm_se",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "Time Series from 45-Day and Seasonal Runs",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/model/cfsr-hpr-ts45",
+                "tds_path": "model-cfs_refor_hp_ts_seasonal",
+                "tds_id": "cfs_refor_hp_ts_seasonal",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "Time Series from 9-Month Runs",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata2/cmd_ts_9mon",
+                "tds_path": "model-cfs_refor_hp_ts_9m",
+                "tds_id": "cfs_refor_hp_ts_9m",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data1",
+                "writeable": false
+            },
+            {
+                "name": "Surface and Radiative Fluxes (FLX), 45 Day Run",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "Path does not exist on server: /modeldata/cfs_reforecast_6-hourly_45day_flxf",
+                "tds_path": "model-cfs_refor_6h_45d_flx",
+                "tds_id": "cfs_refor_6h_45d_flx",
+                "parent_catalog": "model/model.xml",
+                "mount_path": null,
+                "writeable": false
+            },
+            {
+                "name": "Pressure Level (PGB), 45 Day Run",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "Path does not exist on server: /modeldata/cfs_reforecast_6-hourly_45day_pgbf",
+                "tds_path": "model-cfs_refor_6h_45d_pgb",
+                "tds_id": "cfs_refor_6h_45d_pgb",
+                "parent_catalog": "model/model.xml",
+                "mount_path": null,
+                "writeable": false
+            },
+            {
+                "name": "Surface and Radiative Fluxes (FLX), 90 Day Run",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata2/cfs_reforecast_6-hourly_90day_flxf",
+                "tds_path": "model-cfs_refor_6h_90d_flx",
+                "tds_id": "cfs_refor_6h_90d_flx",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data1",
+                "writeable": false
+            },
+            {
+                "name": "Pressure Level (PGB), 90 Day Run",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata2/cfs_reforecast_6-hourly_90day_pgbf",
+                "tds_path": "model-cfs_refor_6h_90d_pgb",
+                "tds_id": "cfs_refor_6h_90d_pgb",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data1",
+                "writeable": false
+            },
+            {
+                "name": "Surface and Radiative Fluxes (FLX), 9 Month Run",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "Path does not exist on server: /modeldata/cfs_reforecast_6-hourly_9mon_flxf",
+                "tds_path": "model-cfs_refor_6h_9m_flx",
+                "tds_id": "cfs_refor_6h_9m_flx",
+                "parent_catalog": "model/model.xml",
+                "mount_path": null,
+                "writeable": false
+            },
+            {
+                "name": "Pressure Level (PGB), 9 Month Run",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata/cfs_reforecast_6-hourly_9mon_pgbf",
+                "tds_path": "model-cfs_refor_6h_9m_pgb",
+                "tds_id": "cfs_refor_6h_9m_pgb",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.32:/export/Data",
+                "writeable": false
+            },
+            {
+                "name": "Ocean (OCNF) 1982-2010",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata2/cfs_reforecast_calclim_mm_9mon_ocnf_1982-2010",
+                "tds_path": "model-cfs_refor_calclim_mm_9m_ocnf",
+                "tds_id": "cfs_refor_calclim_mm_9m_ocnf",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data1",
+                "writeable": false
+            },
+            {
+                "name": "Data By Pressure Level (PGBF) 1982-2010",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata2/cfs_reforecast_calclim_mm_9mon_pgbf_1982-2010",
+                "tds_path": "model-cfs_refor_calclim_mm_9m_pgbf",
+                "tds_id": "cfs_refor_calclim_mm_9m_pgbf",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data1",
+                "writeable": false
+            },
+            {
+                "name": "Time Series",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata/cfsv2_analysis_timeseries",
+                "tds_path": "model-cfs_v2_anl_ts",
+                "tds_id": "cfs_v2_anl_ts",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.32:/export/Data",
+                "writeable": false
+            },
+            {
+                "name": "Energetics, Monthly",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata/cfsv2_analysis_monthlymeans_egy",
+                "tds_path": "model-cfs_v2_anl_mm_egy",
+                "tds_id": "cfs_v2_anl_mm_egy",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.32:/export/Data",
+                "writeable": false
+            },
+            {
+                "name": "Surface and Radiative Fluxes (FLX), Monthly",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata/cfsv2_analysis_monthlymeans_flx",
+                "tds_path": "model-cfs_v2_anl_mm_flxf",
+                "tds_id": "cfs_v2_anl_mm_flxf",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.32:/export/Data",
+                "writeable": false
+            },
+            {
+                "name": "Isentropic Level (IPV), Monthly",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata/cfsv2_analysis_monthlymeans_ipv",
+                "tds_path": "model-cfs_v2_anl_mm_ipv",
+                "tds_id": "cfs_v2_anl_mm_ipv",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.32:/export/Data",
+                "writeable": false
+            },
+            {
+                "name": "Ocean (OCN), Monthly",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata/cfsv2_analysis_monthlymeans_ocn",
+                "tds_path": "model-cfs_v2_anl_mm_ocn",
+                "tds_id": "cfs_v2_anl_mm_ocn",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.32:/export/Data",
+                "writeable": false
+            },
+            {
+                "name": "Pressure Level (PGB), Monthly",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata/cfsv2_analysis_monthlymeans_pgb",
+                "tds_path": "model-cfs_v2_anl_mm_pgb",
+                "tds_id": "cfs_v2_anl_mm_pgb",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.32:/export/Data",
+                "writeable": false
+            },
+            {
+                "name": "Surface and Radiative Fluxes (FLX), 6-hour",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata2/cfsv2_analysis_flxf",
+                "tds_path": "model-cfs_v2_anl_6h_flxf",
+                "tds_id": "cfs_v2_anl_6h_flxf",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data1",
+                "writeable": false
+            },
+            {
+                "name": "Low Resolution Data, 6-hour",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata2/cfsv2_analysis_grblow",
+                "tds_path": "model-cfs_v2_anl_6h_grblow",
+                "tds_id": "cfs_v2_anl_6h_grblow",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data1",
+                "writeable": false
+            },
+            {
+                "name": "3-D Isentropic Level (IPV), 6-hour",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata2/cfsv2_analysis_ipvh",
+                "tds_path": "model-cfs_v2_anl_6h_ipv",
+                "tds_id": "cfs_v2_anl_6h_ipv",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data1",
+                "writeable": false
+            },
+            {
+                "name": "3-D Ocean (OCN), 6-hour",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata2/cfsv2_analysis_ocnh",
+                "tds_path": "model-cfs_v2_anl_6h_ocnh",
+                "tds_id": "cfs_v2_anl_6h_ocnh",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data1",
+                "writeable": false
+            },
+            {
+                "name": "3-D Pressure Level (PGB), 6-hour",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata2/cfsv2_analysis_pgbh",
+                "tds_path": "model-cfs_v2_anl_6h_pgb",
+                "tds_id": "cfs_v2_anl_6h_pgb",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data1",
+                "writeable": false
+            },
+            {
+                "name": "Time Series",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata/cfsv2_forecast_ts_9mon",
+                "tds_path": "model-cfs_v2_for_ts",
+                "tds_id": "cfs_v2_for_ts",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.32:/export/Data",
+                "writeable": false
+            },
+            {
+                "name": "Monthly Means",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata/cfsv2_forecast_mm_9mon",
+                "tds_path": "model-cfs_v2_for_mm",
+                "tds_id": "cfs_v2_for_mm",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.32:/export/Data",
+                "writeable": false
+            },
+            {
+                "name": "Surface and Radiative Fluxes (FLX), 6-hour",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata/cfsv2_forecast_6-hourly_9mon_flxf",
+                "tds_path": "model-cfs_v2_for_6h_flxf",
+                "tds_id": "cfs_v2_for_6h_flxf",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.32:/export/Data",
+                "writeable": false
+            },
+            {
+                "name": "3-D Isentropic Level (IPV), 6-hour",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata/cfsv2_forecast_6-hourly_9mon_ipvf",
+                "tds_path": "model-cfs_v2_for_6h_ipv",
+                "tds_id": "cfs_v2_for_6h_ipv",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.32:/export/Data",
+                "writeable": false
+            },
+            {
+                "name": "3-D Ocean (OCN), 6-hour",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata/cfsv2_forecast_6-hourly_9mon_ocnf",
+                "tds_path": "model-cfs_v2_for_6h_ocnh",
+                "tds_id": "cfs_v2_for_6h_ocnh",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.32:/export/Data",
+                "writeable": false
+            },
+            {
+                "name": "3-D Pressure Level (PGB), 6-hour",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata/cfsv2_forecast_6-hourly_9mon_pgbf",
+                "tds_path": "model-cfs_v2_for_6h_pgb",
+                "tds_id": "cfs_v2_for_6h_pgb",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.32:/export/Data",
+                "writeable": false
+            }
+        ],
+        "model/ciofs_catalog.xml": [
+            {
+                "name": "CIOFS Models",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ciofs_catalog.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/cook-inlet-operational-forecast-system-ciofs",
+                "tds_path": "model-ciofs-files",
+                "tds_id": "CIOFS/MODELS",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            }
+        ],
+        "model/creofs_catalog.xml": [
+            {
+                "name": "CREOFS Models",
+                "catalog": "/var/lib/tomcat/content/thredds/model/creofs_catalog.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/columbia-river-estuary-operational-forecast-system-creofs/",
+                "tds_path": "model-creofs-files",
+                "tds_id": "model-creofs-files",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            }
+        ],
+        "model/dbofs_catalog.xml": [
+            {
+                "name": "DBOFS Models",
+                "catalog": "/var/lib/tomcat/content/thredds/model/dbofs_catalog.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/delaware-bay-operational-forecast-system-dbofs/",
+                "tds_path": "model-dbofs-files",
+                "tds_id": "DBOFS/MODELS",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            }
+        ],
+        "model/gens.xml": [
+            {
+                "name": "GEFS3 - Global Ensemble Forecast System 003 (1 degree longitude-latitude grid, 21 members)",
+                "catalog": "/var/lib/tomcat/content/thredds/model/gens.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/global-ensemble-forecast-system/access/1.0-degree-grid/",
+                "tds_path": "model-gefs-003",
+                "tds_id": "gefs003",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "GEFS2 - Global Ensemble Forecast System 002 (2.5 degree longitude-latitude grid, 21 members)",
+                "catalog": "/var/lib/tomcat/content/thredds/model/gens.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/global-ensemble-forecast-system/access/2.5-degree-grid/",
+                "tds_path": "model-gefs-002",
+                "tds_id": "gefs002",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            }
+        ],
+        "model/gfs.xml": [
+            {
+                "name": "Global Forecast System - Grid 3 - file units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/gfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/global-forecast-system/access/grid-003-1.0-degree/forecast",
+                "tds_path": "model-gfs-003-files",
+                "tds_id": "gfs-g3-files",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "Global Forecast System - Grid 3 - historical file units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/gfs.xml",
+                "type": "datasetScan",
+                "server_location": "/san5102/nexus/gfs-avn",
+                "tds_path": "model-gfs-003-files-old",
+                "tds_id": "gfs-g3-files-old",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
+                "writeable": false
+            },
+            {
+                "name": "Global Forecast System - Grid 4 - file units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/gfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/global-forecast-system/access/grid-004-0.5-degree/analysis",
+                "tds_path": "model-gfs-004-files",
+                "tds_id": "gfs-g4-files",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "Global Forecast System - Grid 4 - historical file units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/gfs.xml",
+                "type": "datasetScan",
+                "server_location": "/san5303/nexus/gfs4",
+                "tds_path": "model-gfs-004-files-old",
+                "tds_id": "gfs-g4-files-old",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
+                "writeable": false
+            },
+            {
+                "name": "Global Forecast System Grid 3 Analysis Set - file units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/gfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/global-forecast-system/access/grid-003-1.0-degree/analysis",
+                "tds_path": "model-gfs-g3-anl-files",
+                "tds_id": "gfs-g3-anl-files",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "Global Forecast System Grid 3 Analysis Set - historical file units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/gfs.xml",
+                "type": "datasetScan",
+                "server_location": "/san5302/nexus/gfsanl",
+                "tds_path": "model-gfs-g3-anl-files-old",
+                "tds_id": "gfs-g3-anl-files-old",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P1/san5302",
+                "writeable": false
+            },
+            {
+                "name": "Global Forecast System Grid 4 Analysis Set - file units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/gfs.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/global-forecast-system/access/grid-004-0.5-degree/analysis",
+                "tds_path": "model-gfs-g4-anl-files",
+                "tds_id": "gfs-g4-anl-files",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "Global Forecast System Grid 4 Analysis Set - historical file units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/gfs.xml",
+                "type": "datasetScan",
+                "server_location": "/san5302/nexus/gfsanl",
+                "tds_path": "model-gfs-g4-anl-files-old",
+                "tds_id": "gfs-g4-anl-files-old",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P1/san5302",
+                "writeable": false
+            }
+        ],
+        "model/gomofs_catalog.xml": [
+            {
+                "name": "GOMOFS Models",
+                "catalog": "/var/lib/tomcat/content/thredds/model/gomofs_catalog.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/gulf-of-maine-operational-forecast-system-gomofs",
+                "tds_path": "model-gomofs-files",
+                "tds_id": "GOMOFS/MODELS",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            }
+        ],
+        "model/leofs_catalog.xml": [
+            {
+                "name": "LEOFS Models",
+                "catalog": "/var/lib/tomcat/content/thredds/model/leofs_catalog.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-erie-operational-forecast-system-leofs",
+                "tds_path": "model-leofs",
+                "tds_id": "NOAA/LEOFS/MODELS",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            }
+        ],
+        "model/lhofs_catalog.xml": [
+            {
+                "name": "LHOFS Models",
+                "catalog": "/var/lib/tomcat/content/thredds/model/lhofs_catalog.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-huron-operational-forecast-system-lhofs/",
+                "tds_path": "model-lhofs-files",
+                "tds_id": "LHOFS/MODELS",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            }
+        ],
+        "model/lmhofs_catalog.xml": [
+            {
+                "name": "LMHOFS Models",
+                "catalog": "/var/lib/tomcat/content/thredds/model/lmhofs_catalog.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-michigan-and-huron-operational-forecast-system-lmhofs",
+                "tds_path": "model-lmhofs-files",
+                "tds_id": "LMHOFS/MODELS",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            }
+        ],
+        "model/lmofs_catalog.xml": [
+            {
+                "name": "LMOFS Models",
+                "catalog": "/var/lib/tomcat/content/thredds/model/lmofs_catalog.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-michigan-operational-forecast-system-lmofs/",
+                "tds_path": "model-lmofs-files",
+                "tds_id": "LMOFS/MODELS",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            }
+        ],
+        "model/loofs_catalog.xml": [
+            {
+                "name": "LOOFS Models",
+                "catalog": "/var/lib/tomcat/content/thredds/model/loofs_catalog.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-ontario-operational-forecast-system-loofs",
+                "tds_path": "model-loofs-files",
+                "tds_id": "LOOFS/MODELS",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            }
+        ],
+        "model/lsofs_catalog.xml": [
+            {
+                "name": "LSOFS Models",
+                "catalog": "/var/lib/tomcat/content/thredds/model/lsofs_catalog.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-superior-operational-forecast-system-lsofs/",
+                "tds_path": "model-lsofs-files",
+                "tds_id": "LSOFS/MODELS",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            }
+        ],
+        "model/model.xml": [
+            {
+                "name": null,
+                "catalog": "model/model.xml",
+                "type": null,
+                "server_location": null,
+                "tds_path": null,
+                "tds_id": null,
+                "parent_catalog": "catalog.xml",
+                "mount_path": null,
+                "writeable": null
+            }
+        ],
+        "model/nam.xml": [
+            {
+                "name": "NAM218 - Near Real-Time",
+                "catalog": "/var/lib/tomcat/content/thredds/model/nam.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/north-american-mesoscale-model/access/forecast",
+                "tds_path": "model-nam218",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "NAM218 -  Historical",
+                "catalog": "/var/lib/tomcat/content/thredds/model/nam.xml",
+                "type": "datasetScan",
+                "server_location": "/san5303/nexus/nam",
+                "tds_path": "model-nam218-old",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
+                "writeable": false
+            },
+            {
+                "name": "NAM Grid 218 - Analysis Only File Units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/nam.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/north-american-mesoscale-model/access/analysis",
+                "tds_path": "model-namanl",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "NAM Grid 218 - Analysis Only File Units, Historical",
+                "catalog": "/var/lib/tomcat/content/thredds/model/nam.xml",
+                "type": "datasetScan",
+                "server_location": "/san5302/nexus/namanl",
+                "tds_path": "model-namanl-old",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P1/san5302",
+                "writeable": false
+            }
+        ],
+        "model/narr.xml": [
+            {
+                "name": "NARR-A - 3 Hour - File Units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/narr.xml",
+                "type": "datasetScan",
+                "server_location": "/san5102/nexus/narr",
+                "tds_path": "model-narr-a-files",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
+                "writeable": false
+            },
+            {
+                "name": "NARR-A Monthly Means from Climate Diagnostics Center - File Units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/narr.xml",
+                "type": "datasetScan",
+                "server_location": "/san5102/nexus/narrmon",
+                "tds_path": "model-narrmon-a-files",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
+                "writeable": false
+            },
+            {
+                "name": "NARR-A Monthly Means by 3h Period from Climate Diagnostics Center - File Units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/narr.xml",
+                "type": "datasetScan",
+                "server_location": "/san5102/nexus/narrmon",
+                "tds_path": "model-narrmonhr-a-files",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
+                "writeable": false
+            },
+            {
+                "name": "NARR-B - 3 Hour - File Units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/narr.xml",
+                "type": "datasetScan",
+                "server_location": "/san5102/nexus/narr",
+                "tds_path": "model-narr-b-files",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
+                "writeable": false
+            },
+            {
+                "name": "NARR-B Monthly Means from Climate Diagnostics Center - File Units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/narr.xml",
+                "type": "datasetScan",
+                "server_location": "/san5102/nexus/narrmon",
+                "tds_path": "model-narrmon-b-files",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
+                "writeable": false
+            },
+            {
+                "name": "NARR-B Monthly Means by 3h Period from Climate Diagnostics Center - File Units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/narr.xml",
+                "type": "datasetScan",
+                "server_location": "/san5102/nexus/narrmon",
+                "tds_path": "model-narrmonhr-b-files",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
+                "writeable": false
+            }
+        ],
+        "model/ndfd.xml": [
+            {
+                "name": "NDFD - National Digital Forecast Database - File Access",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ndfd.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/national-digital-forecast-database/access",
+                "tds_path": "model-ndfd-file",
+                "tds_id": "NDFD",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "NDFD - National Digital Forecast Database - Historical File Access",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ndfd.xml",
+                "type": "datasetScan",
+                "server_location": "/san5303/nexus/ndfd",
+                "tds_path": "model-ndfd-file-old",
+                "tds_id": "NDFD-OLD",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
+                "writeable": false
+            },
+            {
+                "name": "NDFD - File Access for Core NDFD (Center Code: KWBN) Data With Human-Readable Names",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ndfd.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/national-digital-forecast-database/access",
+                "tds_path": "model-ndfd-file_kwbn",
+                "tds_id": "NDFD_kwbn",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "NDFD - Historical File Access for Core NDFD (Center Code: KWBN) Data With Human-Readable Names",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ndfd.xml",
+                "type": "datasetScan",
+                "server_location": "/san5303/nexus/ndfd",
+                "tds_path": "model-ndfd-file_kwbn-old",
+                "tds_id": "NDFD_kwbn-old",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
+                "writeable": false
+            },
+            {
+                "name": "NDFD - File Access for National Hurricane Center (Center Code: KNHC) Data With Human-Readable Names",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ndfd.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/national-digital-forecast-database/access",
+                "tds_path": "model-ndfd-file_knhc",
+                "tds_id": "NDFD_knhc",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "NDFD - Historical File Access for National Hurricane Center (Center Code: KNHC) Data With Human-Readable Names",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ndfd.xml",
+                "type": "datasetScan",
+                "server_location": "/san5303/nexus/ndfd",
+                "tds_path": "model-ndfd-file_knhc-old",
+                "tds_id": "NDFD_knhc-old",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
+                "writeable": false
+            },
+            {
+                "name": "NDFD - File Access for Storm Prediction Center (Center Code: KWNS) Data With Human-Readable Names",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ndfd.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/national-digital-forecast-database/access",
+                "tds_path": "model-ndfd-file_kwns",
+                "tds_id": "NDFD_kwns",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "NDFD - Historical File Access for Storm Prediction Center (Center Code: KWNS) Data With Human-Readable Names",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ndfd.xml",
+                "type": "datasetScan",
+                "server_location": "/san5303/nexus/ndfd",
+                "tds_path": "model-ndfd-file_kwns-old",
+                "tds_id": "NDFD_kwns-old",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
+                "writeable": false
+            },
+            {
+                "name": "NDFD - File Access for Climate Prediction Center (Center Code: KWNC) Data With Human-Readable Names",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ndfd.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/national-digital-forecast-database/access",
+                "tds_path": "model-ndfd-file_kwnc",
+                "tds_id": "NDFD_kwnc",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "NDFD - Historical File Access for Climate Prediction Center (Center Code: KWNC) Data With Human-Readable Names",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ndfd.xml",
+                "type": "datasetScan",
+                "server_location": "/san5303/nexus/ndfd",
+                "tds_path": "model-ndfd-file_kwnc-old",
+                "tds_id": "NDFD_kwnc-old",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
+                "writeable": false
+            }
+        ],
+        "model/ndgd.xml": [
+            {
+                "name": "NDGD - National Digital Guidance Database (file listing)",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ndgd.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/national-digital-guidance-database/access",
+                "tds_path": "model-ndgd-file",
+                "tds_id": "NDGD",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "NDGD - National Digital Guidance Database (file listing, historical)",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ndgd.xml",
+                "type": "datasetScan",
+                "server_location": "/san5303/nexus/ndgd",
+                "tds_path": "model-ndgd-file-old",
+                "tds_id": "NDGD-OLD",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
+                "writeable": false
+            },
+            {
+                "name": "NDGD - National Digital Guidance Database Core Files (Center Code: KWBR)",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ndgd.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/national-digital-guidance-database/access",
+                "tds_path": "model-ndgd-file_kwbr",
+                "tds_id": "NDGD_KWBR",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "NDGD - National Digital Guidance Database Core Files, Historical (Center Code: KWBR)",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ndgd.xml",
+                "type": "datasetScan",
+                "server_location": "/san5303/nexus/ndgd",
+                "tds_path": "model-ndgd-file_kwbr-old",
+                "tds_id": "NDGD_KWBR-old",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
+                "writeable": false
+            },
+            {
+                "name": "NDGD - National Digital Guidance Database Air Quality (Center Code: KWBP)",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ndgd.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/national-digital-guidance-database/access",
+                "tds_path": "model-ndgd-file_kwbp",
+                "tds_id": "NDGD_KWBP",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "NDGD - National Digital Guidance Database Air Quality, Historical (Center Code: KWBP)",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ndgd.xml",
+                "type": "datasetScan",
+                "server_location": "/san5303/nexus/ndgd",
+                "tds_path": "model-ndgd-file_kwbp-old",
+                "tds_id": "NDGD_KWBP-old",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
+                "writeable": false
+            },
+            {
+                "name": "NDGD - National Digital Guidance Database National Hurricane Center (Center Code: KNHC)",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ndgd.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/national-digital-guidance-database/access",
+                "tds_path": "model-ndgd-file_knhc",
+                "tds_id": "NDGD_KNHC",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "NDGD - National Digital Guidance Database National Hurricane Center, Historical (Center Code: KNHC)",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ndgd.xml",
+                "type": "datasetScan",
+                "server_location": "/san5303/nexus/ndgd",
+                "tds_path": "model-ndgd-file_knhc-old",
+                "tds_id": "NDGD_KNHC-old",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
+                "writeable": false
+            },
+            {
+                "name": "NDGD - National Digital Guidance Database Climate Prediction Center (Center Code: KWNC)",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ndgd.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/national-digital-guidance-database/access",
+                "tds_path": "model-ndgd-file_kwnc",
+                "tds_id": "NDGD_KWNC",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "NDGD - National Digital Guidance Database Climate Prediction Center, Historical (Center Code: KWNC)",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ndgd.xml",
+                "type": "datasetScan",
+                "server_location": "/san5303/nexus/ndgd",
+                "tds_path": "model-ndgd-file_kwnc-old",
+                "tds_id": "NDGD_KWNC-old",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
+                "writeable": false
+            },
+            {
+                "name": "NDGD - National Digital Guidance (Center Code: KWBG)",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ndgd.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/national-digital-guidance-database/access",
+                "tds_path": "model-ndgd-file_kwbg",
+                "tds_id": "NDGD_KWBG",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            }
+        ],
+        "model/negofs_catalog.xml": [
+            {
+                "name": "NEGOFS Models",
+                "catalog": "/var/lib/tomcat/content/thredds/model/negofs_catalog.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/northeast-gulf-of-mexico-operational-forecast-system-negofs/",
+                "tds_path": "model-negofs-files",
+                "tds_id": "NOAA/NEGOFS/MODELS",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            }
+        ],
+        "model/ngofs2_catalog.xml": [
+            {
+                "name": "NGOFS2 Models",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ngofs2_catalog.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/northern-gulf-of-mexico-2-operational-forecast-system-ngofs2/",
+                "tds_path": "model-ngofs2-files",
+                "tds_id": "NOAA/NGOFS2/MODELS",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            }
+        ],
+        "model/ngofs_catalog.xml": [
+            {
+                "name": "NGOFS Models",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ngofs_catalog.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/northern-gulf-of-mexico-operational-forecast-system-ngofs/",
+                "tds_path": "model-ngofs-files",
+                "tds_id": "NOAA/NGOFS/MODELS",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            }
+        ],
+        "model/nmme.xml": [
+            {
+                "name": null,
+                "catalog": "model/nmme.xml",
+                "type": null,
+                "server_location": null,
+                "tds_path": null,
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": null,
+                "writeable": null
+            }
+        ],
+        "model/nnr2.xml": [
+            {
+                "name": "NCEP/NCAR Reanalysis II (NNR2) 6-hour - File Units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/nnr2.xml",
+                "type": "datasetScan",
+                "server_location": "/san5102/nexus/reanalysis-2/6hr/",
+                "tds_path": "model-nnr2-6h-files",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
+                "writeable": false
+            },
+            {
+                "name": "NCEP/NCAR Reanalysis II (NNR2) montly - File Units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/nnr2.xml",
+                "type": "datasetScan",
+                "server_location": "/san5102/nexus/reanalysis-2/month/",
+                "tds_path": "model-nnr2-month-files",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
+                "writeable": false
+            }
+        ],
+        "model/nwgofs_catalog.xml": [
+            {
+                "name": "NWGOFS Models",
+                "catalog": "/var/lib/tomcat/content/thredds/model/nwgofs_catalog.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/northwest-gulf-of-mexico-operational-forecast-system-nwgofs/",
+                "tds_path": "model-nwgofs-files",
+                "tds_id": "NOAA/NWGOFS/MODELS",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            }
+        ],
+        "model/nyofs_catalog.xml": [
+            {
+                "name": "NYOFS Models",
+                "catalog": "/var/lib/tomcat/content/thredds/model/nyofs_catalog.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/port-of-new-york-and-new-jersey-operational-forecast-system-nyofs/",
+                "tds_path": "model-nyofs-files",
+                "tds_id": "NYOFS/MODELS",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            }
+        ],
+        "model/paleo.xml": [
+            {
+                "name": "Drought Reconstructions",
+                "catalog": "/var/lib/tomcat/content/thredds/model/paleo.xml",
+                "type": "datasetScan",
+                "server_location": "/san5102/nexus/paleo/ngdc",
+                "tds_path": "model-paleo-pdsi",
+                "tds_id": "paleo-pdsi",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
+                "writeable": false
+            },
+            {
+                "name": "Paleoclimate Model Intercomparision Project",
+                "catalog": "/var/lib/tomcat/content/thredds/model/paleo.xml",
+                "type": "datasetScan",
+                "server_location": "/san5102/nexus/paleo/PMIP",
+                "tds_path": "model-paleo-pmip",
+                "tds_id": "paleo-pmip",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
+                "writeable": false
+            },
+            {
+                "name": "Paleoclimate Reconstructions of Last 2 Millennia",
+                "catalog": "/var/lib/tomcat/content/thredds/model/paleo.xml",
+                "type": "datasetScan",
+                "server_location": "/san5102/nexus/paleo/Last2Millennia/Reconstructions",
+                "tds_path": "model-paleo-2m-recon",
+                "tds_id": "paleo-2m-recon",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
+                "writeable": false
+            },
+            {
+                "name": "Abrupt Climate Change",
+                "catalog": "/var/lib/tomcat/content/thredds/model/paleo.xml",
+                "type": "datasetScan",
+                "server_location": "/san5102/nexus/paleo/AbruptChange",
+                "tds_path": "model-paleo-abrupt-climate-change",
+                "tds_id": "paleo-abrupt-climate-change",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P1/san5102",
+                "writeable": false
+            }
+        ],
+        "model/rucrap.xml": [
+            {
+                "name": "Rapid Refresh - 13km CONUS - file units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/rucrap.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/rapid-refresh/access/rap-130-13km/forecast/",
+                "tds_path": "model-rap130",
+                "tds_id": "rap130",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "Rapid Refresh - 13km CONUS - historical file units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/rucrap.xml",
+                "type": "datasetScan",
+                "server_location": "/san5303/nexus/ruc13",
+                "tds_path": "model-rap130-old",
+                "tds_id": "rap130-old",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
+                "writeable": false
+            },
+            {
+                "name": "Rapid Refresh - 20KM CONUS - file units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/rucrap.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/rapid-refresh/access/rap-252-20km/forecast/",
+                "tds_path": "model-rap252",
+                "tds_id": "rap252",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "Rapid Refresh - 20KM CONUS - historical file units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/rucrap.xml",
+                "type": "datasetScan",
+                "server_location": "/san5303/nexus/ruc",
+                "tds_path": "model-rap252-old",
+                "tds_id": "rap252-old",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
+                "writeable": false
+            },
+            {
+                "name": "Rapid Refresh Analysis Collection - 13km CONUS - file units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/rucrap.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/rapid-refresh/access/rap-130-13km/analysis/",
+                "tds_path": "model-rap130anl",
+                "tds_id": "rap130anl",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "Rapid Refresh Analysis Collection - 13km CONUS - historical file units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/rucrap.xml",
+                "type": "datasetScan",
+                "server_location": "/san5302/nexus/rucanl",
+                "tds_path": "model-rap130anl-old",
+                "tds_id": "rap130anl-old",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P1/san5302",
+                "writeable": false
+            },
+            {
+                "name": "Rapid Refresh Analysis Collection - 20km CONUS - file units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/rucrap.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/rapid-refresh/access/rap-252-20km/analysis/",
+                "tds_path": "model-rap252anl",
+                "tds_id": "rap252anl",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            },
+            {
+                "name": "Rapid Refresh Analysis Collection - 20km CONUS - historical file units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/rucrap.xml",
+                "type": "datasetScan",
+                "server_location": "/san5302/nexus/rucanl",
+                "tds_path": "model-rap252anl-old",
+                "tds_id": "rap252anl-old",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P1/san5302",
+                "writeable": false
+            },
+            {
+                "name": "Rapid Update Cycle Analysis Collection - 20km CONUS - file units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/rucrap.xml",
+                "type": "datasetScan",
+                "server_location": "/san5302/nexus/rucanl",
+                "tds_path": "model-ruc252anl",
+                "tds_id": "ruc252anl",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P1/san5302",
+                "writeable": false
+            },
+            {
+                "name": "Rapid Update Cycle Analysis Collection - 13km CONUS - file units",
+                "catalog": "/var/lib/tomcat/content/thredds/model/rucrap.xml",
+                "type": "datasetScan",
+                "server_location": "/san5302/nexus/rucanl",
+                "tds_path": "model-ruc130anl",
+                "tds_id": "ruc130anl",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P1/san5302",
+                "writeable": false
+            }
+        ],
+        "model/sfbofs_catalog.xml": [
+            {
+                "name": "SFBOFS Models",
+                "catalog": "/var/lib/tomcat/content/thredds/model/sfbofs_catalog.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/san-francisco-bay-operational-forecast-system-sfbofs/",
+                "tds_path": "model-sfbofs-files",
+                "tds_id": "NOAA/SFBOFS/MODELS",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            }
+        ],
+        "model/sjrofs_catalog.xml": [
+            {
+                "name": "SJROFS Models",
+                "catalog": "/var/lib/tomcat/content/thredds/model/sjrofs_catalog.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/st-johns-river-operational-forecast-system-sjrofs/",
+                "tds_path": "model-sjrofs-files",
+                "tds_id": "SJROFS/MODELS",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            }
+        ],
+        "model/srrs.xml": [
+            {
+                "name": "SRRS - NWS Service Records Retention System (GRIB Products)",
+                "catalog": "/var/lib/tomcat/content/thredds/model/srrs.xml",
+                "type": "datasetScan",
+                "server_location": "/san5303/nexus/srrs/data",
+                "tds_path": "model-srrs-grib",
+                "tds_id": "SRRS-GRIB",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.102.132:/mnt/HL2-P2/san5303",
+                "writeable": false
+            }
+        ],
+        "model/tbofs_catalog.xml": [
+            {
+                "name": "TBOFS Models",
+                "catalog": "/var/lib/tomcat/content/thredds/model/tbofs_catalog.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/tampa-bay-operational-forecast-system-tbofs/",
+                "tds_path": "model-tbofs-files",
+                "tds_id": "TBOFS/MODELS",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            }
+        ],
+        "model/wcofs_catalog.xml": [
+            {
+                "name": "WCOFS Models",
+                "catalog": "/var/lib/tomcat/content/thredds/model/wcofs_catalog.xml",
+                "type": "datasetScan",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/west-coast-operational-forecast-system-wcofs/",
+                "tds_path": "model-wcofs-files",
+                "tds_id": "NOAA/WCOFS/MODELS",
+                "parent_catalog": "model/model.xml",
+                "mount_path": "10.254.11.33:/export/opsnas102-data2",
+                "writeable": false
+            }
+        ],
+        "model/wcrp-cmip3.xml": [
+            {
+                "name": null,
+                "catalog": "model/wcrp-cmip3.xml",
+                "type": null,
+                "server_location": null,
+                "tds_path": null,
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": null,
+                "writeable": null
+            }
+        ],
+        "stub.xml": [
+            {
+                "name": null,
+                "catalog": "stub.xml",
+                "type": null,
+                "server_location": null,
+                "tds_path": null,
+                "tds_id": null,
+                "parent_catalog": "catalog.xml",
+                "mount_path": null,
+                "writeable": null
+            }
+        ]
+    }
 }
