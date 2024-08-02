@@ -125,5 +125,18 @@
             "mount_path": null,
             "writeable": false
         }
+    ],
+    "tds01-prod.ncei.noaa.gov-old": [
+        {
+            "name": "Soil Moisture Change",
+            "catalog": "/var/lib/tomcat/content/thredds/data-in-development/data-in-development.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/mnt/san2/nidis",
+            "tds_path": "smc",
+            "tds_id": "smc",
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        }
     ]
 }
