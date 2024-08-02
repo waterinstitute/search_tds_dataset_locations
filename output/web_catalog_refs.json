@@ -10,5 +10,6 @@
             "parent": "/oceanNomads/data/",
             "catalog": "data.nodc.noaa.gov/thredds/catalog/ncep/rtofs/catalog.xml"
         }
-    ]
+    ],
+    "tds-ams01-dev.ncei.noaa.gov": []
 }

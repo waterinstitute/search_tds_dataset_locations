@@ -186,5 +186,29 @@
         }
     ],
     "tds-coastal01-dev.ncei.noaa.gov": [],
-    "tds-coastal01-test.ncei.noaa.gov": []
+    "tds-coastal01-test.ncei.noaa.gov": [],
+    "tds-ams01-dev.ncei.noaa.gov": [
+        {
+            "name": "Northwest Atlantic",
+            "catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0155889",
+            "tds_path": "regional-climatologies/northwest-atlantic",
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Southwest North Atlantic",
+            "catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0201696/",
+            "tds_path": "regional-climatologies/southwest-north-atlantic",
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        }
+    ]
 }
