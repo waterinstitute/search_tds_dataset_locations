@@ -1,0 +1,8 @@
+{
+    "tds-coastal01-dev.ncei.noaa.gov": [
+        {
+            "parent": "/oceanNomads/data/",
+            "catalog": "data.nodc.noaa.gov/thredds/catalog/ncep/rtofs/catalog.xml"
+        }
+    ]
+}

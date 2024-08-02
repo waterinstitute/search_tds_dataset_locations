@@ -27,9 +27,11 @@ def getCatalogRefs(catalog_xml, catalog_ref, catalog_path):
 
     return catalog_refs, catalog_refs_dict
 
-def updateCatalogRefs(catalog_refs):
+def updateCatalogRefs(catalog_refs, catalog_refs_dict, web_catalog_refs_dict):
     catalog_refs_sublist = []
     catalog_refs_sublist_dict = []
+    hostname = subprocess.check_output(['hostname']).decode('utf-8').strip()
+
     for catalog_ref in catalog_refs:
         # remove the thredds_home_dir from the catalog_ref
         catalog_ref_rel_path = Path(catalog_ref).relative_to(thredds_home_dir)
@@ -39,12 +41,26 @@ def updateCatalogRefs(catalog_refs):
         catalog_path = thredds_home_dir / catalog_ref_rel_path
         # read the catalog file
         catalog_ref_str = str(catalog_ref)
+        # if catalog_ref_str contains 'http://' or 'https://', do not parse, and add to a web reference list.
+        if 'http:/' in catalog_ref_str or 'https:/' in catalog_ref_str:
+            # split the catalog_ref_str by starting with 'http://' or 'https://'
+            catalog_parent = catalog_ref_str.split('http:/')[0].split('https:/')[0]
+            # remove the thredds home dir
+            catalog_parent = catalog_parent.split(str(thredds_home_dir))[-1]
+            catalog_ref_str = catalog_ref_str.split('http:/')[-1].split('https:/')[-1]
+            web_catalog_refs_dict[hostname].append({
+                "parent": catalog_parent,
+                "catalog": catalog_ref_str
+            })
+
+            # don't parse the web catalog reference and go to the next catalog reference.
+            continue
         catalog_ref_xml = ET.parse(catalog_ref_str)
         sublist, sublist_dict = getCatalogRefs(catalog_ref_xml, catalog_ref, catalog_path)
         catalog_refs_sublist += sublist
         catalog_refs_sublist_dict += sublist_dict
 
-    return catalog_refs_sublist, catalog_refs_sublist_dict
+    return catalog_refs_sublist, catalog_refs_sublist_dict, web_catalog_refs_dict
 
 def is_on_mount(path):
   while True:
@@ -68,11 +84,20 @@ except FileNotFoundError:
     missing_datasets_dict = {}
     with open(missing_datasets, 'w') as f:
         json.dump(missing_datasets_dict, f, indent=4)
-
 # Create a key in the missing_datasets_dict for the hostname
 missing_datasets_dict[hostname] = []
 
-
+# define web catalog references json file, and if it does not exist, create it..
+web_catalog_refs = 'output/web_catalog_refs.json'
+try:
+    with open(web_catalog_refs, 'r') as f:
+        web_catalog_refs_dict = json.load(f)
+except FileNotFoundError:
+    web_catalog_refs_dict = {}
+    with open(web_catalog_refs, 'w') as f:
+        json.dump(web_catalog_refs_dict, f, indent=4)
+# Create a key in the web_catalog_refs_dict for the hostname
+web_catalog_refs_dict[hostname] = []
 
 # read /var/lib/tomcat/content/thredds/catalog.xml and parse it for additional catalog references.
 # read the catalog.xml file
@@ -97,15 +122,16 @@ catalog_refs_dict = [i for n, i in enumerate(catalog_refs_dict) if i not in cata
 # for each catalog reference, read the catalog file, and parse it for additional catalog references. add these to the list of catalog references.
 # run updateCatalogRefs until there are no additional sub catalog references.
 n = 0
-catalog_refs_sublist, catalog_refs_sublist_dict = updateCatalogRefs(catalog_refs)
+catalog_refs_sublist, catalog_refs_sublist_dict, web_catalog_refs_dict = updateCatalogRefs(catalog_refs, catalog_refs_dict, web_catalog_refs_dict)
 while len(catalog_refs_sublist) > 0:
     # Update catalog reference list with sublist n.
     catalog_refs += catalog_refs_sublist
     catalog_refs_dict += catalog_refs_sublist_dict
+    # Update web catalog reference list
     n+=1
     # print(f'\nFound nested catalogs \n Parsing nested catalog {n}. \n')    
     # Get new sublist
-    catalog_refs_sublist, sublist_dict = updateCatalogRefs(catalog_refs_sublist)
+    catalog_refs_sublist, sublist_dict, web_catalog_refs_dict = updateCatalogRefs(catalog_refs_sublist, catalog_refs_dict, web_catalog_refs_dict)
 
 # remove duplicates from the catalog_refs and catalog_refs_dict
 catalog_refs = list(set(catalog_refs))
@@ -216,3 +242,7 @@ print(f'Json output to: output/{hostname}_tds_datasets.json')
 # write missing datasets to file: missing_datasets.json
 with open(missing_datasets, 'w') as f:
     json.dump(missing_datasets_dict, f, indent=4)
+
+# write web catalog references to file: web_catalog_refs.json
+with open(web_catalog_refs, 'w') as f:
+    json.dump(web_catalog_refs_dict, f, indent=4)
