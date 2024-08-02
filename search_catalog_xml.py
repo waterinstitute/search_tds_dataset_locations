@@ -54,6 +54,25 @@ def is_on_mount(path):
       return True
     path = os.path.dirname(path)
 
+# get hostname
+hostname = subprocess.check_output(['hostname']).decode('utf-8').strip()
+
+# define the missing datasets json file to append any missing datasets to.
+missing_datasets = 'output/missing_datasets.json'
+# open the missing datasets json file and if it does not exist, create it.
+try:
+    with open(missing_datasets, 'r') as f:
+        missing_datasets_dict = json.load(f)
+except FileNotFoundError:
+    missing_datasets_dict = {}
+    with open(missing_datasets, 'w') as f:
+        json.dump(missing_datasets_dict, f, indent=4)
+
+# Create a key in the missing_datasets_dict for the hostname
+missing_datasets_dict[hostname] = []
+
+
+
 # read /var/lib/tomcat/content/thredds/catalog.xml and parse it for additional catalog references.
 # read the catalog.xml file
 thredds_home_dir = Path('/var/lib/tomcat/content/thredds/')
@@ -102,6 +121,7 @@ catalog_refs_dict.sort(key=lambda x: x['catalog'])
 
 # create a dictionary to store the dataset locations for each catalog reference.
 catalog_datasets_dict = {}
+catalog_datasets_dict[hostname] = {}
 # for each catalog key in each item in the catalog_refs_dict, read the catalog file, parse it to find the dataset locations, 
 # and finally add the dataset location and other attrs to the dictionary.
 for catalog_ref in catalog_refs_dict:
@@ -113,7 +133,7 @@ for catalog_ref in catalog_refs_dict:
     catalog_ref_parent = str(catalog_ref['parent'])
     # add a key to the dictionary for the catalog reference add an empty list as the value to append each found dataset location.
     
-    catalog_datasets_dict[catalog_ref_str] = []
+    catalog_datasets_dict[hostname][catalog_ref_str] = []
     
     catalog_ref = thredds_home_dir / catalog_ref['catalog']
     catalog_xml = ET.parse(str(catalog_ref))
@@ -124,20 +144,40 @@ for catalog_ref in catalog_refs_dict:
             # use the server location attribute to get the mount path.
             is_mounted = is_on_mount(tag.get('location'))
             writeable = os.access(tag.get('location'), os.W_OK)
-            if is_mounted:
-                # run a subprocess to use findmnt -n 0o SOURCE --target path
-                # to get the source of the mount.
-                mnt_path = subprocess.check_output(['findmnt', '-n', '-o', 'SOURCE', '--target', tag.get('location')])
-                mnt_path = mnt_path.decode('utf-8').strip()
-            else: 
+            if os.path.exists(tag.get('location')):
+                location = tag.get('location')
+                if is_mounted:
+                    # check if the locatiion exists
+                        # run a subprocess to use findmnt -n 0o SOURCE --target path
+                        # to get the source of the mount.
+                        mnt_path = subprocess.check_output(['findmnt', '-n', '-o', 'SOURCE', '--target', tag.get('location')])        
+                        mnt_path = mnt_path.decode('utf-8').strip()
+                else:
+                    # the path exists but is not mounted.
+                    mnt_path = None
+            else:
+                # the path does not exist. set the mount path to None and add the location to the missing datasets dictionary.
                 mnt_path = None
+                location = f"Path does not exist on server: {tag.get('location')}"
+                missing_datasets_dict[hostname].append({
+                    "name": tag.get('name'),
+                    "catalog": str(catalog_ref),
+                    "type": tag.tag.split('}')[-1],
+                    "missing_server_location": tag.get('location'),
+                    "tds_path": tag.get('path'),
+                    "tds_id": tag.get('ID'),
+                    "parent_catalog": catalog_ref_parent,
+                    "mount_path": mnt_path,
+                    "writeable": writeable
+                })
+
 
             # append the location attribute to the list of dataset locations for the catalog reference.
-            catalog_datasets_dict[catalog_ref_str].append({
+            catalog_datasets_dict[hostname][catalog_ref_str].append({
                 "name": tag.get('name'),
                 "catalog": str(catalog_ref),
                 "type": tag.tag.split('}')[-1],
-                "server_location": tag.get('location'),
+                "server_location": location,
                 "tds_path": tag.get('path'),
                 "tds_id": tag.get('ID'),
                 "parent_catalog": catalog_ref_parent,
@@ -146,12 +186,12 @@ for catalog_ref in catalog_refs_dict:
             })
 
 # if a key in the catalog_datasets_dict has no dataset locations, add a nested dictionary with the catalog, parent and the rest of the fields set to None.
-for key in catalog_datasets_dict:
-    if len(catalog_datasets_dict[key]) == 0:
+for key in catalog_datasets_dict[hostname]:
+    if len(catalog_datasets_dict[hostname][key]) == 0:
         # find the parent catalog reference, the parent catalog reference is the catalog_ref_dict at an unknown index.
         # we need to find the index by matching the parent catalog reference to the catalog reference in the catalog_refs_dict.
         index = [i for i, d in enumerate(catalog_refs_dict) if d['catalog'] == key][0]
-        catalog_datasets_dict[key].append({
+        catalog_datasets_dict[hostname][key].append({
             "name": None,
             "catalog": key,
             "type": None,
@@ -167,10 +207,11 @@ for key in catalog_datasets_dict:
 # pretty print catalog_datasets
 # print(json.dumps(catalog_datasets_dict, indent=4))
 
-# get hostname
-hostname = subprocess.check_output(['hostname']).decode('utf-8').strip()
-
 # write json to file: tds_datasets.json
 with open(f'output/{hostname}_tds_datasets.json', 'w') as f:
     json.dump(catalog_datasets_dict, f, indent=4)
 print(f'Json output to: output/{hostname}_tds_datasets.json')
+
+# write missing datasets to file: missing_datasets.json
+with open(missing_datasets, 'w') as f:
+    json.dump(missing_datasets_dict, f, indent=4)
