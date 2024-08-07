@@ -61,6 +61,62 @@
                 "parent_catalog": "catalog.xml",
                 "mount_path": "10.254.101.74:/NFS04/msthredds/data",
                 "writeable": false
+            },
+            {
+                "name": "AEC GoMex Model Climatology Aggregation",
+                "catalog": "/var/lib/tomcat/content/thredds/catalog_aec_climo.xml",
+                "type": "featureCollection",
+                "server_location": "/mnt/thredds-data/aec/aec_model_climo",
+                "tds_path": "aec_model_agg",
+                "tds_id": "aec_model_climo_agg",
+                "parent_catalog": "catalog.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/mnt/thredds-data/aec/aec_model_climo/AEC.*nc$"
+                ]
+            },
+            {
+                "name": "AEC GoMex Satellite Climatology",
+                "catalog": "/var/lib/tomcat/content/thredds/catalog_aec_climo.xml",
+                "type": "featureCollection",
+                "server_location": "/mnt/thredds-data/aec/aec_sat_climo/GOM",
+                "tds_path": "aec_gomex_sat_agg",
+                "tds_id": "aec_gomex_sat_agg",
+                "parent_catalog": "catalog.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/mnt/thredds-data/aec/aec_sat_climo/GOM/AEC.*.nc$"
+                ]
+            },
+            {
+                "name": "AEC USEAST Satellite Climatology",
+                "catalog": "/var/lib/tomcat/content/thredds/catalog_aec_climo.xml",
+                "type": "featureCollection",
+                "server_location": "/mnt/thredds-data/aec/aec_sat_climo/USEAST",
+                "tds_path": "aec_useast_sat_agg",
+                "tds_id": "aec_useast_sat_agg",
+                "parent_catalog": "catalog.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/mnt/thredds-data/aec/aec_sat_climo/USEAST/AEC.*.nc$"
+                ]
+            },
+            {
+                "name": "AEC USWEST Satellite Climatology",
+                "catalog": "/var/lib/tomcat/content/thredds/catalog_aec_climo.xml",
+                "type": "featureCollection",
+                "server_location": "/mnt/thredds-data/aec/aec_sat_climo/USWEST",
+                "tds_path": "aec_uswest_sat_agg",
+                "tds_id": "aec_uswest_sat_agg",
+                "parent_catalog": "catalog.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/mnt/thredds-data/aec/aec_sat_climo/USWEST/AEC.*.nc$"
+                ]
             }
         ],
         "catalog_dwh.xml": [
