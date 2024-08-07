@@ -61,6 +61,34 @@
                 "writeable": false
             },
             {
+                "name": "Aggregation of 6h Ocean Wind Stress",
+                "catalog": "/var/lib/tomcat/content/thredds/blended-global/oceanWinds.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/blended-global-sea-surface-wind-products/access/nrt/stress",
+                "tds_path": "uv/6h_strs_agg",
+                "tds_id": null,
+                "parent_catalog": "blended-global/blended-global.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/blended-global-sea-surface-wind-products/access/nrt/stress/**/NBS_v02_wind-stress_6hourly_d[0-9]{8}_nrt_c[0-9]{8}\\.nc$"
+                ]
+            },
+            {
+                "name": "Aggregation of Daily Ocean Wind Stress",
+                "catalog": "/var/lib/tomcat/content/thredds/blended-global/oceanWinds.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/blended-global-sea-surface-wind-products/access/nrt/stress",
+                "tds_path": "uv/daily_strs_agg",
+                "tds_id": null,
+                "parent_catalog": "blended-global/blended-global.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/blended-global-sea-surface-wind-products/access/nrt/stress/**/NBS_v02_wind-stress_daily_d[0-9]{8}_nrt_c[0-9]{8}\\.nc$"
+                ]
+            },
+            {
                 "name": "Files",
                 "catalog": "/var/lib/tomcat/content/thredds/blended-global/oceanWinds.xml",
                 "type": "datasetScan",
@@ -70,6 +98,34 @@
                 "parent_catalog": "blended-global/blended-global.xml",
                 "mount_path": "10.254.101.67:/NFS06/datasets/published-prod",
                 "writeable": false
+            },
+            {
+                "name": "Aggregation of 6h Ocean Wind",
+                "catalog": "/var/lib/tomcat/content/thredds/blended-global/oceanWinds.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/blended-global-sea-surface-wind-products/access/nrt/wind",
+                "tds_path": "uv/6h_agg",
+                "tds_id": null,
+                "parent_catalog": "blended-global/blended-global.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/blended-global-sea-surface-wind-products/access/nrt/wind/**/NBS_v02_wind_6hourly_d[0-9]{8}_nrt_c[0-9]{8}\\.nc$"
+                ]
+            },
+            {
+                "name": "Aggregation of Daily Ocean Wind",
+                "catalog": "/var/lib/tomcat/content/thredds/blended-global/oceanWinds.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/blended-global-sea-surface-wind-products/access/nrt/wind",
+                "tds_path": "uv/daily_agg",
+                "tds_id": null,
+                "parent_catalog": "blended-global/blended-global.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/blended-global-sea-surface-wind-products/access/nrt/wind/**/NBS_v02_wind_daily_d[0-9]{8}_nrt_c[0-9]{8}\\.nc$"
+                ]
             },
             {
                 "name": "Files",
@@ -83,6 +139,48 @@
                 "writeable": false
             },
             {
+                "name": "Aggregation of Reprocessed 6h Ocean Wind Stress",
+                "catalog": "/var/lib/tomcat/content/thredds/blended-global/oceanWinds.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/blended-global-sea-surface-wind-products/access/reprocessed/stress",
+                "tds_path": "uv/reprocessed_6h_strs_agg",
+                "tds_id": null,
+                "parent_catalog": "blended-global/blended-global.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/blended-global-sea-surface-wind-products/access/reprocessed/stress/**/NBS_v02_wind-stress_6hourly_d[0-9]{8}_nrt_c[0-9]{8}\\.nc$"
+                ]
+            },
+            {
+                "name": "Aggregation of Reprocessed Daily Ocean Wind Stress",
+                "catalog": "/var/lib/tomcat/content/thredds/blended-global/oceanWinds.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/blended-global-sea-surface-wind-products/access/reprocessed/stress",
+                "tds_path": "uv/reprocessed_daily_strs_agg",
+                "tds_id": null,
+                "parent_catalog": "blended-global/blended-global.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/blended-global-sea-surface-wind-products/access/reprocessed/stress/**/NBS_v02_wind-stress_daily_d[0-9]{8}_nrt_c[0-9]{8}\\.nc$"
+                ]
+            },
+            {
+                "name": "Aggregation of Reprocessed Monthly Ocean Wind Stress",
+                "catalog": "/var/lib/tomcat/content/thredds/blended-global/oceanWinds.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/blended-global-sea-surface-wind-products/access/reprocessed/stress",
+                "tds_path": "uv/reprocessed_monthly_strs_agg",
+                "tds_id": null,
+                "parent_catalog": "blended-global/blended-global.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/blended-global-sea-surface-wind-products/access/reprocessed/stress/**/NBS_v02_wind-stress_monthly_d[0-9]{8}_nrt_c[0-9]{8}\\.nc$"
+                ]
+            },
+            {
                 "name": "Files",
                 "catalog": "/var/lib/tomcat/content/thredds/blended-global/oceanWinds.xml",
                 "type": "datasetScan",
@@ -92,6 +190,48 @@
                 "parent_catalog": "blended-global/blended-global.xml",
                 "mount_path": "10.254.101.67:/NFS06/datasets/published-prod",
                 "writeable": false
+            },
+            {
+                "name": "Aggregation of Reprocessed 6h Ocean Wind",
+                "catalog": "/var/lib/tomcat/content/thredds/blended-global/oceanWinds.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/blended-global-sea-surface-wind-products/access/reprocessed/wind",
+                "tds_path": "uv/reprocessed_6h_agg",
+                "tds_id": null,
+                "parent_catalog": "blended-global/blended-global.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/blended-global-sea-surface-wind-products/access/reprocessed/wind/**/NBS_v02_wind_6hourly_d[0-9]{8}_nrt_c[0-9]{8}\\.nc$"
+                ]
+            },
+            {
+                "name": "Aggregation of Reprocessed Daily Ocean Wind",
+                "catalog": "/var/lib/tomcat/content/thredds/blended-global/oceanWinds.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/blended-global-sea-surface-wind-products/access/reprocessed/wind",
+                "tds_path": "uv/reprocessed_daily_agg",
+                "tds_id": null,
+                "parent_catalog": "blended-global/blended-global.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/blended-global-sea-surface-wind-products/access/reprocessed/wind/**/NBS_v02_wind_daily_d[0-9]{8}_nrt_c[0-9]{8}\\.nc$"
+                ]
+            },
+            {
+                "name": "Aggregation of Reprocessed Monthly Ocean Wind",
+                "catalog": "/var/lib/tomcat/content/thredds/blended-global/oceanWinds.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/blended-global-sea-surface-wind-products/access/reprocessed/wind",
+                "tds_path": "uv/reprocessed_monthly_agg",
+                "tds_id": null,
+                "parent_catalog": "blended-global/blended-global.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/blended-global-sea-surface-wind-products/access/reprocessed/wind/**/NBS_v02_wind_monthly_d[0-9]{8}_nrt_c[0-9]{8}\\.nc$"
+                ]
             },
             {
                 "name": "Files",
@@ -113,7 +253,7 @@
                 "server_location": "/datasets/published/",
                 "tds_path": "OisstBase",
                 "tds_id": null,
-                "parent_catalog": "marine-ocean/marine-ocean.xml",
+                "parent_catalog": "blended-global/blended-global.xml",
                 "mount_path": "10.254.101.67:/NFS06/datasets/published-prod",
                 "writeable": false
             },
@@ -124,7 +264,7 @@
                 "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2/access/avhrr-only",
                 "tds_path": "OisstBase/NetCDF/V2.0/AVHRR",
                 "tds_id": "OISST-V2-AVHRR-Daily",
-                "parent_catalog": "marine-ocean/marine-ocean.xml",
+                "parent_catalog": "blended-global/blended-global.xml",
                 "mount_path": "10.254.101.67:/NFS06/datasets/published-prod",
                 "writeable": false
             },
@@ -135,9 +275,23 @@
                 "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2/access/amsr-avhrr",
                 "tds_path": "OisstBase/NetCDF/V2.0/AVHRR-AMSR",
                 "tds_id": "OISST-V2-AVHRR-AMSR-Daily",
-                "parent_catalog": "marine-ocean/marine-ocean.xml",
+                "parent_catalog": "blended-global/blended-global.xml",
                 "mount_path": "10.254.101.67:/NFS06/datasets/published-prod",
                 "writeable": false
+            },
+            {
+                "name": "OISST Daily AVHRR AMSR Feature Collection",
+                "catalog": "/var/lib/tomcat/content/thredds/blended-global/oisst-catalog.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2/access/amsr-avhrr",
+                "tds_path": "ncFC/fc-oisst-daily-avhrr-amsr-dly",
+                "tds_id": null,
+                "parent_catalog": "blended-global/blended-global.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/sea-surface-temperature-optimum-interpolation/v2/access/amsr-avhrr/**/amsr-avhrr-v2.*\\.nc$"
+                ]
             },
             {
                 "name": "OISST-V2.1-AVHRR-Daily Files",
@@ -146,9 +300,37 @@
                 "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr",
                 "tds_path": "OisstBase/NetCDF/V2.1/AVHRR",
                 "tds_id": "OISST-V2.1-AVHRR-Daily",
-                "parent_catalog": "marine-ocean/marine-ocean.xml",
+                "parent_catalog": "blended-global/blended-global.xml",
                 "mount_path": "10.254.101.67:/NFS06/datasets/published-prod",
                 "writeable": false
+            },
+            {
+                "name": "OISST Preliminary Daily AVHRR-only Feature Collection",
+                "catalog": "/var/lib/tomcat/content/thredds/blended-global/oisst-catalog.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr",
+                "tds_path": "ncFC/fc-oisst-daily-avhrr-only-dly-prelim",
+                "tds_id": null,
+                "parent_catalog": "blended-global/blended-global.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/**/oisst-avhrr-v02r01.[0-9]{8}_preliminary\\.nc$"
+                ]
+            },
+            {
+                "name": "OISST Daily AVHRR-only Feature Collection",
+                "catalog": "/var/lib/tomcat/content/thredds/blended-global/oisst-catalog.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr",
+                "tds_path": "ncFC/fc-oisst-daily-avhrr-only-dly",
+                "tds_id": null,
+                "parent_catalog": "blended-global/blended-global.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/**/oisst-avhrr-v02r01\\.(2020022[8-9]|2020(0[3-9]|1[0-2])[0-3][0-9]|202[1-9][0-1][0-9][0-3][0-9]|20[3-9][0-9][0-1][0-9][0-3][0-9])\\.nc$"
+                ]
             }
         ],
         "data-in-development/data-in-development.xml": [
@@ -195,6 +377,20 @@
                 "parent_catalog": "catalog.xml",
                 "mount_path": "10.254.101.67:/NFS06/datasets/published-prod",
                 "writeable": false
+            },
+            {
+                "name": "NWS Office of Water Prediction (OWP) National Mosaics of Quantitative Precipitation Estimates (QPE): feature collection ",
+                "catalog": "/var/lib/tomcat/content/thredds/data-in-development/data-in-development.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/nws-quantitative-precipitation-estimates/access",
+                "tds_path": "did/nws-qpe-fc",
+                "tds_id": "nws-qpe-fc",
+                "parent_catalog": "catalog.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/nws-quantitative-precipitation-estimates/access/**/nws_precip_ak_#yyyyMMdd#.nc"
+                ]
             }
         ],
         "in_situ/aerosols-esrl-gmd.xml": [
@@ -270,7 +466,7 @@
                 "server_location": "/datasets/published/international-comprehensive-ocean-atmosphere/v3/archive/nrt",
                 "tds_path": "international-comprehensive-ocean-atmosphere-dataset-icoads",
                 "tds_id": "icoads",
-                "parent_catalog": "marine-ocean/marine-ocean.xml",
+                "parent_catalog": "in_situ/in_situ.xml",
                 "mount_path": "10.254.101.67:/NFS06/datasets/published-prod",
                 "writeable": false
             }
@@ -393,6 +589,48 @@
                 "parent_catalog": "satellite/satellite.xml",
                 "mount_path": "10.254.101.67:/NFS06/datasets/published-prod",
                 "writeable": false
+            },
+            {
+                "name": "Historical Land-Cover Change and Land-Use Conversions Global Dataset: HH_AREAVEG Feature Collection",
+                "catalog": "/var/lib/tomcat/content/thredds/satellite/landcover.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/landcover",
+                "tds_path": "ncFC/sat/landcover-HHAREAVEG-fc",
+                "tds_id": null,
+                "parent_catalog": "satellite/satellite.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/landcover/**/land-cover_hh_landcover_.*\\.nc$"
+                ]
+            },
+            {
+                "name": "Historical Land-Cover Change and Land-Use Conversions Global Dataset: HYDE_AREAVEG Feature Collection",
+                "catalog": "/var/lib/tomcat/content/thredds/satellite/landcover.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/landcover",
+                "tds_path": "ncFC/sat/landcover-HYDEAREAVEG-fc",
+                "tds_id": null,
+                "parent_catalog": "satellite/satellite.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/landcover/**/land-cover_hyde_landcover_.*\\.nc$"
+                ]
+            },
+            {
+                "name": "Historical Land-Cover Change and Land-Use Conversions Global Dataset: RF_AREAVEG Feature Collection",
+                "catalog": "/var/lib/tomcat/content/thredds/satellite/landcover.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/landcover",
+                "tds_path": "ncFC/sat/landcover-RFAREAVEG-fc",
+                "tds_id": null,
+                "parent_catalog": "satellite/satellite.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/landcover/**/land-cover_rf_landcover_.*\\.nc$"
+                ]
             }
         ],
         "satellite/mean-layer-temp-noaa.xml": [
@@ -458,6 +696,90 @@
                 "parent_catalog": "satellite/satellite.xml",
                 "mount_path": "10.254.101.67:/NFS06/datasets/published-prod",
                 "writeable": false
+            },
+            {
+                "name": "SSMI-Hydro 2.5 Degree Early",
+                "catalog": "/var/lib/tomcat/content/thredds/satellite/ssmi-hydro.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/ssmi-ssmis-hydrological-products/access/netcdf",
+                "tds_path": "satellite/ssmi-hydro_2_5deg-early-agg",
+                "tds_id": null,
+                "parent_catalog": "satellite/satellite.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/ssmi-ssmis-hydrological-products/access/netcdf/**/mw-hydro_v01_2.5-deg_..._early_[0-9]{6}\\.nc"
+                ]
+            },
+            {
+                "name": "SSMI-Hydro 2.5 Degree Late",
+                "catalog": "/var/lib/tomcat/content/thredds/satellite/ssmi-hydro.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/ssmi-ssmis-hydrological-products/access/netcdf",
+                "tds_path": "satellite/ssmi-hydro_2_5deg-late-agg",
+                "tds_id": null,
+                "parent_catalog": "satellite/satellite.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/ssmi-ssmis-hydrological-products/access/netcdf/**/mw-hydro_v01_2.5-deg_..._late_[0-9]{6}\\.nc"
+                ]
+            },
+            {
+                "name": "SSMI-Hydro Pentad",
+                "catalog": "/var/lib/tomcat/content/thredds/satellite/ssmi-hydro.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/ssmi-ssmis-hydrological-products/access/netcdf",
+                "tds_path": "satellite/ssmi-hydro_pentad_agg",
+                "tds_id": null,
+                "parent_catalog": "satellite/satellite.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/ssmi-ssmis-hydrological-products/access/netcdf/**/mw-hydro_v01_pentad_..._..._[0-9]{8}_[0-9]{8}\\.nc"
+                ]
+            },
+            {
+                "name": "SSMI-Hydro GPCP Input Early",
+                "catalog": "/var/lib/tomcat/content/thredds/satellite/ssmi-hydro.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/ssmi-ssmis-hydrological-products/access/netcdf",
+                "tds_path": "satellite/ssmi-hydro_gpcp_input_early_agg",
+                "tds_id": null,
+                "parent_catalog": "satellite/satellite.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/ssmi-ssmis-hydrological-products/access/netcdf/**/mw-hydro_v01_gpcp-input_..._early_[0-9]{6}\\.nc"
+                ]
+            },
+            {
+                "name": "SSMI-Hydro GPCP Input Late",
+                "catalog": "/var/lib/tomcat/content/thredds/satellite/ssmi-hydro.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/ssmi-ssmis-hydrological-products/access/netcdf",
+                "tds_path": "satellite/ssmi-hydro_gpcp_input_late_agg",
+                "tds_id": null,
+                "parent_catalog": "satellite/satellite.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/ssmi-ssmis-hydrological-products/access/netcdf/**/mw-hydro_v01_gpcp-input_..._late_[0-9]{6}\\.nc"
+                ]
+            },
+            {
+                "name": "SSMI-Hydro GPCP Input Dual",
+                "catalog": "/var/lib/tomcat/content/thredds/satellite/ssmi-hydro.xml",
+                "type": "featureCollection",
+                "server_location": "/datasets/published/ssmi-ssmis-hydrological-products/access/netcdf",
+                "tds_path": "satellite/ssmi-hydro_gpcp_input_dual_agg",
+                "tds_id": null,
+                "parent_catalog": "satellite/satellite.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/datasets/published/ssmi-ssmis-hydrological-products/access/netcdf/**/mw-hydro_v01_gpcp-input_..._dual_[0-9]{6}\\.nc"
+                ]
             }
         ],
         "satellite/tc-primed.xml": [

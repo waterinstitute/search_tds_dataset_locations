@@ -212,6 +212,89 @@ for catalog_ref in catalog_refs_dict:
                 "writeable": writeable
             })
 
+        # search for featureCollections
+        if str(tag.tag).endswith('featureCollection'):
+            print (str(tag.tag))
+            '''
+            <featureCollection name="AVHRR Aerosol Optical Thickness Daily: feature collection"  
+                featureType="FMRC" 
+                harvest="true"	ID="avhrr-aot-daily-fc" 
+                path="ncFC/cdr/avhrr-aot-daily-fc" >
+
+                <metadata inherited="true" >
+                    <serviceName>AggrServices</serviceName>
+                </metadata>
+
+                <collection 
+                    spec="/datasets/published/avhrr-aerosol-optical-thickness/access/daily/**/AOT_AVHRR_v04r00_daily-avg_.*\.nc$"
+                    olderThan="10 min" />
+                <update startup="true" rescan="0 42 6 * * ? *" trigger="allow" /> 
+                <fmrcConfig datasetTypes="Best" />
+            </featureCollection>
+            '''
+            # find any collection tags within the featureCollection tag
+            collection_paths = []
+            spec_parents = []
+            for collection in tag.iter():
+                if str(collection.tag).endswith('collection'):
+                    spec = collection.get('spec')
+                    spec_parent = collection.get('spec')
+                    # while spec path contains *, get parent directory
+                    while '*' in spec_parent:
+                        spec_parent = os.path.dirname(spec_parent)
+                        print (f'new spec: {spec_parent}')
+                    
+                    collection_paths.append(spec)
+                    spec_parents.append(spec_parent)
+            
+            
+            # use the server location attribute to get the mount path.
+            is_mounted = is_on_mount(spec_parents[0])
+            writeable = os.access(spec_parents[0], os.W_OK)
+            if os.path.exists(spec_parents[0]):
+                location = spec_parents[0]
+                if is_mounted:
+                    # check if the locatiion exists
+                        # run a subprocess to use findmnt -n 0o SOURCE --target path
+                        # to get the source of the mount.
+                        mnt_path = subprocess.check_output(['findmnt', '-n', '-o', 'SOURCE', '--target', spec_parents[0]])        
+                        mnt_path = mnt_path.decode('utf-8').strip()
+                else:
+                    # the path exists but is not mounted.
+                    mnt_path = None
+            else:
+                # the path does not exist. set the mount path to None and add the location to the missing datasets dictionary.
+                mnt_path = None
+                location = f"Path does not exist on server: {spec_parents[0]}"
+                missing_datasets_dict[hostname].append({
+                    "name": tag.get('name'),
+                    "catalog": str(catalog_ref),
+                    "type": tag.tag.split('}')[-1],
+                    "missing_server_location": spec_parents[0],
+                    "tds_path": tag.get('path'),
+                    "tds_id": tag.get('ID'),
+                    "parent_catalog": catalog_ref_parent,
+                    "mount_path": mnt_path,
+                    "writeable": writeable,
+                    "collection_paths": collection_paths
+
+                })
+
+            # add the collection to the catalog_datasets_dict
+            catalog_datasets_dict[hostname][catalog_ref_str].append({
+                "name": tag.get('name'),
+                "catalog": str(catalog_ref),
+                "type": tag.tag.split('}')[-1],
+                "server_location": spec_parents[0],
+                "tds_path": tag.get('path'),
+                "tds_id": tag.get('ID'),
+                "parent_catalog": catalog_ref_parent,
+                "mount_path": None,
+                "writeable": None,
+                "collection_paths": collection_paths
+            })
+        
+
 # if a key in the catalog_datasets_dict has no dataset locations, add a nested dictionary with the catalog, parent and the rest of the fields set to None.
 for key in catalog_datasets_dict[hostname]:
     if len(catalog_datasets_dict[hostname][key]) == 0:
@@ -230,13 +313,13 @@ for key in catalog_datasets_dict[hostname]:
             "writeable": None
         })
 
-
 # pretty print catalog_datasets
 # print(json.dumps(catalog_datasets_dict, indent=4))
 
 # write json to file: tds_datasets.json
 with open(f'output/{hostname}_tds_datasets.json', 'w') as f:
     json.dump(catalog_datasets_dict, f, indent=4)
+
 print(f'Json output to: output/{hostname}_tds_datasets.json')
 
 # write missing datasets to file: missing_datasets.json
