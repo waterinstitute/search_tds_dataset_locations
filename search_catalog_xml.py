@@ -214,24 +214,6 @@ for catalog_ref in catalog_refs_dict:
 
         # search for featureCollections
         if str(tag.tag).endswith('featureCollection'):
-            print (str(tag.tag))
-            '''
-            <featureCollection name="AVHRR Aerosol Optical Thickness Daily: feature collection"  
-                featureType="FMRC" 
-                harvest="true"	ID="avhrr-aot-daily-fc" 
-                path="ncFC/cdr/avhrr-aot-daily-fc" >
-
-                <metadata inherited="true" >
-                    <serviceName>AggrServices</serviceName>
-                </metadata>
-
-                <collection 
-                    spec="/datasets/published/avhrr-aerosol-optical-thickness/access/daily/**/AOT_AVHRR_v04r00_daily-avg_.*\.nc$"
-                    olderThan="10 min" />
-                <update startup="true" rescan="0 42 6 * * ? *" trigger="allow" /> 
-                <fmrcConfig datasetTypes="Best" />
-            </featureCollection>
-            '''
             # find any collection tags within the featureCollection tag
             collection_paths = []
             spec_parents = []
@@ -241,12 +223,9 @@ for catalog_ref in catalog_refs_dict:
                     spec_parent = collection.get('spec')
                     # while spec path contains *, get parent directory
                     while '*' in spec_parent:
-                        spec_parent = os.path.dirname(spec_parent)
-                        print (f'new spec: {spec_parent}')
-                    
+                        spec_parent = os.path.dirname(spec_parent)        
                     collection_paths.append(spec)
                     spec_parents.append(spec_parent)
-            
             
             # use the server location attribute to get the mount path.
             is_mounted = is_on_mount(spec_parents[0])

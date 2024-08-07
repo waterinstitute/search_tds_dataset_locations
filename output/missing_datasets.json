@@ -45,6 +45,48 @@
             "writeable": false
         },
         {
+            "name": "Historical Land-Cover Change and Land-Use Conversions Global Dataset: HH_AREAVEG Feature Collection",
+            "catalog": "/var/lib/tomcat/content/thredds/satellite/landcover.xml",
+            "type": "featureCollection",
+            "missing_server_location": "/datasets/published/landcover",
+            "tds_path": "ncFC/sat/landcover-HHAREAVEG-fc",
+            "tds_id": null,
+            "parent_catalog": "satellite/satellite.xml",
+            "mount_path": null,
+            "writeable": false,
+            "collection_paths": [
+                "/datasets/published/landcover/**/land-cover_hh_landcover_.*\\.nc$"
+            ]
+        },
+        {
+            "name": "Historical Land-Cover Change and Land-Use Conversions Global Dataset: HYDE_AREAVEG Feature Collection",
+            "catalog": "/var/lib/tomcat/content/thredds/satellite/landcover.xml",
+            "type": "featureCollection",
+            "missing_server_location": "/datasets/published/landcover",
+            "tds_path": "ncFC/sat/landcover-HYDEAREAVEG-fc",
+            "tds_id": null,
+            "parent_catalog": "satellite/satellite.xml",
+            "mount_path": null,
+            "writeable": false,
+            "collection_paths": [
+                "/datasets/published/landcover/**/land-cover_hyde_landcover_.*\\.nc$"
+            ]
+        },
+        {
+            "name": "Historical Land-Cover Change and Land-Use Conversions Global Dataset: RF_AREAVEG Feature Collection",
+            "catalog": "/var/lib/tomcat/content/thredds/satellite/landcover.xml",
+            "type": "featureCollection",
+            "missing_server_location": "/datasets/published/landcover",
+            "tds_path": "ncFC/sat/landcover-RFAREAVEG-fc",
+            "tds_id": null,
+            "parent_catalog": "satellite/satellite.xml",
+            "mount_path": null,
+            "writeable": false,
+            "collection_paths": [
+                "/datasets/published/landcover/**/land-cover_rf_landcover_.*\\.nc$"
+            ]
+        },
+        {
             "name": "NOAA Microwave Sounding Unit - Brightness Temperature: File access",
             "catalog": "/var/lib/tomcat/content/thredds/satellite/msu_brt_tmp.xml",
             "type": "datasetScan",
