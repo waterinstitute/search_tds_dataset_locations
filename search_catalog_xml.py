@@ -137,10 +137,15 @@ while len(catalog_refs_sublist) > 0:
 catalog_refs = list(set(catalog_refs))
 catalog_refs_dict = [i for n, i in enumerate(catalog_refs_dict) if i not in catalog_refs_dict[n + 1:]]
 
+# add the catalog.xml file to the catalog_refs list
+catalog_refs.append('/var/lib/tomcat/content/thredds/catalog.xml')
+catalog_refs_dict.append({"parent": None, "catalog": '/var/lib/tomcat/content/thredds/catalog.xml'})
+
 # Update the catalog references to remove the thredds_home_dir from the catalog dictionary.
 for ref in catalog_refs_dict:
     ref['catalog'] = str(Path(ref['catalog']).relative_to(thredds_home_dir))
-    ref['parent'] = str(Path(ref['parent']).relative_to(thredds_home_dir))
+    if ref['parent'] is not None:
+        ref['parent'] = str(Path(ref['parent']).relative_to(thredds_home_dir))
 
 # Sort the dictionary
 catalog_refs_dict.sort(key=lambda x: x['catalog'])
@@ -152,7 +157,7 @@ catalog_datasets_dict[hostname] = {}
 # for each catalog key in each item in the catalog_refs_dict, read the catalog file, parse it to find the dataset locations, 
 # and finally add the dataset location and other attrs to the dictionary.
 for catalog_ref in catalog_refs_dict:
-    # print('\n', catalog_ref)
+    print('\n', catalog_ref)
     # create a string from catalog ref that is just the end name of the catalog reference and drop the extension
     catalog_ref_key = Path(catalog_ref['catalog']).stem
     catalog_ref_str = catalog_ref['catalog']
