@@ -157,7 +157,7 @@ catalog_datasets_dict[hostname] = {}
 # for each catalog key in each item in the catalog_refs_dict, read the catalog file, parse it to find the dataset locations, 
 # and finally add the dataset location and other attrs to the dictionary.
 for catalog_ref in catalog_refs_dict:
-    print('\n', catalog_ref)
+    # print('\n', catalog_ref)
     # create a string from catalog ref that is just the end name of the catalog reference and drop the extension
     catalog_ref_key = Path(catalog_ref['catalog']).stem
     catalog_ref_str = catalog_ref['catalog']

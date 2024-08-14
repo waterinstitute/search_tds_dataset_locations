@@ -522,5 +522,95 @@
             "mount_path": null,
             "writeable": false
         }
+    ],
+    "tds-ams01-prod.ncei.noaa.gov-old": [
+        {
+            "name": "GCOS - Global Climate Observing System",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/GCOS",
+            "tds_path": "GCOS",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "SMAP - NCEI-binned 3-day and monthly level-3 Sea Surface Salinity data derived from SMAP level-2 granules",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/ncei/smap",
+            "tds_path": "ncei/smap",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "SMOS - NCEI-binned 3-day and monthly level-3 Sea Surface Salinity data derived from SMOS level-2 granules",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/SMOS",
+            "tds_path": "smos",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "WOA 09 - World Ocean Atlas 2009",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/testdata/woa09",
+            "tds_path": "woa09",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "ROFS/COFS - Regional Ocean Forecast System and Coastal Ocean Forecast System",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/ncep/rofs",
+            "tds_path": "ncep/rofs",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "WOCE - World Ocean Circulation Experiment",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/woce",
+            "tds_path": "woce",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Aggregated Datasets",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/nodc/ncml",
+            "tds_path": "ncml",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Test Data",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/testdata",
+            "tds_path": "testdata",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        }
     ]
 }
