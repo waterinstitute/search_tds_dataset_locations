@@ -334,6 +334,19 @@
                     ]
                 }
             ],
+            "catalog.xml": [
+                {
+                    "name": null,
+                    "catalog": "catalog.xml",
+                    "type": null,
+                    "server_location": null,
+                    "tds_path": null,
+                    "tds_id": null,
+                    "parent_catalog": null,
+                    "mount_path": null,
+                    "writeable": null
+                }
+            ],
             "data-in-development/data-in-development.xml": [
                 {
                     "name": "Soil Moisture Change",
@@ -595,7 +608,7 @@
                     "name": "Historical Land-Cover Change and Land-Use Conversions Global Dataset: HH_AREAVEG Feature Collection",
                     "catalog": "/var/lib/tomcat/content/thredds/satellite/landcover.xml",
                     "type": "featureCollection",
-                    "server_location": "/datasets/published/landcover",
+                    "server_location": "Path does not exist on server: /datasets/published/landcover",
                     "tds_path": "ncFC/sat/landcover-HHAREAVEG-fc",
                     "tds_id": null,
                     "parent_catalog": "satellite/satellite.xml",
@@ -609,7 +622,7 @@
                     "name": "Historical Land-Cover Change and Land-Use Conversions Global Dataset: HYDE_AREAVEG Feature Collection",
                     "catalog": "/var/lib/tomcat/content/thredds/satellite/landcover.xml",
                     "type": "featureCollection",
-                    "server_location": "/datasets/published/landcover",
+                    "server_location": "Path does not exist on server: /datasets/published/landcover",
                     "tds_path": "ncFC/sat/landcover-HYDEAREAVEG-fc",
                     "tds_id": null,
                     "parent_catalog": "satellite/satellite.xml",
@@ -623,7 +636,7 @@
                     "name": "Historical Land-Cover Change and Land-Use Conversions Global Dataset: RF_AREAVEG Feature Collection",
                     "catalog": "/var/lib/tomcat/content/thredds/satellite/landcover.xml",
                     "type": "featureCollection",
-                    "server_location": "/datasets/published/landcover",
+                    "server_location": "Path does not exist on server: /datasets/published/landcover",
                     "tds_path": "ncFC/sat/landcover-RFAREAVEG-fc",
                     "tds_id": null,
                     "parent_catalog": "satellite/satellite.xml",
@@ -1053,7 +1066,7 @@
                     "server_location": "/datasets/published/",
                     "tds_path": "OisstBase",
                     "tds_id": null,
-                    "parent_catalog": "blended-global/blended-global.xml",
+                    "parent_catalog": "marine-ocean/marine-ocean.xml",
                     "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
                     "writeable": false
                 },
@@ -1064,7 +1077,7 @@
                     "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2/access/avhrr-only",
                     "tds_path": "OisstBase/NetCDF/V2.0/AVHRR",
                     "tds_id": "OISST-V2-AVHRR-Daily",
-                    "parent_catalog": "blended-global/blended-global.xml",
+                    "parent_catalog": "marine-ocean/marine-ocean.xml",
                     "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
                     "writeable": false
                 },
@@ -1075,7 +1088,7 @@
                     "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2/access/amsr-avhrr",
                     "tds_path": "OisstBase/NetCDF/V2.0/AVHRR-AMSR",
                     "tds_id": "OISST-V2-AVHRR-AMSR-Daily",
-                    "parent_catalog": "blended-global/blended-global.xml",
+                    "parent_catalog": "marine-ocean/marine-ocean.xml",
                     "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
                     "writeable": false
                 },
@@ -1086,7 +1099,7 @@
                     "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2/access/amsr-avhrr",
                     "tds_path": "ncFC/fc-oisst-daily-avhrr-amsr-dly",
                     "tds_id": null,
-                    "parent_catalog": "blended-global/blended-global.xml",
+                    "parent_catalog": "marine-ocean/marine-ocean.xml",
                     "mount_path": null,
                     "writeable": null,
                     "collection_paths": [
@@ -1100,7 +1113,7 @@
                     "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr",
                     "tds_path": "OisstBase/NetCDF/V2.1/AVHRR",
                     "tds_id": "OISST-V2.1-AVHRR-Daily",
-                    "parent_catalog": "blended-global/blended-global.xml",
+                    "parent_catalog": "marine-ocean/marine-ocean.xml",
                     "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
                     "writeable": false
                 },
@@ -1111,7 +1124,7 @@
                     "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr",
                     "tds_path": "ncFC/fc-oisst-daily-avhrr-only-dly-prelim",
                     "tds_id": null,
-                    "parent_catalog": "blended-global/blended-global.xml",
+                    "parent_catalog": "marine-ocean/marine-ocean.xml",
                     "mount_path": null,
                     "writeable": null,
                     "collection_paths": [
@@ -1125,12 +1138,25 @@
                     "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr",
                     "tds_path": "ncFC/fc-oisst-daily-avhrr-only-dly",
                     "tds_id": null,
-                    "parent_catalog": "blended-global/blended-global.xml",
+                    "parent_catalog": "marine-ocean/marine-ocean.xml",
                     "mount_path": null,
                     "writeable": null,
                     "collection_paths": [
                         "/datasets/published/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/**/oisst-avhrr-v02r01\\.(2020022[8-9]|2020(0[3-9]|1[0-2])[0-3][0-9]|202[1-9][0-1][0-9][0-3][0-9]|20[3-9][0-9][0-1][0-9][0-3][0-9])\\.nc$"
                     ]
+                }
+            ],
+            "catalog.xml": [
+                {
+                    "name": null,
+                    "catalog": "catalog.xml",
+                    "type": null,
+                    "server_location": null,
+                    "tds_path": null,
+                    "tds_id": null,
+                    "parent_catalog": null,
+                    "mount_path": null,
+                    "writeable": null
                 }
             ],
             "data-in-development/data-in-development.xml": [
@@ -1266,7 +1292,7 @@
                     "server_location": "/datasets/published/international-comprehensive-ocean-atmosphere/v3/archive/nrt",
                     "tds_path": "international-comprehensive-ocean-atmosphere-dataset-icoads",
                     "tds_id": "icoads",
-                    "parent_catalog": "in_situ/in_situ.xml",
+                    "parent_catalog": "marine-ocean/marine-ocean.xml",
                     "mount_path": "10.254.103.67:/NFS06/datasets/published-prod",
                     "writeable": false
                 }
@@ -1599,6 +1625,778 @@
     },
     {
         "tds-ams01-test.ncei.noaa.gov": {
+            "catalog.xml": [
+                {
+                    "name": null,
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetRoot",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/",
+                    "tds_path": "data",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "Argo GADR - Data format as presented in the Global Argo Data Repository (GADR) with Argo Climate-Forecast (CF) compliant netCDF including supplemented global attributes for enhanced Attribute Convention for Data Set Discovery (ACDD) compliance",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/projects/argo/oc1.argo/data",
+                    "tds_path": "argo/gadr",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "Argo GDAC - Data format as presented in the Argo Global Data Assembly Center (GDAC) hosted by the Global Ocean Data Assimilation Experiment (GODAE): Argo Climate-Forecast (CF) compliant netCDF",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/data/GODAE-ARGO/dac",
+                    "tds_path": "argo/gdac",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "AOML Thermosalinograph (TSG) sea surface temperature and salinity data",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/aoml/tsg",
+                    "tds_path": "aoml/tsg",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "NOAA Global Drifter Program (GDP) data from ocean surface drifting buoys",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/aoml/gdp",
+                    "tds_path": "aoml/gdp",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "BML Moorings - University of California, Davis, Bodega Marine Laboratory physical oceanographic data from moorings",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/nmsp/bml",
+                    "tds_path": "nmsp/bml",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "Daily Global 5km Satellite Coral Bleaching Heat Stress Monitoring",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/crw/5km",
+                    "tds_path": "crw/5km",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "CoralTemp: A Daily Global 5km Sea Surface Temperature Dataset",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/crw/coraltemp",
+                    "tds_path": "crw/coraltemp",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "Operational Near-real-time Twice-weekly Global 50-km Satellite Coral Bleaching Thermal Stress Monitoring Product Suite",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/crw/tsps50km",
+                    "tds_path": "crw/tsps50km",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "25-km Ocean Acidification Product Suite (OAPS)",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/crw/oaps",
+                    "tds_path": "crw/oaps",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "Deepwater Horizon ocean profile and other support data",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/DeepwaterHorizon",
+                    "tds_path": "DeepwaterHorizon",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "GCOS - Global Climate Observing System",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/GCOS",
+                    "tds_path": "GCOS",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "GHRSST - Group for High Resolution Sea Surface Temperature, Version 1 and 2",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/ghrsst",
+                    "tds_path": "ghrsst",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "GTSPP - Global Temperature and Salinity Profile Programme",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/gtspp",
+                    "tds_path": "gtspp",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "GOSUD - IODE Global Ocean Surface Underway Data Project",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/iode/gosud",
+                    "tds_path": "iode/gosud",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "AOOS - Alaska Ocean Observing System station data",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/ioos/aoos",
+                    "tds_path": "ioos/aoos",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "CARICOOS - Caribbean Coastal Ocean Observing System station data",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/ioos/caricoos",
+                    "tds_path": "ioos/caricoos",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "GCOOS - Gulf of Mexico Coastal Ocean Observing System local data nodes data",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/ioos/gcoos",
+                    "tds_path": "ioos/gcoos",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "GLOS - Great Lakes Observing System non-Federal station data",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/ioos/glos",
+                    "tds_path": "ioos/glos",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "MARACOOS - Mid-Atlantic Regional Association Coastal Ocean Observing System non-Federal station data",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/ioos/maracoos",
+                    "tds_path": "ioos/maracoos",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "NANOOS - Northwest Association of Networked Ocean Observation Systems non-Federal station data",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/ioos/nanoos",
+                    "tds_path": "ioos/nanoos",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "NERACOOS - Northeastern Regional Association of Coastal Ocean Observing Systems non-Federal station data",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/ioos/neracoos",
+                    "tds_path": "ioos/neracoos",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "NGDAC - National Glider Data Assembly Center data",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/ioos/ngdac",
+                    "tds_path": "ioos/ngdac",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "PacIOOS - Pacific Islands Ocean Observing System non-Federal station data",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/ioos/pacioos",
+                    "tds_path": "ioos/pacioos",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "SCCOOS - Southern California Coastal Ocean Observing System non-Federal station data",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/ioos/sccoos",
+                    "tds_path": "ioos/sccoos",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "SECOORA - Southeast Coastal Ocean Observing Regional Association non-Federal station data",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/ioos/secoora",
+                    "tds_path": "ioos/secoora",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "International Quality Controlled Ocean Database (IQuOD) aggregated and community quality controlled ocean profile data",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/iquod",
+                    "tds_path": "iquod",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "KOD - Korea Oceanographic Database",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/kod",
+                    "tds_path": "kod",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "Livneh Model - A spatially comprehensive, hydrologic model-based data set for Mexico, the U.S., and southern Canada, 1950-2014 (Livneh et al)",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/livnehmodel",
+                    "tds_path": "livnehmodel",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "Coastal-Marine Automated Network (C-MAN) and moored (weather) buoys",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/ndbc/cmanwx",
+                    "tds_path": "ndbc/cmanwx",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "Tropical Atmosphere Ocean (TAO) array of moored buoys",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/ndbc/tao-buoy",
+                    "tds_path": "ndbc/tao-buoy",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "Tropical Atmosphere Ocean (TAO) array of moored buoys delayed-mode full-resolution data",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/ndbc/tao-buoys-delayed-mode",
+                    "tds_path": "ndbc/tao-buoys-delayed-mode",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "Tropical Atmosphere Ocean (TAO) CTD data",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/ndbc/tao-ctd",
+                    "tds_path": "ndbc/tao-ctd",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "National Ocean Service (NOS) Center for Operational Oceanographic Products and Services (CO-OPS) National Water Level Observation Network (NWLON) and Physical Oceanographic Real-Time System (PORTS) stations",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/ndbc/co-ops",
+                    "tds_path": "ndbc/co-ops",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "Near-Real Time Surface Ocean Velocities derived from HF Radar stations located along coastal waters",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/ndbc/hfradar/rtv",
+                    "tds_path": "ndbc/hfradar/rtv",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "OceanSITES long-term, deepwater reference stations",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/ndbc/oceansites",
+                    "tds_path": "ndbc/oceansites",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "AVHRR Pathfinder Sea Surface Temperature",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/pathfinder",
+                    "tds_path": "pathfinder",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "CoRTAD - Coral Reef Temperature Anomaly Database",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/cortad",
+                    "tds_path": "cortad",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "GOCD - Global Ocean Currents Database",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/ncei/gocd",
+                    "tds_path": "ncei/gocd",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "Selected Data Sets",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/ncei/archive/data",
+                    "tds_path": "ncei/archive/data",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "SMAP - NCEI-binned 3-day and monthly level-3 Sea Surface Salinity data derived from SMAP level-2 granules",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/ncei/smap",
+                    "tds_path": "ncei/smap",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "SMOS - NCEI-binned 3-day and monthly level-3 Sea Surface Salinity data derived from SMOS level-2 granules",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/SMOS",
+                    "tds_path": "smos",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "SUMD - NCEI Surface Underway Marine Database",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/ncei/sumd",
+                    "tds_path": "ncei/sumd",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "WOA - World Ocean Atlas",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/ncei/woa",
+                    "tds_path": "ncei/woa",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "WOA Global Ocean Heat and Salt Content",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/woa/DATA_ANALYSIS/3M_HEAT_CONTENT/NETCDF",
+                    "tds_path": "woa/heat_content",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "WOA 09 - World Ocean Atlas 2009",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/testdata/woa09",
+                    "tds_path": "woa09",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "WOA 23 - World Ocean Atlas 2023",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/woa.1.data.nodc/WOA23",
+                    "tds_path": "woa23",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "WOA Regional Climatology Data",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/woa/REGCLIM",
+                    "tds_path": "woa/REGCLIM",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "WOD - World Ocean Database",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/ncei/wod",
+                    "tds_path": "ncei/wod",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "NCEI NetCDF Templates Example Datasets",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/ncei/example/data/netcdf",
+                    "tds_path": "example",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "RTOFS - Real-Time Ocean Forecast System (Atlantic)",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/ncep/rtofs",
+                    "tds_path": "ncep/rtofs",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "WAVEWATCH III\u00ae - Operational Wave Models",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/ncep/nww3",
+                    "tds_path": "ncep/nww3",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "ROFS/COFS - Regional Ocean Forecast System and Coastal Ocean Forecast System",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/ncep/rofs",
+                    "tds_path": "ncep/rofs",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "Jason-2 - Ocean Surface Topography Mission (OSTM) altimetry",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/jason2",
+                    "tds_path": "jason2",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "Jason-3 - Ocean Surface Topography Mission (OSTM) altimetry",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/jason3",
+                    "tds_path": "jason3",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "LSA SLR - NOAA Laboratory for Satellite Altimetry Sea Level Rise products - global and regional sea level time series and trend map from satellite altimeter missions (TOPEX/Poseidon, Jason-1/2, GFO, Envisat, and ERS-1/2)",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/lsa/slr",
+                    "tds_path": "lsa/slr",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "Satellite Ocean Heat Content Suite (SOHCS)",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/sohcs",
+                    "tds_path": "sohcs",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "RADARSAT-2 SAR Winds - NOAA high resolution sea surface winds data from Synthetic Aperture Radar (SAR) on the RADARSAT-2 satellite",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/sar-winds/radarsat2",
+                    "tds_path": "sar-winds/radarsat2",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "Sentinel-1 SAR Winds - NOAA high resolution sea surface winds data from Synthetic Aperture Radar (SAR) on the Sentinel-1A and Sentinel-1B satellites",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/sar-winds/sentinel1",
+                    "tds_path": "sar-winds/sentinel1",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "RCM SAR Winds - NOAA high resolution sea surface winds data from Synthetic Aperture Radar (SAR) on the RADARSAT Constellation Mission (RCM) satellites",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/sar-winds/rcm",
+                    "tds_path": "sar-winds/rcm",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "Gulf of Mexico Harmful Algal Bloom Forecast data",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/co-ops/hab/gomex",
+                    "tds_path": "co-ops/hab/gomex",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "NOAA Office of Coast Survey profile data",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/ocs/profile",
+                    "tds_path": "ocs/profile",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "ATOMIC - Atlantic Tradewind Ocean-Atmosphere Mesoscale Interaction Campaign",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/oar/psl/atomic-2020",
+                    "tds_path": "psl/atomic",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "SAMOS - Center for Ocean-Atmospheric Prediction Studies (COAPS) Shipboard Automated Meteorological and Oceanographic System",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/coaps/samos",
+                    "tds_path": "coaps/samos",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "Coastal Data Information Program (CDIP) Datawell Waverider Buoy Data",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /nodc/web/data.nodc/htdocs/sio/cdip",
+                    "tds_path": "sio/cdip",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "WCOS - National Marine Sanctuary Program (NMSP) West Coast Observation System",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/nmsp/wcos",
+                    "tds_path": "nmsp/wcos",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "WOCE - World Ocean Circulation Experiment",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/woce",
+                    "tds_path": "woce",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "UW Seaglider - University of Washington Seaglider data",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/glider",
+                    "tds_path": "glider",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "Aggregated Datasets",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/nodc/ncml",
+                    "tds_path": "ncml",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                },
+                {
+                    "name": "Test Data",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+                    "type": "datasetScan",
+                    "server_location": "Path does not exist on server: /www/sites/data.nodc/htdocs/testdata",
+                    "tds_path": "testdata",
+                    "tds_id": null,
+                    "parent_catalog": "None",
+                    "mount_path": null,
+                    "writeable": false
+                }
+            ],
             "regional_climatologies.xml": [
                 {
                     "name": "Arctic Seas",
@@ -1730,6 +2528,19 @@
                     "writeable": null
                 }
             ],
+            "catalog.xml": [
+                {
+                    "name": null,
+                    "catalog": "catalog.xml",
+                    "type": null,
+                    "server_location": null,
+                    "tds_path": null,
+                    "tds_id": null,
+                    "parent_catalog": null,
+                    "mount_path": null,
+                    "writeable": null
+                }
+            ],
             "catalog_USM_DAP.xml": [
                 {
                     "name": null,
@@ -1765,6 +2576,62 @@
                     "parent_catalog": "catalog.xml",
                     "mount_path": "10.254.102.74:/NFS04/msthredds/data",
                     "writeable": false
+                },
+                {
+                    "name": "AEC GoMex Model Climatology Aggregation",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog_aec_climo.xml",
+                    "type": "featureCollection",
+                    "server_location": "/mnt/thredds-data/aec/aec_model_climo",
+                    "tds_path": "aec_model_agg",
+                    "tds_id": "aec_model_climo_agg",
+                    "parent_catalog": "catalog.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/mnt/thredds-data/aec/aec_model_climo/AEC.*nc$"
+                    ]
+                },
+                {
+                    "name": "AEC GoMex Satellite Climatology",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog_aec_climo.xml",
+                    "type": "featureCollection",
+                    "server_location": "/mnt/thredds-data/aec/aec_sat_climo/GOM",
+                    "tds_path": "aec_gomex_sat_agg",
+                    "tds_id": "aec_gomex_sat_agg",
+                    "parent_catalog": "catalog.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/mnt/thredds-data/aec/aec_sat_climo/GOM/AEC.*.nc$"
+                    ]
+                },
+                {
+                    "name": "AEC USEAST Satellite Climatology",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog_aec_climo.xml",
+                    "type": "featureCollection",
+                    "server_location": "/mnt/thredds-data/aec/aec_sat_climo/USEAST",
+                    "tds_path": "aec_useast_sat_agg",
+                    "tds_id": "aec_useast_sat_agg",
+                    "parent_catalog": "catalog.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/mnt/thredds-data/aec/aec_sat_climo/USEAST/AEC.*.nc$"
+                    ]
+                },
+                {
+                    "name": "AEC USWEST Satellite Climatology",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog_aec_climo.xml",
+                    "type": "featureCollection",
+                    "server_location": "/mnt/thredds-data/aec/aec_sat_climo/USWEST",
+                    "tds_path": "aec_uswest_sat_agg",
+                    "tds_id": "aec_uswest_sat_agg",
+                    "parent_catalog": "catalog.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/mnt/thredds-data/aec/aec_sat_climo/USWEST/AEC.*.nc$"
+                    ]
                 }
             ],
             "catalog_dwh.xml": [
@@ -2115,7 +2982,7 @@
                     "server_location": "/datasets/published/",
                     "tds_path": "OisstBase",
                     "tds_id": null,
-                    "parent_catalog": "blended-global/blended-global.xml",
+                    "parent_catalog": "marine-ocean/marine-ocean.xml",
                     "mount_path": "10.254.101.67:/NFS06/datasets/published-prod",
                     "writeable": false
                 },
@@ -2126,7 +2993,7 @@
                     "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2/access/avhrr-only",
                     "tds_path": "OisstBase/NetCDF/V2.0/AVHRR",
                     "tds_id": "OISST-V2-AVHRR-Daily",
-                    "parent_catalog": "blended-global/blended-global.xml",
+                    "parent_catalog": "marine-ocean/marine-ocean.xml",
                     "mount_path": "10.254.101.67:/NFS06/datasets/published-prod",
                     "writeable": false
                 },
@@ -2137,7 +3004,7 @@
                     "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2/access/amsr-avhrr",
                     "tds_path": "OisstBase/NetCDF/V2.0/AVHRR-AMSR",
                     "tds_id": "OISST-V2-AVHRR-AMSR-Daily",
-                    "parent_catalog": "blended-global/blended-global.xml",
+                    "parent_catalog": "marine-ocean/marine-ocean.xml",
                     "mount_path": "10.254.101.67:/NFS06/datasets/published-prod",
                     "writeable": false
                 },
@@ -2148,7 +3015,7 @@
                     "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2/access/amsr-avhrr",
                     "tds_path": "ncFC/fc-oisst-daily-avhrr-amsr-dly",
                     "tds_id": null,
-                    "parent_catalog": "blended-global/blended-global.xml",
+                    "parent_catalog": "marine-ocean/marine-ocean.xml",
                     "mount_path": null,
                     "writeable": null,
                     "collection_paths": [
@@ -2162,7 +3029,7 @@
                     "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr",
                     "tds_path": "OisstBase/NetCDF/V2.1/AVHRR",
                     "tds_id": "OISST-V2.1-AVHRR-Daily",
-                    "parent_catalog": "blended-global/blended-global.xml",
+                    "parent_catalog": "marine-ocean/marine-ocean.xml",
                     "mount_path": "10.254.101.67:/NFS06/datasets/published-prod",
                     "writeable": false
                 },
@@ -2173,7 +3040,7 @@
                     "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr",
                     "tds_path": "ncFC/fc-oisst-daily-avhrr-only-dly-prelim",
                     "tds_id": null,
-                    "parent_catalog": "blended-global/blended-global.xml",
+                    "parent_catalog": "marine-ocean/marine-ocean.xml",
                     "mount_path": null,
                     "writeable": null,
                     "collection_paths": [
@@ -2187,12 +3054,25 @@
                     "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr",
                     "tds_path": "ncFC/fc-oisst-daily-avhrr-only-dly",
                     "tds_id": null,
-                    "parent_catalog": "blended-global/blended-global.xml",
+                    "parent_catalog": "marine-ocean/marine-ocean.xml",
                     "mount_path": null,
                     "writeable": null,
                     "collection_paths": [
                         "/datasets/published/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/**/oisst-avhrr-v02r01\\.(2020022[8-9]|2020(0[3-9]|1[0-2])[0-3][0-9]|202[1-9][0-1][0-9][0-3][0-9]|20[3-9][0-9][0-1][0-9][0-3][0-9])\\.nc$"
                     ]
+                }
+            ],
+            "catalog.xml": [
+                {
+                    "name": null,
+                    "catalog": "catalog.xml",
+                    "type": null,
+                    "server_location": null,
+                    "tds_path": null,
+                    "tds_id": null,
+                    "parent_catalog": null,
+                    "mount_path": null,
+                    "writeable": null
                 }
             ],
             "data-in-development/data-in-development.xml": [
@@ -2328,7 +3208,7 @@
                     "server_location": "/datasets/published/international-comprehensive-ocean-atmosphere/v3/archive/nrt",
                     "tds_path": "international-comprehensive-ocean-atmosphere-dataset-icoads",
                     "tds_id": "icoads",
-                    "parent_catalog": "in_situ/in_situ.xml",
+                    "parent_catalog": "marine-ocean/marine-ocean.xml",
                     "mount_path": "10.254.101.67:/NFS06/datasets/published-prod",
                     "writeable": false
                 }
@@ -2654,6 +3534,181 @@
                     "tds_id": "tc-primed",
                     "parent_catalog": "satellite/satellite.xml",
                     "mount_path": "10.254.101.67:/NFS06/datasets/published-prod",
+                    "writeable": false
+                }
+            ]
+        }
+    },
+    {
+        "tds-coastal01-prod.ncei.noaa.gov-old": {
+            "catalog.xml": [
+                {
+                    "name": null,
+                    "catalog": "catalog.xml",
+                    "type": null,
+                    "server_location": null,
+                    "tds_path": null,
+                    "tds_id": null,
+                    "parent_catalog": null,
+                    "mount_path": null,
+                    "writeable": null
+                }
+            ],
+            "catalog_USM_DAP.xml": [
+                {
+                    "name": null,
+                    "catalog": "catalog_USM_DAP.xml",
+                    "type": null,
+                    "server_location": null,
+                    "tds_path": null,
+                    "tds_id": null,
+                    "parent_catalog": "catalog.xml",
+                    "mount_path": null,
+                    "writeable": null
+                }
+            ],
+            "catalog_aec_climo.xml": [
+                {
+                    "name": "AEC Model",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog_aec_climo.xml",
+                    "type": "datasetScan",
+                    "server_location": "/mnt/thredds-data/aec/aec_model_climo/",
+                    "tds_path": "aec_model",
+                    "tds_id": "AEC_model",
+                    "parent_catalog": "catalog.xml",
+                    "mount_path": "10.254.103.74:/NFS04/msthredds/data",
+                    "writeable": false
+                },
+                {
+                    "name": "AEC Satellite",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog_aec_climo.xml",
+                    "type": "datasetScan",
+                    "server_location": "/mnt/thredds-data/aec/aec_sat_climo/",
+                    "tds_path": "aec_sat",
+                    "tds_id": "AEC_sat",
+                    "parent_catalog": "catalog.xml",
+                    "mount_path": "10.254.103.74:/NFS04/msthredds/data",
+                    "writeable": false
+                },
+                {
+                    "name": "AEC GoMex Model Climatology Aggregation",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog_aec_climo.xml",
+                    "type": "featureCollection",
+                    "server_location": "/mnt/thredds-data/aec/aec_model_climo",
+                    "tds_path": "aec_model_agg",
+                    "tds_id": "aec_model_climo_agg",
+                    "parent_catalog": "catalog.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/mnt/thredds-data/aec/aec_model_climo/AEC.*nc$"
+                    ]
+                },
+                {
+                    "name": "AEC GoMex Satellite Climatology",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog_aec_climo.xml",
+                    "type": "featureCollection",
+                    "server_location": "/mnt/thredds-data/aec/aec_sat_climo/GOM",
+                    "tds_path": "aec_gomex_sat_agg",
+                    "tds_id": "aec_gomex_sat_agg",
+                    "parent_catalog": "catalog.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/mnt/thredds-data/aec/aec_sat_climo/GOM/AEC.*.nc$"
+                    ]
+                },
+                {
+                    "name": "AEC USEAST Satellite Climatology",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog_aec_climo.xml",
+                    "type": "featureCollection",
+                    "server_location": "/mnt/thredds-data/aec/aec_sat_climo/USEAST",
+                    "tds_path": "aec_useast_sat_agg",
+                    "tds_id": "aec_useast_sat_agg",
+                    "parent_catalog": "catalog.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/mnt/thredds-data/aec/aec_sat_climo/USEAST/AEC.*.nc$"
+                    ]
+                },
+                {
+                    "name": "AEC USWEST Satellite Climatology",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog_aec_climo.xml",
+                    "type": "featureCollection",
+                    "server_location": "/mnt/thredds-data/aec/aec_sat_climo/USWEST",
+                    "tds_path": "aec_uswest_sat_agg",
+                    "tds_id": "aec_uswest_sat_agg",
+                    "parent_catalog": "catalog.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/mnt/thredds-data/aec/aec_sat_climo/USWEST/AEC.*.nc$"
+                    ]
+                }
+            ],
+            "catalog_dwh.xml": [
+                {
+                    "name": "DWH CTD",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog_dwh.xml",
+                    "type": "datasetScan",
+                    "server_location": "/mnt/thredds-data/dwh/ctd",
+                    "tds_path": "dwh/ctd",
+                    "tds_id": "dwh_ctd",
+                    "parent_catalog": "catalog.xml",
+                    "mount_path": "10.254.103.74:/NFS04/msthredds/data",
+                    "writeable": false
+                }
+            ],
+            "catalog_navo_glider.xml": [
+                {
+                    "name": "NAVOCEANO_GLIDER",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog_navo_glider.xml",
+                    "type": "datasetScan",
+                    "server_location": "/mnt/thredds-data/navoceano_glider/",
+                    "tds_path": "navoceano_glider",
+                    "tds_id": "navoceano_glider",
+                    "parent_catalog": "catalog.xml",
+                    "mount_path": "10.254.103.74:/NFS04/msthredds/data",
+                    "writeable": false
+                }
+            ],
+            "catalog_northwest_fisheries.xml": [
+                {
+                    "name": "Northwest Fisheries",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog_northwest_fisheries.xml",
+                    "type": "datasetScan",
+                    "server_location": "/mnt/thredds-data/northwest_fisheries/",
+                    "tds_path": "northwest_fisheries",
+                    "tds_id": "NORTHWEST_FISHERIES",
+                    "parent_catalog": "catalog.xml",
+                    "mount_path": "10.254.103.74:/NFS04/msthredds/data",
+                    "writeable": false
+                }
+            ],
+            "catalog_oceanNomads.xml": [
+                {
+                    "name": null,
+                    "catalog": "catalog_oceanNomads.xml",
+                    "type": null,
+                    "server_location": null,
+                    "tds_path": null,
+                    "tds_id": null,
+                    "parent_catalog": "catalog.xml",
+                    "mount_path": null,
+                    "writeable": null
+                }
+            ],
+            "catalog_ocean_exploration_research.xml": [
+                {
+                    "name": "Ocean Exploration Research",
+                    "catalog": "/var/lib/tomcat/content/thredds/catalog_ocean_exploration_research.xml",
+                    "type": "datasetScan",
+                    "server_location": "/mnt/thredds-data/ocean_exploration_research/",
+                    "tds_path": "ocean_exploration_research",
+                    "tds_id": "ocean_exploration_research",
+                    "parent_catalog": "catalog.xml",
+                    "mount_path": "10.254.103.74:/NFS04/msthredds/data",
                     "writeable": false
                 }
             ]
@@ -3527,6 +4582,19 @@
     },
     {
         "tds-model01-dev.ncei.noaa.gov": {
+            "catalog.xml": [
+                {
+                    "name": null,
+                    "catalog": "catalog.xml",
+                    "type": null,
+                    "server_location": null,
+                    "tds_path": null,
+                    "tds_id": null,
+                    "parent_catalog": null,
+                    "mount_path": null,
+                    "writeable": null
+                }
+            ],
             "model/cbofs_catalog.xml": [
                 {
                     "name": "CBOFS Models",
@@ -6066,6 +7134,19 @@
     },
     {
         "tds-model01-test.ncei.noaa.gov": {
+            "catalog.xml": [
+                {
+                    "name": null,
+                    "catalog": "catalog.xml",
+                    "type": null,
+                    "server_location": null,
+                    "tds_path": null,
+                    "tds_id": null,
+                    "parent_catalog": null,
+                    "mount_path": null,
+                    "writeable": null
+                }
+            ],
             "model/cbofs_catalog.xml": [
                 {
                     "name": "CBOFS Models",
@@ -6077,6 +7158,20 @@
                     "parent_catalog": "model/model.xml",
                     "mount_path": "10.254.11.33:/export/opsnas102-data2",
                     "writeable": false
+                },
+                {
+                    "name": "Aggregated CBOFS Fields Forecast",
+                    "catalog": "/var/lib/tomcat/content/thredds/model/cbofs_catalog.xml",
+                    "type": "featureCollection",
+                    "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/chesapeake-bay-operational-forecast-system-cbofs",
+                    "tds_path": "model-cbofs-agg",
+                    "tds_id": null,
+                    "parent_catalog": "model/model.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/chesapeake-bay-operational-forecast-system-cbofs/**/.*nos.cbofs.fields.*\\.nc(?:\\.ncml)?"
+                    ]
                 }
             ],
             "model/cfs.xml": [
@@ -6112,6 +7207,76 @@
                     "parent_catalog": "model/model.xml",
                     "mount_path": null,
                     "writeable": false
+                },
+                {
+                    "name": "Surface and Radiative Fluxes (FLX), Monthly Mean Aggregation",
+                    "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                    "type": "featureCollection",
+                    "server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
+                    "tds_path": "model-cfs_reanl_mm_flxf_agg",
+                    "tds_id": null,
+                    "parent_catalog": "model/model.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/mnt/modeldata4/model/cfsrmon/**/flxf[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
+                    ]
+                },
+                {
+                    "name": "3-D Ocean (OCN), Monthly Mean Aggregation",
+                    "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                    "type": "featureCollection",
+                    "server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
+                    "tds_path": "model-cfs_reanl_mm_ocnh_agg",
+                    "tds_id": null,
+                    "parent_catalog": "model/model.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/mnt/modeldata4/model/cfsrmon/**/ocnh[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
+                    ]
+                },
+                {
+                    "name": "3-D Isentropic Level (IPV), Monthly Mean Aggregation",
+                    "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                    "type": "featureCollection",
+                    "server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
+                    "tds_path": "model-cfs_reanl_mm_ipvh_agg",
+                    "tds_id": null,
+                    "parent_catalog": "model/model.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/mnt/modeldata4/model/cfsrmon/**/ipvh[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
+                    ]
+                },
+                {
+                    "name": "Energetics (EGY), Monthly Mean Aggregation",
+                    "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                    "type": "featureCollection",
+                    "server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
+                    "tds_path": "model-cfs_reanl_mm_egyh_agg",
+                    "tds_id": null,
+                    "parent_catalog": "model/model.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/mnt/modeldata4/model/cfsrmon/**/egyh[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
+                    ]
+                },
+                {
+                    "name": "3-D Pressure Level (PGB), Monthly Mean Aggregation",
+                    "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                    "type": "featureCollection",
+                    "server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
+                    "tds_path": "model-cfs_reanl_mm_pgbh_agg",
+                    "tds_id": null,
+                    "parent_catalog": "model/model.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/mnt/modeldata4/model/cfsrmon/**/pgbh[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
+                    ]
                 },
                 {
                     "name": "3-D Diabatic Heating Data (DIAB), 6-hour",
@@ -6554,6 +7719,20 @@
                     "parent_catalog": "model/model.xml",
                     "mount_path": "10.254.11.33:/export/opsnas102-data2",
                     "writeable": false
+                },
+                {
+                    "name": "Aggregated CIOFS Fields Forecast",
+                    "catalog": "/var/lib/tomcat/content/thredds/model/ciofs_catalog.xml",
+                    "type": "featureCollection",
+                    "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/cook-inlet-operational-forecast-system-ciofs",
+                    "tds_path": "model-ciofs-agg",
+                    "tds_id": null,
+                    "parent_catalog": "model/model.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/cook-inlet-operational-forecast-system-ciofs/**/.*nos.ciofs.fields.*\\.nc(?:\\.ncml)?"
+                    ]
                 }
             ],
             "model/creofs_catalog.xml": [
@@ -6580,6 +7759,20 @@
                     "parent_catalog": "model/model.xml",
                     "mount_path": "10.254.11.33:/export/opsnas102-data2",
                     "writeable": false
+                },
+                {
+                    "name": "Aggregated DBOFS Fields Forecast",
+                    "catalog": "/var/lib/tomcat/content/thredds/model/dbofs_catalog.xml",
+                    "type": "featureCollection",
+                    "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/delaware-bay-operational-forecast-system-dbofs",
+                    "tds_path": "model-dbofs-agg",
+                    "tds_id": null,
+                    "parent_catalog": "model/model.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/delaware-bay-operational-forecast-system-dbofs/**/.*nos.dbofs.fields.*\\.nc"
+                    ]
                 }
             ],
             "model/gens.xml": [
@@ -6707,6 +7900,20 @@
                     "parent_catalog": "model/model.xml",
                     "mount_path": "10.254.11.33:/export/opsnas102-data2",
                     "writeable": false
+                },
+                {
+                    "name": "Aggregated GOMOFS Fields Forecast",
+                    "catalog": "/var/lib/tomcat/content/thredds/model/gomofs_catalog.xml",
+                    "type": "featureCollection",
+                    "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/gulf-of-maine-operational-forecast-system-gomofs",
+                    "tds_path": "model-gomofs-agg",
+                    "tds_id": null,
+                    "parent_catalog": "model/model.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/gulf-of-maine-operational-forecast-system-gomofs/**/.*nos.gomofs.fields.*\\.nc(?:\\.ncml)?"
+                    ]
                 }
             ],
             "model/leofs_catalog.xml": [
@@ -6733,6 +7940,20 @@
                     "parent_catalog": "model/model.xml",
                     "mount_path": "10.254.11.33:/export/opsnas102-data2",
                     "writeable": false
+                },
+                {
+                    "name": "Aggregated LHOFS Fields Forecast",
+                    "catalog": "/var/lib/tomcat/content/thredds/model/lhofs_catalog.xml",
+                    "type": "featureCollection",
+                    "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-huron-operational-forecast-system-lhofs",
+                    "tds_path": "model-lhofs-agg",
+                    "tds_id": null,
+                    "parent_catalog": "model/model.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-huron-operational-forecast-system-lhofs/**/.*fields.forecast.*\\.nc"
+                    ]
                 }
             ],
             "model/lmhofs_catalog.xml": [
@@ -6759,6 +7980,20 @@
                     "parent_catalog": "model/model.xml",
                     "mount_path": "10.254.11.33:/export/opsnas102-data2",
                     "writeable": false
+                },
+                {
+                    "name": "Aggregated LMOFS Fields Forecast",
+                    "catalog": "/var/lib/tomcat/content/thredds/model/lmofs_catalog.xml",
+                    "type": "featureCollection",
+                    "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-michigan-operational-forecast-system-lmofs",
+                    "tds_path": "model-lmofs-agg",
+                    "tds_id": null,
+                    "parent_catalog": "model/model.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-michigan-operational-forecast-system-lmofs/**/.*fields.forecast.*\\.nc"
+                    ]
                 }
             ],
             "model/loofs_catalog.xml": [
@@ -6772,6 +8007,20 @@
                     "parent_catalog": "model/model.xml",
                     "mount_path": "10.254.11.33:/export/opsnas102-data2",
                     "writeable": false
+                },
+                {
+                    "name": "Aggregated LOOFS Fields Forecast",
+                    "catalog": "/var/lib/tomcat/content/thredds/model/loofs_catalog.xml",
+                    "type": "featureCollection",
+                    "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-ontario-operational-forecast-system-loofs",
+                    "tds_path": "model-loofs-agg",
+                    "tds_id": null,
+                    "parent_catalog": "model/model.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-ontario-operational-forecast-system-loofs/**/.*fields.forecast.*\\.nc"
+                    ]
                 }
             ],
             "model/lsofs_catalog.xml": [
@@ -6785,6 +8034,20 @@
                     "parent_catalog": "model/model.xml",
                     "mount_path": "10.254.11.33:/export/opsnas102-data2",
                     "writeable": false
+                },
+                {
+                    "name": "Aggregated LSOFS Fields Forecast",
+                    "catalog": "/var/lib/tomcat/content/thredds/model/lsofs_catalog.xml",
+                    "type": "featureCollection",
+                    "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-superior-operational-forecast-system-lsofs",
+                    "tds_path": "model-lsofs-agg",
+                    "tds_id": null,
+                    "parent_catalog": "model/model.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-superior-operational-forecast-system-lsofs/**/.*fields.forecast.*\\.nc"
+                    ]
                 }
             ],
             "model/model.xml": [
@@ -7249,6 +8512,20 @@
                     "parent_catalog": "model/model.xml",
                     "mount_path": "10.254.11.33:/export/opsnas102-data2",
                     "writeable": false
+                },
+                {
+                    "name": "Aggregated NYOFS Fields Forecast",
+                    "catalog": "/var/lib/tomcat/content/thredds/model/nyofs_catalog.xml",
+                    "type": "featureCollection",
+                    "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/port-of-new-york-and-new-jersey-operational-forecast-system-nyofs",
+                    "tds_path": "model-nyofs-agg",
+                    "tds_id": null,
+                    "parent_catalog": "model/model.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/port-of-new-york-and-new-jersey-operational-forecast-system-nyofs/**/.*nos.nyofs.fields.forecast.*\\.nc"
+                    ]
                 }
             ],
             "model/paleo.xml": [
@@ -7433,6 +8710,20 @@
                     "parent_catalog": "model/model.xml",
                     "mount_path": "10.254.11.33:/export/opsnas102-data2",
                     "writeable": false
+                },
+                {
+                    "name": "Aggregated SJROFS Fields Forecast",
+                    "catalog": "/var/lib/tomcat/content/thredds/model/sjrofs_catalog.xml",
+                    "type": "featureCollection",
+                    "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/st-johns-river-operational-forecast-system-sjrofs",
+                    "tds_path": "model-sjrofs-agg",
+                    "tds_id": null,
+                    "parent_catalog": "model/model.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/st-johns-river-operational-forecast-system-sjrofs/**/.*.fields.forecast.*\\.nc"
+                    ]
                 }
             ],
             "model/srrs.xml": [
@@ -7459,6 +8750,20 @@
                     "parent_catalog": "model/model.xml",
                     "mount_path": "10.254.11.33:/export/opsnas102-data2",
                     "writeable": false
+                },
+                {
+                    "name": "Aggregated TBOFS Fields Forecast",
+                    "catalog": "/var/lib/tomcat/content/thredds/model/tbofs_catalog.xml",
+                    "type": "featureCollection",
+                    "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/tampa-bay-operational-forecast-system-tbofs",
+                    "tds_path": "model-tbofs-agg",
+                    "tds_id": null,
+                    "parent_catalog": "model/model.xml",
+                    "mount_path": null,
+                    "writeable": null,
+                    "collection_paths": [
+                        "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/tampa-bay-operational-forecast-system-tbofs/**/.*nos.tbofs.fields.*\\.nc"
+                    ]
                 }
             ],
             "model/wcofs_catalog.xml": [
@@ -7526,6 +8831,19 @@
                     "tds_path": null,
                     "tds_id": null,
                     "parent_catalog": "catalog_USM_DAP.xml",
+                    "mount_path": null,
+                    "writeable": null
+                }
+            ],
+            "catalog.xml": [
+                {
+                    "name": null,
+                    "catalog": "catalog.xml",
+                    "type": null,
+                    "server_location": null,
+                    "tds_path": null,
+                    "tds_id": null,
+                    "parent_catalog": null,
                     "mount_path": null,
                     "writeable": null
                 }

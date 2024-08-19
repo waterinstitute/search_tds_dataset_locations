@@ -21,7 +21,10 @@ if os.path.exists('output/combined.json'):
 # create a list of all the json files in the output directory
 file_paths = []
 for json_file in glob('output/*.json'):
-    if json_file == 'output/missing_datasets.json' or json_file == 'output/web_catalog_refs.json' or json_file == 'output/combined.json':
+    if json_file == 'output/missing_datasets.json' \
+    or json_file == 'output/missing_catalog_refs.json' \
+    or json_file == 'output/web_catalog_refs.json' \
+    or json_file == 'output/combined.json':
         continue
     else:
         file_paths.append(json_file)
