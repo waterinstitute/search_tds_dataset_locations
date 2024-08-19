@@ -17,5 +17,6 @@
     "tds01-test.ncei.noaa.gov": [],
     "tds01-prod.ncei.noaa.gov-old": [],
     "tds-model01-dev.ncei.noaa.gov": [],
-    "tds-ams01-prod.ncei.noaa.gov-old": []
+    "tds-ams01-prod.ncei.noaa.gov-old": [],
+    "tds-model01-test.ncei.noaa.gov": []
 }

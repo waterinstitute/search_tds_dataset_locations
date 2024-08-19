@@ -264,6 +264,76 @@
             "writeable": false
         },
         {
+            "name": "Surface and Radiative Fluxes (FLX), Monthly Mean Aggregation",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "featureCollection",
+            "missing_server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
+            "tds_path": "model-cfs_reanl_mm_flxf_agg",
+            "tds_id": null,
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false,
+            "collection_paths": [
+                "/mnt/modeldata4/model/cfsrmon/**/flxf[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
+            ]
+        },
+        {
+            "name": "3-D Ocean (OCN), Monthly Mean Aggregation",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "featureCollection",
+            "missing_server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
+            "tds_path": "model-cfs_reanl_mm_ocnh_agg",
+            "tds_id": null,
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false,
+            "collection_paths": [
+                "/mnt/modeldata4/model/cfsrmon/**/ocnh[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
+            ]
+        },
+        {
+            "name": "3-D Isentropic Level (IPV), Monthly Mean Aggregation",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "featureCollection",
+            "missing_server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
+            "tds_path": "model-cfs_reanl_mm_ipvh_agg",
+            "tds_id": null,
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false,
+            "collection_paths": [
+                "/mnt/modeldata4/model/cfsrmon/**/ipvh[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
+            ]
+        },
+        {
+            "name": "Energetics (EGY), Monthly Mean Aggregation",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "featureCollection",
+            "missing_server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
+            "tds_path": "model-cfs_reanl_mm_egyh_agg",
+            "tds_id": null,
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false,
+            "collection_paths": [
+                "/mnt/modeldata4/model/cfsrmon/**/egyh[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
+            ]
+        },
+        {
+            "name": "3-D Pressure Level (PGB), Monthly Mean Aggregation",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "featureCollection",
+            "missing_server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
+            "tds_path": "model-cfs_reanl_mm_pgbh_agg",
+            "tds_id": null,
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false,
+            "collection_paths": [
+                "/mnt/modeldata4/model/cfsrmon/**/pgbh[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
+            ]
+        },
+        {
             "name": "Surface and Radiative Fluxes (FLX), 45 Day Run",
             "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
             "type": "datasetScan",

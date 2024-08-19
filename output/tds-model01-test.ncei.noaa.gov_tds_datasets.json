@@ -1,5 +1,18 @@
 {
     "tds-model01-test.ncei.noaa.gov": {
+        "catalog.xml": [
+            {
+                "name": null,
+                "catalog": "catalog.xml",
+                "type": null,
+                "server_location": null,
+                "tds_path": null,
+                "tds_id": null,
+                "parent_catalog": null,
+                "mount_path": null,
+                "writeable": null
+            }
+        ],
         "model/cbofs_catalog.xml": [
             {
                 "name": "CBOFS Models",
@@ -11,6 +24,20 @@
                 "parent_catalog": "model/model.xml",
                 "mount_path": "10.254.11.33:/export/opsnas102-data2",
                 "writeable": false
+            },
+            {
+                "name": "Aggregated CBOFS Fields Forecast",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cbofs_catalog.xml",
+                "type": "featureCollection",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/chesapeake-bay-operational-forecast-system-cbofs",
+                "tds_path": "model-cbofs-agg",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/chesapeake-bay-operational-forecast-system-cbofs/**/.*nos.cbofs.fields.*\\.nc(?:\\.ncml)?"
+                ]
             }
         ],
         "model/cfs.xml": [
@@ -46,6 +73,76 @@
                 "parent_catalog": "model/model.xml",
                 "mount_path": null,
                 "writeable": false
+            },
+            {
+                "name": "Surface and Radiative Fluxes (FLX), Monthly Mean Aggregation",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "featureCollection",
+                "server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
+                "tds_path": "model-cfs_reanl_mm_flxf_agg",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/mnt/modeldata4/model/cfsrmon/**/flxf[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
+                ]
+            },
+            {
+                "name": "3-D Ocean (OCN), Monthly Mean Aggregation",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "featureCollection",
+                "server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
+                "tds_path": "model-cfs_reanl_mm_ocnh_agg",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/mnt/modeldata4/model/cfsrmon/**/ocnh[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
+                ]
+            },
+            {
+                "name": "3-D Isentropic Level (IPV), Monthly Mean Aggregation",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "featureCollection",
+                "server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
+                "tds_path": "model-cfs_reanl_mm_ipvh_agg",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/mnt/modeldata4/model/cfsrmon/**/ipvh[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
+                ]
+            },
+            {
+                "name": "Energetics (EGY), Monthly Mean Aggregation",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "featureCollection",
+                "server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
+                "tds_path": "model-cfs_reanl_mm_egyh_agg",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/mnt/modeldata4/model/cfsrmon/**/egyh[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
+                ]
+            },
+            {
+                "name": "3-D Pressure Level (PGB), Monthly Mean Aggregation",
+                "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+                "type": "featureCollection",
+                "server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
+                "tds_path": "model-cfs_reanl_mm_pgbh_agg",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/mnt/modeldata4/model/cfsrmon/**/pgbh[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
+                ]
             },
             {
                 "name": "3-D Diabatic Heating Data (DIAB), 6-hour",
@@ -488,6 +585,20 @@
                 "parent_catalog": "model/model.xml",
                 "mount_path": "10.254.11.33:/export/opsnas102-data2",
                 "writeable": false
+            },
+            {
+                "name": "Aggregated CIOFS Fields Forecast",
+                "catalog": "/var/lib/tomcat/content/thredds/model/ciofs_catalog.xml",
+                "type": "featureCollection",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/cook-inlet-operational-forecast-system-ciofs",
+                "tds_path": "model-ciofs-agg",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/cook-inlet-operational-forecast-system-ciofs/**/.*nos.ciofs.fields.*\\.nc(?:\\.ncml)?"
+                ]
             }
         ],
         "model/creofs_catalog.xml": [
@@ -514,6 +625,20 @@
                 "parent_catalog": "model/model.xml",
                 "mount_path": "10.254.11.33:/export/opsnas102-data2",
                 "writeable": false
+            },
+            {
+                "name": "Aggregated DBOFS Fields Forecast",
+                "catalog": "/var/lib/tomcat/content/thredds/model/dbofs_catalog.xml",
+                "type": "featureCollection",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/delaware-bay-operational-forecast-system-dbofs",
+                "tds_path": "model-dbofs-agg",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/delaware-bay-operational-forecast-system-dbofs/**/.*nos.dbofs.fields.*\\.nc"
+                ]
             }
         ],
         "model/gens.xml": [
@@ -641,6 +766,20 @@
                 "parent_catalog": "model/model.xml",
                 "mount_path": "10.254.11.33:/export/opsnas102-data2",
                 "writeable": false
+            },
+            {
+                "name": "Aggregated GOMOFS Fields Forecast",
+                "catalog": "/var/lib/tomcat/content/thredds/model/gomofs_catalog.xml",
+                "type": "featureCollection",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/gulf-of-maine-operational-forecast-system-gomofs",
+                "tds_path": "model-gomofs-agg",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/gulf-of-maine-operational-forecast-system-gomofs/**/.*nos.gomofs.fields.*\\.nc(?:\\.ncml)?"
+                ]
             }
         ],
         "model/leofs_catalog.xml": [
@@ -667,6 +806,20 @@
                 "parent_catalog": "model/model.xml",
                 "mount_path": "10.254.11.33:/export/opsnas102-data2",
                 "writeable": false
+            },
+            {
+                "name": "Aggregated LHOFS Fields Forecast",
+                "catalog": "/var/lib/tomcat/content/thredds/model/lhofs_catalog.xml",
+                "type": "featureCollection",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-huron-operational-forecast-system-lhofs",
+                "tds_path": "model-lhofs-agg",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-huron-operational-forecast-system-lhofs/**/.*fields.forecast.*\\.nc"
+                ]
             }
         ],
         "model/lmhofs_catalog.xml": [
@@ -693,6 +846,20 @@
                 "parent_catalog": "model/model.xml",
                 "mount_path": "10.254.11.33:/export/opsnas102-data2",
                 "writeable": false
+            },
+            {
+                "name": "Aggregated LMOFS Fields Forecast",
+                "catalog": "/var/lib/tomcat/content/thredds/model/lmofs_catalog.xml",
+                "type": "featureCollection",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-michigan-operational-forecast-system-lmofs",
+                "tds_path": "model-lmofs-agg",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-michigan-operational-forecast-system-lmofs/**/.*fields.forecast.*\\.nc"
+                ]
             }
         ],
         "model/loofs_catalog.xml": [
@@ -706,6 +873,20 @@
                 "parent_catalog": "model/model.xml",
                 "mount_path": "10.254.11.33:/export/opsnas102-data2",
                 "writeable": false
+            },
+            {
+                "name": "Aggregated LOOFS Fields Forecast",
+                "catalog": "/var/lib/tomcat/content/thredds/model/loofs_catalog.xml",
+                "type": "featureCollection",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-ontario-operational-forecast-system-loofs",
+                "tds_path": "model-loofs-agg",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-ontario-operational-forecast-system-loofs/**/.*fields.forecast.*\\.nc"
+                ]
             }
         ],
         "model/lsofs_catalog.xml": [
@@ -719,6 +900,20 @@
                 "parent_catalog": "model/model.xml",
                 "mount_path": "10.254.11.33:/export/opsnas102-data2",
                 "writeable": false
+            },
+            {
+                "name": "Aggregated LSOFS Fields Forecast",
+                "catalog": "/var/lib/tomcat/content/thredds/model/lsofs_catalog.xml",
+                "type": "featureCollection",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-superior-operational-forecast-system-lsofs",
+                "tds_path": "model-lsofs-agg",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/lake-superior-operational-forecast-system-lsofs/**/.*fields.forecast.*\\.nc"
+                ]
             }
         ],
         "model/model.xml": [
@@ -1183,6 +1378,20 @@
                 "parent_catalog": "model/model.xml",
                 "mount_path": "10.254.11.33:/export/opsnas102-data2",
                 "writeable": false
+            },
+            {
+                "name": "Aggregated NYOFS Fields Forecast",
+                "catalog": "/var/lib/tomcat/content/thredds/model/nyofs_catalog.xml",
+                "type": "featureCollection",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/port-of-new-york-and-new-jersey-operational-forecast-system-nyofs",
+                "tds_path": "model-nyofs-agg",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/port-of-new-york-and-new-jersey-operational-forecast-system-nyofs/**/.*nos.nyofs.fields.forecast.*\\.nc"
+                ]
             }
         ],
         "model/paleo.xml": [
@@ -1367,6 +1576,20 @@
                 "parent_catalog": "model/model.xml",
                 "mount_path": "10.254.11.33:/export/opsnas102-data2",
                 "writeable": false
+            },
+            {
+                "name": "Aggregated SJROFS Fields Forecast",
+                "catalog": "/var/lib/tomcat/content/thredds/model/sjrofs_catalog.xml",
+                "type": "featureCollection",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/st-johns-river-operational-forecast-system-sjrofs",
+                "tds_path": "model-sjrofs-agg",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/st-johns-river-operational-forecast-system-sjrofs/**/.*.fields.forecast.*\\.nc"
+                ]
             }
         ],
         "model/srrs.xml": [
@@ -1393,6 +1616,20 @@
                 "parent_catalog": "model/model.xml",
                 "mount_path": "10.254.11.33:/export/opsnas102-data2",
                 "writeable": false
+            },
+            {
+                "name": "Aggregated TBOFS Fields Forecast",
+                "catalog": "/var/lib/tomcat/content/thredds/model/tbofs_catalog.xml",
+                "type": "featureCollection",
+                "server_location": "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/tampa-bay-operational-forecast-system-tbofs",
+                "tds_path": "model-tbofs-agg",
+                "tds_id": null,
+                "parent_catalog": "model/model.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/modeldata3/published/operational-nowcast-and-forecast-hydrodynamic-model-systems-co-ops/access/tampa-bay-operational-forecast-system-tbofs/**/.*nos.tbofs.fields.*\\.nc"
+                ]
             }
         ],
         "model/wcofs_catalog.xml": [
