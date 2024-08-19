@@ -16,5 +16,6 @@
             "parent": "/var/lib/tomcat/content/thredds/oceanNomads",
             "catalog": "/var/lib/tomcat/content/thredds/oceanNomads/catalog_aggs.xml"
         }
-    ]
+    ],
+    "tds-ams01-dev.ncei.noaa.gov": []
 }
