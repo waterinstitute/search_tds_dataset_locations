@@ -333,6 +333,19 @@
                 ]
             }
         ],
+        "catalog.xml": [
+            {
+                "name": null,
+                "catalog": "catalog.xml",
+                "type": null,
+                "server_location": null,
+                "tds_path": null,
+                "tds_id": null,
+                "parent_catalog": null,
+                "mount_path": null,
+                "writeable": null
+            }
+        ],
         "data-in-development/data-in-development.xml": [
             {
                 "name": "Soil Moisture Change",
@@ -594,7 +607,7 @@
                 "name": "Historical Land-Cover Change and Land-Use Conversions Global Dataset: HH_AREAVEG Feature Collection",
                 "catalog": "/var/lib/tomcat/content/thredds/satellite/landcover.xml",
                 "type": "featureCollection",
-                "server_location": "/datasets/published/landcover",
+                "server_location": "Path does not exist on server: /datasets/published/landcover",
                 "tds_path": "ncFC/sat/landcover-HHAREAVEG-fc",
                 "tds_id": null,
                 "parent_catalog": "satellite/satellite.xml",
@@ -608,7 +621,7 @@
                 "name": "Historical Land-Cover Change and Land-Use Conversions Global Dataset: HYDE_AREAVEG Feature Collection",
                 "catalog": "/var/lib/tomcat/content/thredds/satellite/landcover.xml",
                 "type": "featureCollection",
-                "server_location": "/datasets/published/landcover",
+                "server_location": "Path does not exist on server: /datasets/published/landcover",
                 "tds_path": "ncFC/sat/landcover-HYDEAREAVEG-fc",
                 "tds_id": null,
                 "parent_catalog": "satellite/satellite.xml",
@@ -622,7 +635,7 @@
                 "name": "Historical Land-Cover Change and Land-Use Conversions Global Dataset: RF_AREAVEG Feature Collection",
                 "catalog": "/var/lib/tomcat/content/thredds/satellite/landcover.xml",
                 "type": "featureCollection",
-                "server_location": "/datasets/published/landcover",
+                "server_location": "Path does not exist on server: /datasets/published/landcover",
                 "tds_path": "ncFC/sat/landcover-RFAREAVEG-fc",
                 "tds_id": null,
                 "parent_catalog": "satellite/satellite.xml",
