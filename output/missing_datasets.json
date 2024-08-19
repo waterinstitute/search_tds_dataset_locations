@@ -1,616 +1,651 @@
 {
-	"tds01-test.ncei.noaa.gov": [
-		{
-			"name": "Soil Moisture Change",
-			"catalog": "/var/lib/tomcat/content/thredds/data-in-development/data-in-development.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/mnt/san2/nidis",
-			"tds_path": "smc",
-			"tds_id": "smc",
-			"parent_catalog": "catalog.xml",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Ozone - Zonal Mean Binary Database of Profiles",
-			"catalog": "/var/lib/tomcat/content/thredds/satellite/cdr.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/datasets/published/ozone-concentration-esrl/access",
-			"tds_path": "cdr/ozone-zonal-mean-esrl",
-			"tds_id": null,
-			"parent_catalog": "satellite/satellite.xml",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Sea Ice Concentration: File Access",
-			"catalog": "/var/lib/tomcat/content/thredds/satellite/cdr.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/datasets/published/sea-ice-concentration/access",
-			"tds_path": "cdr/sea-ice-concentration",
-			"tds_id": null,
-			"parent_catalog": "satellite/satellite.xml",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Historical Land-Cover Change and Land-Use Conversions Global Dataset: Files",
-			"catalog": "/var/lib/tomcat/content/thredds/satellite/landcover.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/datasets/published/landcover/access",
-			"tds_path": "sat/landcover",
-			"tds_id": null,
-			"parent_catalog": "satellite/satellite.xml",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Historical Land-Cover Change and Land-Use Conversions Global Dataset: HH_AREAVEG Feature Collection",
-			"catalog": "/var/lib/tomcat/content/thredds/satellite/landcover.xml",
-			"type": "featureCollection",
-			"missing_server_location": "/datasets/published/landcover",
-			"tds_path": "ncFC/sat/landcover-HHAREAVEG-fc",
-			"tds_id": null,
-			"parent_catalog": "satellite/satellite.xml",
-			"mount_path": null,
-			"writeable": false,
-			"collection_paths": [
-				"/datasets/published/landcover/**/land-cover_hh_landcover_.*\\.nc$"
-			]
-		},
-		{
-			"name": "Historical Land-Cover Change and Land-Use Conversions Global Dataset: HYDE_AREAVEG Feature Collection",
-			"catalog": "/var/lib/tomcat/content/thredds/satellite/landcover.xml",
-			"type": "featureCollection",
-			"missing_server_location": "/datasets/published/landcover",
-			"tds_path": "ncFC/sat/landcover-HYDEAREAVEG-fc",
-			"tds_id": null,
-			"parent_catalog": "satellite/satellite.xml",
-			"mount_path": null,
-			"writeable": false,
-			"collection_paths": [
-				"/datasets/published/landcover/**/land-cover_hyde_landcover_.*\\.nc$"
-			]
-		},
-		{
-			"name": "Historical Land-Cover Change and Land-Use Conversions Global Dataset: RF_AREAVEG Feature Collection",
-			"catalog": "/var/lib/tomcat/content/thredds/satellite/landcover.xml",
-			"type": "featureCollection",
-			"missing_server_location": "/datasets/published/landcover",
-			"tds_path": "ncFC/sat/landcover-RFAREAVEG-fc",
-			"tds_id": null,
-			"parent_catalog": "satellite/satellite.xml",
-			"mount_path": null,
-			"writeable": false,
-			"collection_paths": [
-				"/datasets/published/landcover/**/land-cover_rf_landcover_.*\\.nc$"
-			]
-		},
-		{
-			"name": "NOAA Microwave Sounding Unit - Brightness Temperature: File access",
-			"catalog": "/var/lib/tomcat/content/thredds/satellite/msu_brt_tmp.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/datasets/published/msu-brightness-temperature-noaa/access",
-			"tds_path": "satellite/msu-brightness-temperature-noaa",
-			"tds_id": "msu-brightness-temperature-noaa",
-			"parent_catalog": "satellite/satellite.xml",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "POES - NOAA Polar Orbiting Satellite - Global Visible and Infrared Band Data from ESSA: File access",
-			"catalog": "/var/lib/tomcat/content/thredds/satellite/poes.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/datasets/published/poes-essa-noaa-satellite-imagery/access",
-			"tds_path": "satellite/poes",
-			"tds_id": "poes",
-			"parent_catalog": "satellite/satellite.xml",
-			"mount_path": null,
-			"writeable": false
-		}
-	],
-	"tds-model01-dev.ncei.noaa.gov": [
-		{
-			"name": "Monthly Means",
-			"catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/mnt/modeldata4/model/cfsrmon",
-			"tds_path": "model-cfs_reanl_mm",
-			"tds_id": "cfs_reanl_mm",
-			"parent_catalog": "model/model.xml",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Surface and Radiative Fluxes (FLX), Monthly Mean Aggregation",
-			"catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-			"type": "featureCollection",
-			"missing_server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
-			"tds_path": "model-cfs_reanl_mm_flxf_agg",
-			"tds_id": null,
-			"parent_catalog": "model/model.xml",
-			"mount_path": null,
-			"writeable": false,
-			"collection_paths": [
-				"/mnt/modeldata4/model/cfsrmon/**/flxf[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
-			]
-		},
-		{
-			"name": "3-D Ocean (OCN), Monthly Mean Aggregation",
-			"catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-			"type": "featureCollection",
-			"missing_server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
-			"tds_path": "model-cfs_reanl_mm_ocnh_agg",
-			"tds_id": null,
-			"parent_catalog": "model/model.xml",
-			"mount_path": null,
-			"writeable": false,
-			"collection_paths": [
-				"/mnt/modeldata4/model/cfsrmon/**/ocnh[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
-			]
-		},
-		{
-			"name": "3-D Isentropic Level (IPV), Monthly Mean Aggregation",
-			"catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-			"type": "featureCollection",
-			"missing_server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
-			"tds_path": "model-cfs_reanl_mm_ipvh_agg",
-			"tds_id": null,
-			"parent_catalog": "model/model.xml",
-			"mount_path": null,
-			"writeable": false,
-			"collection_paths": [
-				"/mnt/modeldata4/model/cfsrmon/**/ipvh[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
-			]
-		},
-		{
-			"name": "Energetics (EGY), Monthly Mean Aggregation",
-			"catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-			"type": "featureCollection",
-			"missing_server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
-			"tds_path": "model-cfs_reanl_mm_egyh_agg",
-			"tds_id": null,
-			"parent_catalog": "model/model.xml",
-			"mount_path": null,
-			"writeable": false,
-			"collection_paths": [
-				"/mnt/modeldata4/model/cfsrmon/**/egyh[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
-			]
-		},
-		{
-			"name": "3-D Pressure Level (PGB), Monthly Mean Aggregation",
-			"catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-			"type": "featureCollection",
-			"missing_server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
-			"tds_path": "model-cfs_reanl_mm_pgbh_agg",
-			"tds_id": null,
-			"parent_catalog": "model/model.xml",
-			"mount_path": null,
-			"writeable": false,
-			"collection_paths": [
-				"/mnt/modeldata4/model/cfsrmon/**/pgbh[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
-			]
-		},
-		{
-			"name": "Surface and Radiative Fluxes (FLX), 45 Day Run",
-			"catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/modeldata/cfs_reforecast_6-hourly_45day_flxf",
-			"tds_path": "model-cfs_refor_6h_45d_flx",
-			"tds_id": "cfs_refor_6h_45d_flx",
-			"parent_catalog": "model/model.xml",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Pressure Level (PGB), 45 Day Run",
-			"catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/modeldata/cfs_reforecast_6-hourly_45day_pgbf",
-			"tds_path": "model-cfs_refor_6h_45d_pgb",
-			"tds_id": "cfs_refor_6h_45d_pgb",
-			"parent_catalog": "model/model.xml",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Surface and Radiative Fluxes (FLX), 9 Month Run",
-			"catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/modeldata/cfs_reforecast_6-hourly_9mon_flxf",
-			"tds_path": "model-cfs_refor_6h_9m_flx",
-			"tds_id": "cfs_refor_6h_9m_flx",
-			"parent_catalog": "model/model.xml",
-			"mount_path": null,
-			"writeable": false
-		}
-	],
-	"tds01-dev.ncei.noaa.gov": [
-		{
-			"name": "Soil Moisture Change",
-			"catalog": "/var/lib/tomcat/content/thredds/data-in-development/data-in-development.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/mnt/san2/nidis",
-			"tds_path": "smc",
-			"tds_id": "smc",
-			"parent_catalog": "catalog.xml",
-			"mount_path": null,
-			"writeable": false
-		}
-	],
-	"tds01-prod.ncei.noaa.gov-old": [
-		{
-			"name": "Soil Moisture Change",
-			"catalog": "/var/lib/tomcat/content/thredds/data-in-development/data-in-development.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/mnt/san2/nidis",
-			"tds_path": "smc",
-			"tds_id": "smc",
-			"parent_catalog": "catalog.xml",
-			"mount_path": null,
-			"writeable": false
-		}
-	],
-	"tds-model01-test.ncei.noaa.gov": [
-		{
-			"name": "Monthly Means",
-			"catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/mnt/modeldata4/model/cfsrmon",
-			"tds_path": "model-cfs_reanl_mm",
-			"tds_id": "cfs_reanl_mm",
-			"parent_catalog": "model/model.xml",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Surface and Radiative Fluxes (FLX), 45 Day Run",
-			"catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/modeldata/cfs_reforecast_6-hourly_45day_flxf",
-			"tds_path": "model-cfs_refor_6h_45d_flx",
-			"tds_id": "cfs_refor_6h_45d_flx",
-			"parent_catalog": "model/model.xml",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Pressure Level (PGB), 45 Day Run",
-			"catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/modeldata/cfs_reforecast_6-hourly_45day_pgbf",
-			"tds_path": "model-cfs_refor_6h_45d_pgb",
-			"tds_id": "cfs_refor_6h_45d_pgb",
-			"parent_catalog": "model/model.xml",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Surface and Radiative Fluxes (FLX), 9 Month Run",
-			"catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/modeldata/cfs_reforecast_6-hourly_9mon_flxf",
-			"tds_path": "model-cfs_refor_6h_9m_flx",
-			"tds_id": "cfs_refor_6h_9m_flx",
-			"parent_catalog": "model/model.xml",
-			"mount_path": null,
-			"writeable": false
-		}
-	],
-	"tds-coastal01-dev.ncei.noaa.gov": [],
-	"tds-coastal01-test.ncei.noaa.gov": [],
-	"tds-ams01-dev.ncei.noaa.gov": [
-		{
-			"name": "GCOS - Global Climate Observing System",
-			"catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/www/sites/data.nodc/htdocs/GCOS",
-			"tds_path": "GCOS",
-			"tds_id": null,
-			"parent_catalog": "None",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "SMAP - NCEI-binned 3-day and monthly level-3 Sea Surface Salinity data derived from SMAP level-2 granules",
-			"catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/www/sites/data.nodc/htdocs/ncei/smap",
-			"tds_path": "ncei/smap",
-			"tds_id": null,
-			"parent_catalog": "None",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "SMOS - NCEI-binned 3-day and monthly level-3 Sea Surface Salinity data derived from SMOS level-2 granules",
-			"catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/www/sites/data.nodc/htdocs/SMOS",
-			"tds_path": "smos",
-			"tds_id": null,
-			"parent_catalog": "None",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "WOA - World Ocean Atlas",
-			"catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/www/sites/data.nodc/htdocs/ncei/woa",
-			"tds_path": "ncei/woa",
-			"tds_id": null,
-			"parent_catalog": "None",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "WOA 09 - World Ocean Atlas 2009",
-			"catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/www/sites/data.nodc/htdocs/testdata/woa09",
-			"tds_path": "woa09",
-			"tds_id": null,
-			"parent_catalog": "None",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "ROFS/COFS - Regional Ocean Forecast System and Coastal Ocean Forecast System",
-			"catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/www/sites/data.nodc/htdocs/ncep/rofs",
-			"tds_path": "ncep/rofs",
-			"tds_id": null,
-			"parent_catalog": "None",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "WOCE - World Ocean Circulation Experiment",
-			"catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/www/sites/data.nodc/htdocs/woce",
-			"tds_path": "woce",
-			"tds_id": null,
-			"parent_catalog": "None",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Aggregated Datasets",
-			"catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/www/sites/data.nodc/htdocs/nodc/ncml",
-			"tds_path": "ncml",
-			"tds_id": null,
-			"parent_catalog": "None",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Test Data",
-			"catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/www/sites/data.nodc/htdocs/testdata",
-			"tds_path": "testdata",
-			"tds_id": null,
-			"parent_catalog": "None",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Northwest Atlantic",
-			"catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0155889",
-			"tds_path": "regional-climatologies/northwest-atlantic",
-			"tds_id": null,
-			"parent_catalog": "catalog.xml",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Southwest North Atlantic",
-			"catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0201696/",
-			"tds_path": "regional-climatologies/southwest-north-atlantic",
-			"tds_id": null,
-			"parent_catalog": "catalog.xml",
-			"mount_path": null,
-			"writeable": false
-		}
-	],
-	"tds-ams01-test.ncei.noaa.gov": [
-		{
-			"name": "Arctic Seas",
-			"catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0115771",
-			"tds_path": "regional-climatologies/arctic-seas",
-			"tds_id": null,
-			"parent_catalog": "catalog.xml",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "East Asian Seas",
-			"catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0123300",
-			"tds_path": "regional-climatologies/east-asian-seas",
-			"tds_id": null,
-			"parent_catalog": "catalog.xml",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Greenland/Iceland/Norwegian Seas",
-			"catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0170742",
-			"tds_path": "regional-climatologies/greenland-iceland-seas",
-			"tds_id": null,
-			"parent_catalog": "catalog.xml",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Gulf of Mexico",
-			"catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/nodc/web/woa.data.nodc/REGCLIM/GULFv2",
-			"tds_path": "regional-climatologies/gulf-of-mexico",
-			"tds_id": null,
-			"parent_catalog": "catalog.xml",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Nordic Seas and North North Atlantic",
-			"catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0118478",
-			"tds_path": "regional-climatologies/nordic-and-north-atlantic",
-			"tds_id": null,
-			"parent_catalog": "catalog.xml",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Northwest Atlantic",
-			"catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0155889",
-			"tds_path": "regional-climatologies/northwest-atlantic",
-			"tds_id": null,
-			"parent_catalog": "catalog.xml",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Southwest North Atlantic",
-			"catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0201696/",
-			"tds_path": "regional-climatologies/southwest-north-atlantic",
-			"tds_id": null,
-			"parent_catalog": "catalog.xml",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Northern North Pacific",
-			"catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0156768",
-			"tds_path": "regional-climatologies/northern-north-pacific",
-			"tds_id": null,
-			"parent_catalog": "catalog.xml",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Northeast Pacific",
-			"catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0163799",
-			"tds_path": "regional-climatologies/northeast-pacific",
-			"tds_id": null,
-			"parent_catalog": "catalog.xml",
-			"mount_path": null,
-			"writeable": false
-		}
-	],
-	"tds-ams01-prod.ncei.noaa.gov-old": [
-		{
-			"name": "GCOS - Global Climate Observing System",
-			"catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/www/sites/data.nodc/htdocs/GCOS",
-			"tds_path": "GCOS",
-			"tds_id": null,
-			"parent_catalog": "None",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "SMAP - NCEI-binned 3-day and monthly level-3 Sea Surface Salinity data derived from SMAP level-2 granules",
-			"catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/www/sites/data.nodc/htdocs/ncei/smap",
-			"tds_path": "ncei/smap",
-			"tds_id": null,
-			"parent_catalog": "None",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "SMOS - NCEI-binned 3-day and monthly level-3 Sea Surface Salinity data derived from SMOS level-2 granules",
-			"catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/www/sites/data.nodc/htdocs/SMOS",
-			"tds_path": "smos",
-			"tds_id": null,
-			"parent_catalog": "None",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "WOA 09 - World Ocean Atlas 2009",
-			"catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/www/sites/data.nodc/htdocs/testdata/woa09",
-			"tds_path": "woa09",
-			"tds_id": null,
-			"parent_catalog": "None",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "ROFS/COFS - Regional Ocean Forecast System and Coastal Ocean Forecast System",
-			"catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/www/sites/data.nodc/htdocs/ncep/rofs",
-			"tds_path": "ncep/rofs",
-			"tds_id": null,
-			"parent_catalog": "None",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "WOCE - World Ocean Circulation Experiment",
-			"catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/www/sites/data.nodc/htdocs/woce",
-			"tds_path": "woce",
-			"tds_id": null,
-			"parent_catalog": "None",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Aggregated Datasets",
-			"catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/www/sites/data.nodc/htdocs/nodc/ncml",
-			"tds_path": "ncml",
-			"tds_id": null,
-			"parent_catalog": "None",
-			"mount_path": null,
-			"writeable": false
-		},
-		{
-			"name": "Test Data",
-			"catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
-			"type": "datasetScan",
-			"missing_server_location": "/www/sites/data.nodc/htdocs/testdata",
-			"tds_path": "testdata",
-			"tds_id": null,
-			"parent_catalog": "None",
-			"mount_path": null,
-			"writeable": false
-		}
-	]
+    "tds01-test.ncei.noaa.gov": [
+        {
+            "name": "Soil Moisture Change",
+            "catalog": "/var/lib/tomcat/content/thredds/data-in-development/data-in-development.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/mnt/san2/nidis",
+            "tds_path": "smc",
+            "tds_id": "smc",
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Ozone - Zonal Mean Binary Database of Profiles",
+            "catalog": "/var/lib/tomcat/content/thredds/satellite/cdr.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/datasets/published/ozone-concentration-esrl/access",
+            "tds_path": "cdr/ozone-zonal-mean-esrl",
+            "tds_id": null,
+            "parent_catalog": "satellite/satellite.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Sea Ice Concentration: File Access",
+            "catalog": "/var/lib/tomcat/content/thredds/satellite/cdr.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/datasets/published/sea-ice-concentration/access",
+            "tds_path": "cdr/sea-ice-concentration",
+            "tds_id": null,
+            "parent_catalog": "satellite/satellite.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Historical Land-Cover Change and Land-Use Conversions Global Dataset: Files",
+            "catalog": "/var/lib/tomcat/content/thredds/satellite/landcover.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/datasets/published/landcover/access",
+            "tds_path": "sat/landcover",
+            "tds_id": null,
+            "parent_catalog": "satellite/satellite.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Historical Land-Cover Change and Land-Use Conversions Global Dataset: HH_AREAVEG Feature Collection",
+            "catalog": "/var/lib/tomcat/content/thredds/satellite/landcover.xml",
+            "type": "featureCollection",
+            "missing_server_location": "/datasets/published/landcover",
+            "tds_path": "ncFC/sat/landcover-HHAREAVEG-fc",
+            "tds_id": null,
+            "parent_catalog": "satellite/satellite.xml",
+            "mount_path": null,
+            "writeable": false,
+            "collection_paths": [
+                "/datasets/published/landcover/**/land-cover_hh_landcover_.*\\.nc$"
+            ]
+        },
+        {
+            "name": "Historical Land-Cover Change and Land-Use Conversions Global Dataset: HYDE_AREAVEG Feature Collection",
+            "catalog": "/var/lib/tomcat/content/thredds/satellite/landcover.xml",
+            "type": "featureCollection",
+            "missing_server_location": "/datasets/published/landcover",
+            "tds_path": "ncFC/sat/landcover-HYDEAREAVEG-fc",
+            "tds_id": null,
+            "parent_catalog": "satellite/satellite.xml",
+            "mount_path": null,
+            "writeable": false,
+            "collection_paths": [
+                "/datasets/published/landcover/**/land-cover_hyde_landcover_.*\\.nc$"
+            ]
+        },
+        {
+            "name": "Historical Land-Cover Change and Land-Use Conversions Global Dataset: RF_AREAVEG Feature Collection",
+            "catalog": "/var/lib/tomcat/content/thredds/satellite/landcover.xml",
+            "type": "featureCollection",
+            "missing_server_location": "/datasets/published/landcover",
+            "tds_path": "ncFC/sat/landcover-RFAREAVEG-fc",
+            "tds_id": null,
+            "parent_catalog": "satellite/satellite.xml",
+            "mount_path": null,
+            "writeable": false,
+            "collection_paths": [
+                "/datasets/published/landcover/**/land-cover_rf_landcover_.*\\.nc$"
+            ]
+        },
+        {
+            "name": "NOAA Microwave Sounding Unit - Brightness Temperature: File access",
+            "catalog": "/var/lib/tomcat/content/thredds/satellite/msu_brt_tmp.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/datasets/published/msu-brightness-temperature-noaa/access",
+            "tds_path": "satellite/msu-brightness-temperature-noaa",
+            "tds_id": "msu-brightness-temperature-noaa",
+            "parent_catalog": "satellite/satellite.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "POES - NOAA Polar Orbiting Satellite - Global Visible and Infrared Band Data from ESSA: File access",
+            "catalog": "/var/lib/tomcat/content/thredds/satellite/poes.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/datasets/published/poes-essa-noaa-satellite-imagery/access",
+            "tds_path": "satellite/poes",
+            "tds_id": "poes",
+            "parent_catalog": "satellite/satellite.xml",
+            "mount_path": null,
+            "writeable": false
+        }
+    ],
+    "tds-model01-dev.ncei.noaa.gov": [
+        {
+            "name": "Monthly Means",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/mnt/modeldata4/model/cfsrmon",
+            "tds_path": "model-cfs_reanl_mm",
+            "tds_id": "cfs_reanl_mm",
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Surface and Radiative Fluxes (FLX), Monthly Mean Aggregation",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "featureCollection",
+            "missing_server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
+            "tds_path": "model-cfs_reanl_mm_flxf_agg",
+            "tds_id": null,
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false,
+            "collection_paths": [
+                "/mnt/modeldata4/model/cfsrmon/**/flxf[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
+            ]
+        },
+        {
+            "name": "3-D Ocean (OCN), Monthly Mean Aggregation",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "featureCollection",
+            "missing_server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
+            "tds_path": "model-cfs_reanl_mm_ocnh_agg",
+            "tds_id": null,
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false,
+            "collection_paths": [
+                "/mnt/modeldata4/model/cfsrmon/**/ocnh[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
+            ]
+        },
+        {
+            "name": "3-D Isentropic Level (IPV), Monthly Mean Aggregation",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "featureCollection",
+            "missing_server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
+            "tds_path": "model-cfs_reanl_mm_ipvh_agg",
+            "tds_id": null,
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false,
+            "collection_paths": [
+                "/mnt/modeldata4/model/cfsrmon/**/ipvh[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
+            ]
+        },
+        {
+            "name": "Energetics (EGY), Monthly Mean Aggregation",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "featureCollection",
+            "missing_server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
+            "tds_path": "model-cfs_reanl_mm_egyh_agg",
+            "tds_id": null,
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false,
+            "collection_paths": [
+                "/mnt/modeldata4/model/cfsrmon/**/egyh[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
+            ]
+        },
+        {
+            "name": "3-D Pressure Level (PGB), Monthly Mean Aggregation",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "featureCollection",
+            "missing_server_location": "Path does not exist on server: /mnt/modeldata4/model/cfsrmon",
+            "tds_path": "model-cfs_reanl_mm_pgbh_agg",
+            "tds_id": null,
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false,
+            "collection_paths": [
+                "/mnt/modeldata4/model/cfsrmon/**/pgbh[0-9]{2}\\.gdas\\.[0-9]{6}\\.grb2"
+            ]
+        },
+        {
+            "name": "Surface and Radiative Fluxes (FLX), 45 Day Run",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/modeldata/cfs_reforecast_6-hourly_45day_flxf",
+            "tds_path": "model-cfs_refor_6h_45d_flx",
+            "tds_id": "cfs_refor_6h_45d_flx",
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Pressure Level (PGB), 45 Day Run",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/modeldata/cfs_reforecast_6-hourly_45day_pgbf",
+            "tds_path": "model-cfs_refor_6h_45d_pgb",
+            "tds_id": "cfs_refor_6h_45d_pgb",
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Surface and Radiative Fluxes (FLX), 9 Month Run",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/modeldata/cfs_reforecast_6-hourly_9mon_flxf",
+            "tds_path": "model-cfs_refor_6h_9m_flx",
+            "tds_id": "cfs_refor_6h_9m_flx",
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false
+        }
+    ],
+    "tds01-dev.ncei.noaa.gov": [
+        {
+            "name": "Soil Moisture Change",
+            "catalog": "/var/lib/tomcat/content/thredds/data-in-development/data-in-development.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/mnt/san2/nidis",
+            "tds_path": "smc",
+            "tds_id": "smc",
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        }
+    ],
+    "tds01-prod.ncei.noaa.gov-old": [
+        {
+            "name": "Soil Moisture Change",
+            "catalog": "/var/lib/tomcat/content/thredds/data-in-development/data-in-development.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/mnt/san2/nidis",
+            "tds_path": "smc",
+            "tds_id": "smc",
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        }
+    ],
+    "tds-model01-test.ncei.noaa.gov": [
+        {
+            "name": "Monthly Means",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/mnt/modeldata4/model/cfsrmon",
+            "tds_path": "model-cfs_reanl_mm",
+            "tds_id": "cfs_reanl_mm",
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Surface and Radiative Fluxes (FLX), 45 Day Run",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/modeldata/cfs_reforecast_6-hourly_45day_flxf",
+            "tds_path": "model-cfs_refor_6h_45d_flx",
+            "tds_id": "cfs_refor_6h_45d_flx",
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Pressure Level (PGB), 45 Day Run",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/modeldata/cfs_reforecast_6-hourly_45day_pgbf",
+            "tds_path": "model-cfs_refor_6h_45d_pgb",
+            "tds_id": "cfs_refor_6h_45d_pgb",
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Surface and Radiative Fluxes (FLX), 9 Month Run",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/modeldata/cfs_reforecast_6-hourly_9mon_flxf",
+            "tds_path": "model-cfs_refor_6h_9m_flx",
+            "tds_id": "cfs_refor_6h_9m_flx",
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false
+        }
+    ],
+    "tds-coastal01-dev.ncei.noaa.gov": [],
+    "tds-coastal01-test.ncei.noaa.gov": [],
+    "tds-ams01-dev.ncei.noaa.gov": [
+        {
+            "name": "GCOS - Global Climate Observing System",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/GCOS",
+            "tds_path": "GCOS",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "SMAP - NCEI-binned 3-day and monthly level-3 Sea Surface Salinity data derived from SMAP level-2 granules",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/ncei/smap",
+            "tds_path": "ncei/smap",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "SMOS - NCEI-binned 3-day and monthly level-3 Sea Surface Salinity data derived from SMOS level-2 granules",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/SMOS",
+            "tds_path": "smos",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "WOA - World Ocean Atlas",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/ncei/woa",
+            "tds_path": "ncei/woa",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "WOA 09 - World Ocean Atlas 2009",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/testdata/woa09",
+            "tds_path": "woa09",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "ROFS/COFS - Regional Ocean Forecast System and Coastal Ocean Forecast System",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/ncep/rofs",
+            "tds_path": "ncep/rofs",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "WOCE - World Ocean Circulation Experiment",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/woce",
+            "tds_path": "woce",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Aggregated Datasets",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/nodc/ncml",
+            "tds_path": "ncml",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Test Data",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/testdata",
+            "tds_path": "testdata",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Northwest Atlantic",
+            "catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0155889",
+            "tds_path": "regional-climatologies/northwest-atlantic",
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Southwest North Atlantic",
+            "catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0201696/",
+            "tds_path": "regional-climatologies/southwest-north-atlantic",
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        }
+    ],
+    "tds-ams01-test.ncei.noaa.gov": [
+        {
+            "name": "Arctic Seas",
+            "catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0115771",
+            "tds_path": "regional-climatologies/arctic-seas",
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "East Asian Seas",
+            "catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0123300",
+            "tds_path": "regional-climatologies/east-asian-seas",
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Greenland/Iceland/Norwegian Seas",
+            "catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0170742",
+            "tds_path": "regional-climatologies/greenland-iceland-seas",
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Gulf of Mexico",
+            "catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/nodc/web/woa.data.nodc/REGCLIM/GULFv2",
+            "tds_path": "regional-climatologies/gulf-of-mexico",
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Nordic Seas and North North Atlantic",
+            "catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0118478",
+            "tds_path": "regional-climatologies/nordic-and-north-atlantic",
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Northwest Atlantic",
+            "catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0155889",
+            "tds_path": "regional-climatologies/northwest-atlantic",
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Southwest North Atlantic",
+            "catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0201696/",
+            "tds_path": "regional-climatologies/southwest-north-atlantic",
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Northern North Pacific",
+            "catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0156768",
+            "tds_path": "regional-climatologies/northern-north-pacific",
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Northeast Pacific",
+            "catalog": "/var/lib/tomcat/content/thredds/regional_climatologies.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/nodc/web/data.nodc/htdocs/ncei/archive/data/0163799",
+            "tds_path": "regional-climatologies/northeast-pacific",
+            "tds_id": null,
+            "parent_catalog": "catalog.xml",
+            "mount_path": null,
+            "writeable": false
+        }
+    ],
+    "tds-ams01-prod.ncei.noaa.gov-old": [
+        {
+            "name": "GCOS - Global Climate Observing System",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/GCOS",
+            "tds_path": "GCOS",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "SMAP - NCEI-binned 3-day and monthly level-3 Sea Surface Salinity data derived from SMAP level-2 granules",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/ncei/smap",
+            "tds_path": "ncei/smap",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "SMOS - NCEI-binned 3-day and monthly level-3 Sea Surface Salinity data derived from SMOS level-2 granules",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/SMOS",
+            "tds_path": "smos",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "WOA 09 - World Ocean Atlas 2009",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/testdata/woa09",
+            "tds_path": "woa09",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "ROFS/COFS - Regional Ocean Forecast System and Coastal Ocean Forecast System",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/ncep/rofs",
+            "tds_path": "ncep/rofs",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "WOCE - World Ocean Circulation Experiment",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/woce",
+            "tds_path": "woce",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Aggregated Datasets",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/nodc/ncml",
+            "tds_path": "ncml",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Test Data",
+            "catalog": "/var/lib/tomcat/content/thredds/catalog.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/www/sites/data.nodc/htdocs/testdata",
+            "tds_path": "testdata",
+            "tds_id": null,
+            "parent_catalog": "None",
+            "mount_path": null,
+            "writeable": false
+        }
+    ],
+    "tds-model01-prod.ncei.noaa.gov-old": [
+        {
+            "name": "Surface and Radiative Fluxes (FLX), 45 Day Run",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/modeldata/cfs_reforecast_6-hourly_45day_flxf",
+            "tds_path": "model-cfs_refor_6h_45d_flx",
+            "tds_id": "cfs_refor_6h_45d_flx",
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Pressure Level (PGB), 45 Day Run",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/modeldata/cfs_reforecast_6-hourly_45day_pgbf",
+            "tds_path": "model-cfs_refor_6h_45d_pgb",
+            "tds_id": "cfs_refor_6h_45d_pgb",
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false
+        },
+        {
+            "name": "Surface and Radiative Fluxes (FLX), 9 Month Run",
+            "catalog": "/var/lib/tomcat/content/thredds/model/cfs.xml",
+            "type": "datasetScan",
+            "missing_server_location": "/modeldata/cfs_reforecast_6-hourly_9mon_flxf",
+            "tds_path": "model-cfs_refor_6h_9m_flx",
+            "tds_id": "cfs_refor_6h_9m_flx",
+            "parent_catalog": "model/model.xml",
+            "mount_path": null,
+            "writeable": false
+        }
+    ]
 }
