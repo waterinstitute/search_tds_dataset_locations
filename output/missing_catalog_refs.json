@@ -1,0 +1,20 @@
+{
+    "tds-coastal01-prod.ncei.noaa.gov-old": [
+        {
+            "parent": "/var/lib/tomcat/content/thredds/USM_DAP",
+            "catalog": "/var/lib/tomcat/content/thredds/USM_DAP/catalog_data.xml"
+        },
+        {
+            "parent": "/var/lib/tomcat/content/thredds/USM_DAP",
+            "catalog": "/var/lib/tomcat/content/thredds/USM_DAP/catalog_aggs.xml"
+        },
+        {
+            "parent": "/var/lib/tomcat/content/thredds/oceanNomads",
+            "catalog": "/var/lib/tomcat/content/thredds/oceanNomads/catalog_data.xml"
+        },
+        {
+            "parent": "/var/lib/tomcat/content/thredds/oceanNomads",
+            "catalog": "/var/lib/tomcat/content/thredds/oceanNomads/catalog_aggs.xml"
+        }
+    ]
+}

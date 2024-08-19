@@ -1,0 +1,175 @@
+{
+    "tds-coastal01-prod.ncei.noaa.gov-old": {
+        "catalog.xml": [
+            {
+                "name": null,
+                "catalog": "catalog.xml",
+                "type": null,
+                "server_location": null,
+                "tds_path": null,
+                "tds_id": null,
+                "parent_catalog": null,
+                "mount_path": null,
+                "writeable": null
+            }
+        ],
+        "catalog_USM_DAP.xml": [
+            {
+                "name": null,
+                "catalog": "catalog_USM_DAP.xml",
+                "type": null,
+                "server_location": null,
+                "tds_path": null,
+                "tds_id": null,
+                "parent_catalog": "catalog.xml",
+                "mount_path": null,
+                "writeable": null
+            }
+        ],
+        "catalog_aec_climo.xml": [
+            {
+                "name": "AEC Model",
+                "catalog": "/var/lib/tomcat/content/thredds/catalog_aec_climo.xml",
+                "type": "datasetScan",
+                "server_location": "/mnt/thredds-data/aec/aec_model_climo/",
+                "tds_path": "aec_model",
+                "tds_id": "AEC_model",
+                "parent_catalog": "catalog.xml",
+                "mount_path": "10.254.103.74:/NFS04/msthredds/data",
+                "writeable": false
+            },
+            {
+                "name": "AEC Satellite",
+                "catalog": "/var/lib/tomcat/content/thredds/catalog_aec_climo.xml",
+                "type": "datasetScan",
+                "server_location": "/mnt/thredds-data/aec/aec_sat_climo/",
+                "tds_path": "aec_sat",
+                "tds_id": "AEC_sat",
+                "parent_catalog": "catalog.xml",
+                "mount_path": "10.254.103.74:/NFS04/msthredds/data",
+                "writeable": false
+            },
+            {
+                "name": "AEC GoMex Model Climatology Aggregation",
+                "catalog": "/var/lib/tomcat/content/thredds/catalog_aec_climo.xml",
+                "type": "featureCollection",
+                "server_location": "/mnt/thredds-data/aec/aec_model_climo",
+                "tds_path": "aec_model_agg",
+                "tds_id": "aec_model_climo_agg",
+                "parent_catalog": "catalog.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/mnt/thredds-data/aec/aec_model_climo/AEC.*nc$"
+                ]
+            },
+            {
+                "name": "AEC GoMex Satellite Climatology",
+                "catalog": "/var/lib/tomcat/content/thredds/catalog_aec_climo.xml",
+                "type": "featureCollection",
+                "server_location": "/mnt/thredds-data/aec/aec_sat_climo/GOM",
+                "tds_path": "aec_gomex_sat_agg",
+                "tds_id": "aec_gomex_sat_agg",
+                "parent_catalog": "catalog.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/mnt/thredds-data/aec/aec_sat_climo/GOM/AEC.*.nc$"
+                ]
+            },
+            {
+                "name": "AEC USEAST Satellite Climatology",
+                "catalog": "/var/lib/tomcat/content/thredds/catalog_aec_climo.xml",
+                "type": "featureCollection",
+                "server_location": "/mnt/thredds-data/aec/aec_sat_climo/USEAST",
+                "tds_path": "aec_useast_sat_agg",
+                "tds_id": "aec_useast_sat_agg",
+                "parent_catalog": "catalog.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/mnt/thredds-data/aec/aec_sat_climo/USEAST/AEC.*.nc$"
+                ]
+            },
+            {
+                "name": "AEC USWEST Satellite Climatology",
+                "catalog": "/var/lib/tomcat/content/thredds/catalog_aec_climo.xml",
+                "type": "featureCollection",
+                "server_location": "/mnt/thredds-data/aec/aec_sat_climo/USWEST",
+                "tds_path": "aec_uswest_sat_agg",
+                "tds_id": "aec_uswest_sat_agg",
+                "parent_catalog": "catalog.xml",
+                "mount_path": null,
+                "writeable": null,
+                "collection_paths": [
+                    "/mnt/thredds-data/aec/aec_sat_climo/USWEST/AEC.*.nc$"
+                ]
+            }
+        ],
+        "catalog_dwh.xml": [
+            {
+                "name": "DWH CTD",
+                "catalog": "/var/lib/tomcat/content/thredds/catalog_dwh.xml",
+                "type": "datasetScan",
+                "server_location": "/mnt/thredds-data/dwh/ctd",
+                "tds_path": "dwh/ctd",
+                "tds_id": "dwh_ctd",
+                "parent_catalog": "catalog.xml",
+                "mount_path": "10.254.103.74:/NFS04/msthredds/data",
+                "writeable": false
+            }
+        ],
+        "catalog_navo_glider.xml": [
+            {
+                "name": "NAVOCEANO_GLIDER",
+                "catalog": "/var/lib/tomcat/content/thredds/catalog_navo_glider.xml",
+                "type": "datasetScan",
+                "server_location": "/mnt/thredds-data/navoceano_glider/",
+                "tds_path": "navoceano_glider",
+                "tds_id": "navoceano_glider",
+                "parent_catalog": "catalog.xml",
+                "mount_path": "10.254.103.74:/NFS04/msthredds/data",
+                "writeable": false
+            }
+        ],
+        "catalog_northwest_fisheries.xml": [
+            {
+                "name": "Northwest Fisheries",
+                "catalog": "/var/lib/tomcat/content/thredds/catalog_northwest_fisheries.xml",
+                "type": "datasetScan",
+                "server_location": "/mnt/thredds-data/northwest_fisheries/",
+                "tds_path": "northwest_fisheries",
+                "tds_id": "NORTHWEST_FISHERIES",
+                "parent_catalog": "catalog.xml",
+                "mount_path": "10.254.103.74:/NFS04/msthredds/data",
+                "writeable": false
+            }
+        ],
+        "catalog_oceanNomads.xml": [
+            {
+                "name": null,
+                "catalog": "catalog_oceanNomads.xml",
+                "type": null,
+                "server_location": null,
+                "tds_path": null,
+                "tds_id": null,
+                "parent_catalog": "catalog.xml",
+                "mount_path": null,
+                "writeable": null
+            }
+        ],
+        "catalog_ocean_exploration_research.xml": [
+            {
+                "name": "Ocean Exploration Research",
+                "catalog": "/var/lib/tomcat/content/thredds/catalog_ocean_exploration_research.xml",
+                "type": "datasetScan",
+                "server_location": "/mnt/thredds-data/ocean_exploration_research/",
+                "tds_path": "ocean_exploration_research",
+                "tds_id": "ocean_exploration_research",
+                "parent_catalog": "catalog.xml",
+                "mount_path": "10.254.103.74:/NFS04/msthredds/data",
+                "writeable": false
+            }
+        ]
+    }
+}

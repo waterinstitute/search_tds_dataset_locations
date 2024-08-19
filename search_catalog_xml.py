@@ -27,7 +27,7 @@ def getCatalogRefs(catalog_xml, catalog_ref, catalog_path):
 
     return catalog_refs, catalog_refs_dict
 
-def updateCatalogRefs(catalog_refs, catalog_refs_dict, web_catalog_refs_dict):
+def updateCatalogRefs(catalog_refs, catalog_refs_dict, web_catalog_refs_dict, missing_catalog_refs_dict):
     catalog_refs_sublist = []
     catalog_refs_sublist_dict = []
     hostname = subprocess.check_output(['hostname']).decode('utf-8').strip()
@@ -55,12 +55,25 @@ def updateCatalogRefs(catalog_refs, catalog_refs_dict, web_catalog_refs_dict):
 
             # don't parse the web catalog reference and go to the next catalog reference.
             continue
+        # check if catalog exists and parse. Otherwise, add to missing catalogs json
+        if not os.path.exists(catalog_ref_str):
+            missing_catalog_refs_dict[hostname].append({
+                "parent": catalog_ref.parent,
+                "catalog": catalog_ref_str
+            })
+            continue
         catalog_ref_xml = ET.parse(catalog_ref_str)
         sublist, sublist_dict = getCatalogRefs(catalog_ref_xml, catalog_ref, catalog_path)
         catalog_refs_sublist += sublist
         catalog_refs_sublist_dict += sublist_dict
 
-    return catalog_refs_sublist, catalog_refs_sublist_dict, web_catalog_refs_dict
+    # remove any missing catalogs from the catalog_refs_sublist and the catalog_refs_sublist_dict
+    for missing_catalog in missing_catalog_refs_dict[hostname]:
+        catalog_refs_sublist = [ref for ref in catalog_refs_sublist if str(ref).strip() != missing_catalog['catalog']]
+        catalog_refs_sublist_dict = [ref for ref in catalog_refs_sublist_dict if str(ref['catalog']).strip() != missing_catalog['catalog']]
+        print ('removing missing catalog from sublists: ', missing_catalog['catalog'])
+
+    return catalog_refs_sublist, catalog_refs_sublist_dict, web_catalog_refs_dict, missing_catalog_refs_dict
 
 def is_on_mount(path):
   while True:
@@ -87,7 +100,7 @@ except FileNotFoundError:
 # Create a key in the missing_datasets_dict for the hostname
 missing_datasets_dict[hostname] = []
 
-# define web catalog references json file, and if it does not exist, create it..
+# define web catalog references json file, and if it does not exist, create it.
 web_catalog_refs = 'output/web_catalog_refs.json'
 try:
     with open(web_catalog_refs, 'r') as f:
@@ -98,6 +111,18 @@ except FileNotFoundError:
         json.dump(web_catalog_refs_dict, f, indent=4)
 # Create a key in the web_catalog_refs_dict for the hostname
 web_catalog_refs_dict[hostname] = []
+
+# define the missing catalog references json file, and if it does not exist, create it.
+missing_catalog_refs = 'output/missing_catalog_refs.json'
+try:
+    with open(missing_catalog_refs, 'r') as f:
+        missing_catalog_refs_dict = json.load(f)
+except FileNotFoundError:
+    missing_catalog_refs_dict = {}
+    with open(missing_catalog_refs, 'w') as f:
+        json.dump(missing_catalog_refs_dict, f, indent=4)
+# Create a key in the missing_catalog_refs_dict for the hostname
+missing_catalog_refs_dict[hostname] = []
 
 # read /var/lib/tomcat/content/thredds/catalog.xml and parse it for additional catalog references.
 # read the catalog.xml file
@@ -122,7 +147,7 @@ catalog_refs_dict = [i for n, i in enumerate(catalog_refs_dict) if i not in cata
 # for each catalog reference, read the catalog file, and parse it for additional catalog references. add these to the list of catalog references.
 # run updateCatalogRefs until there are no additional sub catalog references.
 n = 0
-catalog_refs_sublist, catalog_refs_sublist_dict, web_catalog_refs_dict = updateCatalogRefs(catalog_refs, catalog_refs_dict, web_catalog_refs_dict)
+catalog_refs_sublist, catalog_refs_sublist_dict, web_catalog_refs_dict, missing_catalog_refs_dict = updateCatalogRefs(catalog_refs, catalog_refs_dict, web_catalog_refs_dict, missing_catalog_refs_dict)
 while len(catalog_refs_sublist) > 0:
     # Update catalog reference list with sublist n.
     catalog_refs += catalog_refs_sublist
@@ -131,11 +156,25 @@ while len(catalog_refs_sublist) > 0:
     n+=1
     # print(f'\nFound nested catalogs \n Parsing nested catalog {n}. \n')    
     # Get new sublist
-    catalog_refs_sublist, sublist_dict, web_catalog_refs_dict = updateCatalogRefs(catalog_refs_sublist, catalog_refs_dict, web_catalog_refs_dict)
-
+    catalog_refs_sublist, sublist_dict, web_catalog_refs_dict, missing_catalog_refs_dict = updateCatalogRefs(catalog_refs_sublist, catalog_refs_dict, web_catalog_refs_dict, missing_catalog_refs_dict)
 # remove duplicates from the catalog_refs and catalog_refs_dict
 catalog_refs = list(set(catalog_refs))
 catalog_refs_dict = [i for n, i in enumerate(catalog_refs_dict) if i not in catalog_refs_dict[n + 1:]]
+
+# remove any missing catalogs from the catalog_refs and the catalog_refs_dict
+for missing_catalog in missing_catalog_refs_dict[hostname]:
+    print (f'\nmissing_catalog: {missing_catalog["catalog"]}')
+    for ref in catalog_refs:
+        print (f'ref: {ref}')
+        #  trim and clean up strings
+        ref = str(ref).strip()
+        # missing_catalog['catalog'] = str(missing_catalog['catalog']).strip()
+        if ref == missing_catalog['catalog']:
+            # catalog_refs.remove(ref)
+            print ('equal')
+    catalog_refs = [ref for ref in catalog_refs if str(ref).strip() != missing_catalog['catalog']]
+    catalog_refs_dict = [ref for ref in catalog_refs_dict if str(ref['catalog']).strip() != missing_catalog['catalog']]
+    print ('removing missing catalog from lists: ', missing_catalog['catalog'])
 
 # add the catalog.xml file to the catalog_refs list
 catalog_refs.append('/var/lib/tomcat/content/thredds/catalog.xml')
@@ -313,3 +352,12 @@ with open(missing_datasets, 'w') as f:
 # write web catalog references to file: web_catalog_refs.json
 with open(web_catalog_refs, 'w') as f:
     json.dump(web_catalog_refs_dict, f, indent=4)
+
+# convert PosixPath to string for missing_catalog_refs_dict
+for key in missing_catalog_refs_dict[hostname]:
+    key['catalog'] = str(key['catalog'])
+    key['parent'] = str(key['parent'])
+
+# write missing catalog references to file: missing_catalog_refs.json
+with open(missing_catalog_refs, 'w') as f:
+    json.dump(missing_catalog_refs_dict, f, indent=4)
