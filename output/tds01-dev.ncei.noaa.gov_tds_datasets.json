@@ -253,7 +253,7 @@
                 "server_location": "/datasets/published/",
                 "tds_path": "OisstBase",
                 "tds_id": null,
-                "parent_catalog": "blended-global/blended-global.xml",
+                "parent_catalog": "marine-ocean/marine-ocean.xml",
                 "mount_path": "10.254.101.67:/NFS06/datasets/published-prod",
                 "writeable": false
             },
@@ -264,7 +264,7 @@
                 "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2/access/avhrr-only",
                 "tds_path": "OisstBase/NetCDF/V2.0/AVHRR",
                 "tds_id": "OISST-V2-AVHRR-Daily",
-                "parent_catalog": "blended-global/blended-global.xml",
+                "parent_catalog": "marine-ocean/marine-ocean.xml",
                 "mount_path": "10.254.101.67:/NFS06/datasets/published-prod",
                 "writeable": false
             },
@@ -275,7 +275,7 @@
                 "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2/access/amsr-avhrr",
                 "tds_path": "OisstBase/NetCDF/V2.0/AVHRR-AMSR",
                 "tds_id": "OISST-V2-AVHRR-AMSR-Daily",
-                "parent_catalog": "blended-global/blended-global.xml",
+                "parent_catalog": "marine-ocean/marine-ocean.xml",
                 "mount_path": "10.254.101.67:/NFS06/datasets/published-prod",
                 "writeable": false
             },
@@ -286,7 +286,7 @@
                 "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2/access/amsr-avhrr",
                 "tds_path": "ncFC/fc-oisst-daily-avhrr-amsr-dly",
                 "tds_id": null,
-                "parent_catalog": "blended-global/blended-global.xml",
+                "parent_catalog": "marine-ocean/marine-ocean.xml",
                 "mount_path": null,
                 "writeable": null,
                 "collection_paths": [
@@ -300,7 +300,7 @@
                 "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr",
                 "tds_path": "OisstBase/NetCDF/V2.1/AVHRR",
                 "tds_id": "OISST-V2.1-AVHRR-Daily",
-                "parent_catalog": "blended-global/blended-global.xml",
+                "parent_catalog": "marine-ocean/marine-ocean.xml",
                 "mount_path": "10.254.101.67:/NFS06/datasets/published-prod",
                 "writeable": false
             },
@@ -311,7 +311,7 @@
                 "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr",
                 "tds_path": "ncFC/fc-oisst-daily-avhrr-only-dly-prelim",
                 "tds_id": null,
-                "parent_catalog": "blended-global/blended-global.xml",
+                "parent_catalog": "marine-ocean/marine-ocean.xml",
                 "mount_path": null,
                 "writeable": null,
                 "collection_paths": [
@@ -325,12 +325,25 @@
                 "server_location": "/datasets/published/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr",
                 "tds_path": "ncFC/fc-oisst-daily-avhrr-only-dly",
                 "tds_id": null,
-                "parent_catalog": "blended-global/blended-global.xml",
+                "parent_catalog": "marine-ocean/marine-ocean.xml",
                 "mount_path": null,
                 "writeable": null,
                 "collection_paths": [
                     "/datasets/published/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/**/oisst-avhrr-v02r01\\.(2020022[8-9]|2020(0[3-9]|1[0-2])[0-3][0-9]|202[1-9][0-1][0-9][0-3][0-9]|20[3-9][0-9][0-1][0-9][0-3][0-9])\\.nc$"
                 ]
+            }
+        ],
+        "catalog.xml": [
+            {
+                "name": null,
+                "catalog": "catalog.xml",
+                "type": null,
+                "server_location": null,
+                "tds_path": null,
+                "tds_id": null,
+                "parent_catalog": null,
+                "mount_path": null,
+                "writeable": null
             }
         ],
         "data-in-development/data-in-development.xml": [
@@ -466,7 +479,7 @@
                 "server_location": "/datasets/published/international-comprehensive-ocean-atmosphere/v3/archive/nrt",
                 "tds_path": "international-comprehensive-ocean-atmosphere-dataset-icoads",
                 "tds_id": "icoads",
-                "parent_catalog": "in_situ/in_situ.xml",
+                "parent_catalog": "marine-ocean/marine-ocean.xml",
                 "mount_path": "10.254.101.67:/NFS06/datasets/published-prod",
                 "writeable": false
             }
