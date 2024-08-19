@@ -1,5 +1,18 @@
 {
     "tds-model01-dev.ncei.noaa.gov": {
+        "catalog.xml": [
+            {
+                "name": null,
+                "catalog": "catalog.xml",
+                "type": null,
+                "server_location": null,
+                "tds_path": null,
+                "tds_id": null,
+                "parent_catalog": null,
+                "mount_path": null,
+                "writeable": null
+            }
+        ],
         "model/cbofs_catalog.xml": [
             {
                 "name": "CBOFS Models",
